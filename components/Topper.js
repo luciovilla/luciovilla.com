@@ -19,7 +19,7 @@ export default function Topper() {
 
             <div className="flex mt-3 w-full">
               <div className="text-sm text-gra">
-                <a className="underline" href="mailto:contact@luciovilla.com">
+                <a className="underline" href="mailto:hi@luciovilla.com?subject=Hola Lucio">
                   {' '}
                   Email
                 </a>{' '}
