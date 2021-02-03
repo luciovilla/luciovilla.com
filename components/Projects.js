@@ -5,8 +5,8 @@ import Image from 'next/image'
 export default function Topper() {
   return (
     <>
-      <div className="text-center w-full mb-10 uppercase text-gray-600" id="projects">
-        Latest Projects{' '}
+      <div className="text-center w-full uppercase text-gray-600 pt-5 pb-20" id="projects">
+        Recent Projects{' '}
         <span className="inline-block w-3">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
             <path
