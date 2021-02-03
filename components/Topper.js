@@ -5,14 +5,15 @@ export default function Topper() {
     <div className="relative pt-16 pb-32 flex items-center w-full min-h-80">
       <div className="container mx-auto px-4 w-full md:w-4/5">
         <div className="flex flex-wrap ">
-          <div className="w-full px-4 ">
+          <div className="w-full px-4">
             <span className="font-semibold text-xl text-gray-400">Hola,</span>
-            <h1>
-              <span className="font-semibold text-5xl">I'm Lucio V.</span>
-              <p className="mt-2 text-lg text-gray-700 max-w-md">
-                – a designer who codes. Currently a Design Editor at The Washington Post helping the
-                News Design team advance in digital storytelling, mentoring designers and fostering
-                collaboration across the newsroom.
+            <h1 className="mt-1">
+              <span className="font-semibold text-5xl">I'm Lucio</span>
+              <p className="mt-1 text-lg text-gray-700 max-w-md">
+                – a designer who codes. Passionate about telling engaging stories online. Currently
+                a Design Editor at The Washington Post helping the News Design team advance in
+                digital storytelling, mentoring designers and fostering collaboration across the
+                newsroom.
               </p>
             </h1>
 

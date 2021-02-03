@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Image from 'next/image'
 
 export default function Topper() {
   return (
@@ -20,20 +21,30 @@ export default function Topper() {
         <Featured
           title="Serial Killer Series"
           projRole="Designer, developer, art director"
-          hasVideo="proj-sk.mp4"
+          image="projects/sk.jpg"
+          width={2126}
+          height={1222}
         />
         <Featured
           title="Mueller Report Illustrated"
           projRole="Designer, developer"
-          hasVideo="proj-mri.mp4"
+          image="projects/mri.jpg"
+          width={1560}
+          height={980}
         />
-        <Featured title="Mekong River" projRole="Designer, developer" image="proj-mekong.png" />
+        <Featured
+          title="Mekong River"
+          projRole="Designer, developer"
+          image="projects/mekong.jpg"
+          width={1000}
+          height={518}
+        />
       </section>
     </>
   )
 }
 
-const Featured = ({ title, projRole, hasVideo, image }) => (
+const Featured = ({ title, projRole, hasVideo, image, width, height }) => (
   <div className="container mx-auto pb-32 w-full md:w-4/5">
     <div className="items-center flex flex-wrap">
       <div className="w-full md:w-1/2 ml-auto px-4 md:pr-12 md:pl-6 md:pr-4">
@@ -50,7 +61,9 @@ const Featured = ({ title, projRole, hasVideo, image }) => (
             <source src={`./video/${hasVideo}`} type="video/mp4" />
           </video>
         ) : (
-          <img alt="..." className="max-w-full rounded-lg shadow-xl" src={`./${image}`} />
+          <div className="max-w-full image-shadow">
+            <Image alt="..." src={`/${image}`} width={width} height={height} />
+          </div>
         )}
       </div>
     </div>
