@@ -32,7 +32,7 @@ export default function About() {
                 During my time in San Francisco I helped instruct a class on editorial web design
                 and development at the Graduate School of Journalism in UC Berkeley and was the
                 board President of the Bay Area chapter of the National Association of Hispanic
-                Journalists.
+                Journalists (NAHJ).
               </p>
 
               <p className="mt-4 text-lg leading-relaxed text-gray-600">
@@ -74,8 +74,7 @@ export default function About() {
                 Poly Post for two years before I transferred to Fullerton.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                I am currently serving on the board of the National Association of Hispanic
-                Journalists (NAHJ) DC Chapter and am a member of the following orgs: SND, ONA and
+                I am currently serving on the board of the NAHJ DC Chapter and am a member of the following orgs: SND, ONA and
                 IRE.
               </p>
             </div>
