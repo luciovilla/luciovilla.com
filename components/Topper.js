@@ -6,7 +6,7 @@ export default function Topper() {
       <div className="container mx-auto px-4 w-full md:w-4/5">
         <div className="flex flex-wrap ">
           <div className="w-full px-4">
-            <span className="font-semibold text-xl text-gray-400">Hola,</span>
+            <span className="font-semibold text-xl text-gray-500">Hola,</span>
             <h1 className="mt-1">
               <span className="font-semibold text-5xl">I'm Lucio</span>
               <p className="mt-1 text-lg text-gray-700 max-w-md">
