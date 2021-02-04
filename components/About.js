@@ -36,7 +36,7 @@ export default function About() {
               </p>
 
               <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                Apart from work I was recently listed in Editor &amp; Publisher’s 2019 “
+                Outside of work, I was listed in Editor &amp; Publisher’s 2019 “
                 <a
                   className="underline"
                   href="https://www.editorandpublisher.com/feature/eps-25-under-35-2019-the-next-generation-of-newspaper-leaders-wants-to-keep-the-industry-moving/"
@@ -45,7 +45,7 @@ export default function About() {
                 >
                   25 Under 35: The Future Generation of Newspaper Leaders.
                 </a>
-                ”, co-founder of
+                ” I also co-founded{' '}
                 <a
                   className="underline"
                   href="http://www.codelatino.com/"
@@ -74,17 +74,14 @@ export default function About() {
                 Poly Post for two years before I transferred to Fullerton.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                Currently serving on the board of the NAHJ DC Chapter and a member of the following
-                orgs: SND, ONA, IRE.
+                I am currently serving on the board of the National Association of Hispanic
+                Journalists (NAHJ) DC Chapter and am a member of the following orgs: SND, ONA and
+                IRE.
               </p>
             </div>
           </div>
           <div className="w-full md:w-1/4 ml-auto pl-4 pt-4 md:pt-0">
-            <img
-              alt="..."
-              className="max-w-full rounded-lg shadow-xl"
-              src="./me.jpg"
-            />
+            <img alt="..." className="max-w-full rounded-lg shadow-xl" src="./me.jpg" />
           </div>
         </div>
       </div>
