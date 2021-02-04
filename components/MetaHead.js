@@ -42,7 +42,7 @@ export default function MetaHead() {
       <meta name="twitter:description" content={pageDescription} />
       <meta name="twitter:image" content={siteImg} />
       <link rel="canonical" href={canonical_url} />
-      <link rel="icon" type="image/x-icon" href="" />
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28929069-1" />
       <script
