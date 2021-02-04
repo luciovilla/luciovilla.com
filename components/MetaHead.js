@@ -37,10 +37,10 @@ export default function MetaHead() {
       <meta property="og:title" content={pageTitle} />
       <meta property="og:description" content={pageDescription} />
       <meta name="twitter:site" content="@luciovilla" />
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={pageDescription} />
-      <meta name="twitter:image" content="/test.jpg?4362984378" />
+      <meta name="twitter:image" content="/test.jpg" />
       <link rel="canonical" href={canonical_url} />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
