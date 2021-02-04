@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react'
+import Image from 'next/image'
 
 export default function About() {
   return (
@@ -74,13 +75,15 @@ export default function About() {
                 Poly Post for two years before I transferred to Fullerton.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                I am currently serving on the board of the NAHJ DC Chapter and am a member of the following orgs: SND, ONA and
-                IRE.
+                I am currently serving on the board of the NAHJ DC Chapter and am a member of the
+                following orgs: SND, ONA and IRE.
               </p>
             </div>
           </div>
-          <div className="w-full md:w-1/4 ml-auto pl-4 pt-4 md:pt-0">
-            <img alt="..." className="max-w-full rounded-lg shadow-xl" src="./me.jpg" />
+          <div className="w-full md:w-1/5 ml-auto md:pl-4 pt-4 md:pt-0">
+            <div className="max-w-full image-shadow">
+              <Image alt="..." src="/me.jpg" width={500} height={500} />
+            </div>
           </div>
         </div>
       </div>
