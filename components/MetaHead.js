@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 
-const canonical_url = 'https://luciovilla.com/'
+const canonical_url = 'https://luciovilla.vercel.app/'
 const pageTitle = 'Lucio Villa – a designer who codes.'
 const siteImg = '/test.gif'
 const pageDescription =
