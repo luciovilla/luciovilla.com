@@ -49,7 +49,7 @@ const Featured = ({ title, projRole, hasVideo, image, width, height }) => (
     <div className="items-center flex flex-wrap">
       <div className="w-full md:w-1/2 ml-auto px-4 md:pr-12 md:pl-6 md:pr-4">
         <div className="md:pr-12">
-          <h3 className="text-3xl font-semibold">{title}</h3>
+          <h2 className="text-3xl font-semibold">{title}</h2>
           <div className="mt-2 text-lg leading-relaxed text-gray-600">
             <b>Role:</b> {projRole}
           </div>
