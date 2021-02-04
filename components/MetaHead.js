@@ -38,7 +38,7 @@ export default function MetaHead() {
       <meta property="og:description" content={pageDescription} />
       <meta name="twitter:site" content="@luciovilla" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Lucio Villa" />
+      <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={pageDescription} />
       <meta name="twitter:image" content="/test.jpg" />
       <link rel="canonical" href={canonical_url} />
