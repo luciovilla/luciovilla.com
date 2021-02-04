@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 const canonical_url = 'https://luciovilla.vercel.app/'
 const pageTitle = 'Lucio Villa, a designer who codes.'
-const siteImg = '/test.gif'
+const siteImg = '/site.gif'
 const pageDescription =
   'Portfolio site of Lucio Villa, a designer with a passion for coding engaging stories online.'
 const generateStructuredMetadata = () => {
@@ -40,7 +40,7 @@ export default function MetaHead() {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={pageDescription} />
-      <meta name="twitter:image" content="/test.jpg" />
+      <meta name="twitter:image" content="/site.jpg" />
       <link rel="canonical" href={canonical_url} />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
