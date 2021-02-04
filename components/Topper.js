@@ -10,10 +10,9 @@ export default function Topper() {
             <h1 className="mt-1">
               <span className="font-semibold text-5xl">I'm Lucio</span>
               <p className="mt-1 text-lg text-gray-700 max-w-md">
-                – a designer who codes who is passionate about telling engaging stories online. Currently
-                a Design Editor at The Washington Post helping the News Design team advance in
-                digital storytelling, mentoring designers and fostering collaboration across the
-                newsroom.
+                – a designer with a passion for coding engaging stories online. Currently a Design
+                Editor at The Washington Post helping the News Design team advance in digital
+                storytelling, mentoring designers and fostering collaboration across the newsroom.
               </p>
             </h1>
 

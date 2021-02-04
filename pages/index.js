@@ -1,5 +1,5 @@
 import React from 'react'
-import Head from '../components/Head'
+import MetaHead from '../components/MetaHead'
 import Nav from '../components/Nav'
 import Topper from '../components/Topper'
 import Projects from '../components/Projects'
@@ -10,7 +10,7 @@ import Footer from '../components/Footer'
 export default function Home() {
   return (
     <>
-      <Head />
+      <MetaHead />
       <Nav />
       <Topper />
       <Projects />
