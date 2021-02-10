@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 const canonical_url = 'https://luciovilla.com'
 const pageTitle = 'Lucio Villa, a designer who codes.'
-const siteImg = '/site.gif'
+const siteImg = '/sitev2.gif'
 const pageDescription =
   'Portfolio site of Lucio Villa, a designer with a passion for coding engaging stories online.'
 const generateStructuredMetadata = () => {
