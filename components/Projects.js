@@ -93,7 +93,7 @@ const Featured = ({ title, projRole, hasVideo, image, width, height, url, summar
           </div>
           {url && (
             <div className="mt-2 text-lg leading-relaxed text-gray-600">
-              <a className="underline text-sm" href={url} target="_blank">
+              <a className="underline text-sm" href={url} target="_blank" rel="noopener">
                 View Project{' '}
                 <span className="inline-block w-3">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
