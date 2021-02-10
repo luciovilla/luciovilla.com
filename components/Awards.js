@@ -19,7 +19,7 @@ export default function Awards() {
 
         <div className="w-full md:w-4/5 container mx-auto px-4">
           <div className="flex flex-wrap">
-            <div className="w-full md:w-4/12 px-4">
+            <div className="w-full md:w-1/2 px-4">
               <div className="relative flex flex-col min-w-0 w-full mb-8">
                 <div className="px-4 flex-auto">
                   <h3 className="text-xl font-semibold -ml-4">2020</h3>
@@ -146,7 +146,7 @@ export default function Awards() {
               </div>
             </div>
 
-            <div className="w-full md:w-4/12 px-4">
+            <div className="w-full md:w-1/2 px-4">
               <div className="relative flex flex-col min-w-0 w-full mb-8">
                 <div className="px-4 flex-auto">
                   <h3 className="text-xl font-semibold -ml-4">2019</h3>
@@ -185,14 +185,7 @@ export default function Awards() {
                       </a>
                     </li>
                   </ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="w-full md:w-4/12 px-4">
-              <div className="relative flex flex-col min-w-0 w-full mb-8">
-                <div className="px-4 flex-auto">
-                  <h3 className="text-xl font-semibold -ml-4">2018</h3>
+                  <h3 className="text-xl font-semibold -ml-4 mt-4">2018</h3>
                   <ul className="list-outside list-disc mt-4 text-lg text-gray-600">
                     <li className="award">
                       POY:{' '}
