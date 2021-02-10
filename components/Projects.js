@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Image from 'next/image'
 
-export default function Topper() {
+export default function Projects() {
   return (
     <>
       <div className="text-center w-full uppercase text-gray-600 pt-5 pb-20" id="projects">
@@ -17,7 +17,7 @@ export default function Topper() {
           </svg>
         </span>
       </div>
-      <section className="relative w-full last:pb-0">
+      <section className="relative w-full last:pb-0 max-w-screen-xl m-auto">
         <Featured
           title="Serial Killer Series"
           projRole="Designer, developer, art director"

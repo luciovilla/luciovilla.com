@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Topper() {
   return (
-    <div className="relative pt-16 pb-16 md:pb-32 flex items-center w-full min-h-65 md:min-h-80">
+    <div className="relative pt-16 pb-16 md:pb-32 flex items-center w-full min-h-65 md:min-h-80 max-w-screen-xl m-auto">
       <div className="container mx-auto px-4 w-full md:w-4/5">
         <div className="w-full px-4">
           <div>

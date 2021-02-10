@@ -10,3 +10,13 @@ p {
     border-radius: 0.25rem;
   }
 }
+
+.name-lv {
+  letter-spacing: -7px;
+  color: #01417b;
+  z-index: 2;
+  span {
+    color: #ffa70a;
+    z-index: -1;
+  }
+}

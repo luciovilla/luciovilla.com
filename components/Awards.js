@@ -3,7 +3,7 @@ import React from 'react'
 export default function Awards() {
   return (
     <>
-      <section className="relative pb-20 w-full" id="awards">
+      <section className="relative pb-20 w-full max-w-screen-xl m-auto" id="awards">
         <div className="text-center w-full mb-10 uppercase text-gray-600">
           Awards & Honors{' '}
           <span className="inline-block w-3">

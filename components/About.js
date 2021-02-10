@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function About() {
   return (
-    <section className="relative py-20 w-full" id="about-me">
+    <section className="relative py-20 w-full max-w-screen-xl m-auto" id="about-me">
       <div className="container mx-auto px-4 pb-32 w-full md:w-4/5">
         <div className="text-center w-full mb-10 uppercase text-gray-600">
           About me
