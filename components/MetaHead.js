@@ -40,7 +40,7 @@ export default function MetaHead() {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={pageDescription} />
-      <meta name="twitter:image" content="/site.jpg" />
+      <meta name="twitter:image" content="/site.png" />
       <link rel="canonical" href={canonical_url} />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
