@@ -1,3 +1,5 @@
+@import 'variables.scss';
+
 p {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -12,10 +14,10 @@ p {
 }
 
 .name-lv {
-  color: #01417b;
+  color: $blue;
   z-index: 2;
   span {
-    color: #ffa70a;
+    color: $yellow;
     z-index: -1;
     opacity: 0;
     &.fade-in {
