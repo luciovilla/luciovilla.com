@@ -12,11 +12,16 @@ p {
 }
 
 .name-lv {
-  letter-spacing: -7px;
   color: #01417b;
   z-index: 2;
   span {
     color: #ffa70a;
     z-index: -1;
+    opacity: 0;
+    &.fade-in {
+      transition: all 3s;
+      opacity: 1;
+      transform: translateX(-7.2px);
+    }
   }
 }
