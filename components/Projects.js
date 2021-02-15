@@ -2,6 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Image from 'next/image'
 
+const ConditionalWrapper = ({ condition, wrapper, children }) =>
+  condition ? wrapper(children) : children
+
 export default function Projects() {
   return (
     <>
@@ -81,7 +84,7 @@ export default function Projects() {
   )
 }
 
-const Featured = ({ title, projRole, hasVideo, image, width, height, url, summary }) => (
+const Featured = ({ title, projRole, image, width, height, url, summary }) => (
   <div className="container mx-auto pb-32 w-full md:w-4/5">
     <div className="items-center flex flex-wrap">
       <div className="w-full md:w-1/2 ml-auto px-4 md:pr-12 md:pl-6 md:pr-4">
@@ -110,15 +113,20 @@ const Featured = ({ title, projRole, hasVideo, image, width, height, url, summar
         </div>
       </div>
       <div className="w-full md:w-1/2 mr-auto px-4 pt-4 md:pt-0">
-        {hasVideo ? (
-          <video className="max-w-full rounded-lg shadow-xl" muted playsInline autoPlay loop>
-            <source src={`./video/${hasVideo}`} type="video/mp4" />
-          </video>
-        ) : (
-          <div className="max-w-full image-shadow">
-            <Image alt="..." src={`/${image}`} width={width} height={height} />
-          </div>
-        )}
+        <ConditionalWrapper
+          condition={url}
+          wrapper={(children) => (
+            <a href={url} target="_blank" rel="noopener">
+              {children}
+            </a>
+          )}
+        >
+          <>
+            <div className="max-w-full image-shadow">
+              <Image alt="..." src={`/${image}`} width={width} height={height} />
+            </div>
+          </>
+        </ConditionalWrapper>
       </div>
     </div>
   </div>
