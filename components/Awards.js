@@ -36,17 +36,6 @@ export default function Awards() {
                       </a>
                     </li>
                     <li className="award">
-                      SND:{' '}
-                      <a
-                        className="underline"
-                        rel="noreferrer"
-                        href="https://www.snd.org/2020/04/new-york-times-and-washington-post-named-worlds-best-by-snd/"
-                        target="_blank"
-                      >
-                        World’s Best-Designed in Digital
-                      </a>
-                    </li>
-                    <li className="award">
                       Malofiej:{' '}
                       <a
                         className="underline"
