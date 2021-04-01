@@ -23,7 +23,8 @@ export default function About() {
             <div className="md:pr-12">
               <p className="mt-4 text-lg leading-relaxed text-gray-600">
                 I'm a designer and web developer currently working at The Washington Post as a
-                Design Editor.
+                Design Editor. Providing project and technical feedback to a team of over 30
+                designers, improving designer's coding workflows and pushing for brand consistency.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-gray-600">
                 Previously I worked at The San Francisco Chronicle, Hoy; Chicago Tribune's Spanish

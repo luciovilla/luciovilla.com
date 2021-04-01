@@ -22,7 +22,80 @@ export default function Awards() {
             <div className="w-full md:w-1/2 px-4">
               <div className="relative flex flex-col min-w-0 w-full mb-8">
                 <div className="px-4 flex-auto">
-                  <h3 className="text-xl font-semibold -ml-4">2020</h3>
+                  <h3 className="text-xl font-semibold -ml-4">2021</h3>
+                  <ul className="list-outside list-disc mt-4 text-lg text-gray-600">
+                    <li>
+                      SND:{' '}
+                      <a
+                        className="underline"
+                        rel="noreferrer"
+                        href="https://www.snd.org/bodd/2021/02/25/2020-results/"
+                        target="_blank"
+                      >
+                        Bronze Medal (Story Page Design)
+                      </a>
+                    </li>
+                    <li className="award">
+                      SND:{' '}
+                      <a
+                        className="underline"
+                        rel="noreferrer"
+                        href="https://www.snd.org/bodd/2021/02/25/2020-results/"
+                        target="_blank"
+                      >
+                        Award of Excellence (Use of Original/Commissioned Illustrations)
+                      </a>
+                    </li>
+
+                    <li className="award">
+                      SND:{' '}
+                      <a
+                        className="underline"
+                        rel="noreferrer"
+                        href="https://www.snd.org/bodd/2021/02/25/2020-results/"
+                        target="_blank"
+                      >
+                        Award of Excellence (Use of Video)
+                      </a>
+                    </li>
+
+                    <li className="award">
+                      SND:{' '}
+                      <a
+                        className="underline"
+                        rel="noreferrer"
+                        href="https://www.snd.org/bodd/2021/02/25/2020-results/"
+                        target="_blank"
+                      >
+                        Award of Excellence (Use of Video)
+                      </a>
+                    </li>
+
+                    <li className="award">
+                      SND:{' '}
+                      <a
+                        className="underline"
+                        rel="noreferrer"
+                        href="https://www.snd.org/bodd/2021/02/25/2020-results/"
+                        target="_blank"
+                      >
+                        Award of Excellence (Use of Audio in Digital Storytelling)
+                      </a>
+                    </li>
+
+                    <li className="award">
+                      SND:{' '}
+                      <a
+                        className="underline"
+                        rel="noreferrer"
+                        href="https://www.snd.org/bodd/2021/02/25/2020-results/"
+                        target="_blank"
+                      >
+                        Award of Excellence (Line of Coverage: Long-form Series)
+                      </a>
+                    </li>
+                  </ul>
+                  <h3 className="text-xl font-semibold -ml-4 mt-4">2020</h3>
                   <ul className="list-outside list-disc mt-4 text-lg text-gray-600">
                     <li>
                       SND:{' '}

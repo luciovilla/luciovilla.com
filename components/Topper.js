@@ -12,7 +12,8 @@ export default function Topper() {
               <p className="mt-1 text-xl text-gray-700">
                 – a designer with a passion for coding engaging stories online. Currently a Design
                 Editor at The Washington Post helping the News Design team advance in digital
-                storytelling, mentoring designers and fostering collaboration across the newsroom.
+                storytelling, mentoring designers, providing both design and technical feedback and
+                while still leading my own projects.
               </p>
             </h1>
           </div>

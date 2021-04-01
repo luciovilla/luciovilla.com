@@ -23,25 +23,33 @@ export default function Projects() {
       <section className="relative w-full last:pb-0 max-w-screen-xl m-auto">
         <Featured
           title="Serial Killer Series"
-          projRole="Designer, developer, art director"
+          tools="Adobe XD, React, Next.js, PLX animation library"
+          awards={`2x SND 2020 "Award of Excellence" awards.`}
+          projRole="Responsible for the project concept, design and its implementation. Commissioned and art directed illustrations."
           image="projects/sk.jpg"
-          summary="A three-part investigation of law enforcement’s failure to catch Samuel Little."
+          summary="A three-part investigation series on law enforcement’s failure to catch the most prolific serial killer in U.S. history."
           url="https://www.washingtonpost.com/graphics/2020/national/samuel-little-serial-killer/part-one/"
           width={2126}
           height={1222}
         />
         <Featured
           title="Mueller Report Illustrated"
-          projRole="Designer, developer"
+          projRole="Lead digital designer and developer."
+          tools="Adobe XD, React, PLX animation library, ffmpeg"
           image="projects/mri.jpg"
-          summary="A book and six-part digital series on the obstruction investigation."
+          summary="A book and digital interactive six-part series on the obstruction investigation with audio and animations."
           url="https://www.washingtonpost.com/graphics/2019/politics/mueller-report-illustrated/about/"
+          awards={`New York Times Bestseller, The Indie Bestseller List, Amazon #1 New Release,
+          Malofiej International Awards Gold Medal, 2019 SND Best in Show, 2019 SND Gold Medal, 2019 SND Silver Medal, 2019 SND Bronze Medal, x2 2019 SND Award of Excellence, 
+          2019 Scripps Howards Award Finalist, 2x ONA Finalist`}
           width={1560}
           height={980}
         />
         <Featured
           title="Mekong River"
-          projRole="Designer, developer"
+          projRole="Designer and developer."
+          awards="2020 SND Award of Excellence."
+          tools="Adobe XD, ScrollMagic.js "
           image="projects/mekong.jpg"
           summary="Story about displaced villages and a ruined ecosystem with audio narration from the reporter."
           url="https://www.washingtonpost.com/graphics/2020/world/the-mekong-river-basin-under-threat/"
@@ -50,8 +58,10 @@ export default function Projects() {
         />
         <Featured
           title="Military Helicopter"
-          projRole="Designer, developer"
+          projRole="Designer and developer."
           image="projects/helicopter.jpg"
+          tools="Adobe XD, React, Next.js, PLX animation library"
+          awards="2020 SND Bronze Medal"
           summary="A reconstruction of the
           movements of two D.C. Army National Guard
           helicopters that parked nearly still in the air
@@ -62,9 +72,10 @@ export default function Projects() {
         />
         <Featured
           title="Rose Garden Photo"
-          projRole="Designer, developer"
+          tools="React, Next.js, ScrollMonitor"
+          projRole="After news starting breaking that more and more people were testing positive for coronavirus, I quickly designed and developed this alternative form of storytelling to show who attended this event and updated it as needed."
           image="projects/rose.jpg"
-          summary="An interactive project that zooms and pans to show who attended a possible superspreader event."
+          summary="An interactive project that zooms and pans to show who attended a possible superspreader event at the White House."
           url="https://www.washingtonpost.com/graphics/2020/politics/coronavirus-attendees-barrett-nomination-ceremony/"
           width={1356}
           height={892}
@@ -72,10 +83,9 @@ export default function Projects() {
 
         <Featured
           title="Washington Post Project Template Generator"
-          projRole="Part of the core developers"
+          projRole="Part of the core developers and continuing to update. Working on designer workflows, onboarding and documentation."
           image="projects/template.png"
-          summary="A React and NEXT.js (contributor) based template for use by The Washington Post design and graphics
-          teams."
+          summary="A Node, React and Next.js based template that powers all of the custom interactive projects at The Washington Post."
           width={1036}
           height={574}
         />
@@ -84,16 +94,42 @@ export default function Projects() {
   )
 }
 
-const Featured = ({ title, projRole, image, width, height, url, summary }) => (
+const Featured = ({ title, projRole, image, width, height, url, summary, awards, tools }) => (
   <div className="container mx-auto pb-32 w-full md:w-4/5">
-    <div className="items-center flex flex-wrap">
+    <div className="items-center flex flex-wrap flex-row-reverse">
+      <div className="w-full md:w-1/2 mr-auto px-4 pt-4 md:pt-0 mb-5">
+        <ConditionalWrapper
+          condition={url}
+          wrapper={(children) => (
+            <a href={url} target="_blank" rel="noopener">
+              {children}
+            </a>
+          )}
+        >
+          <>
+            <div className="max-w-full image-shadow">
+              <Image alt="..." src={`/${image}`} width={width} height={height} />
+            </div>
+          </>
+        </ConditionalWrapper>
+      </div>
       <div className="w-full md:w-1/2 ml-auto px-4 md:pr-12 md:pl-6 md:pr-4">
         <div className="md:pr-12">
           <h2 className="text-3xl font-semibold">{title}</h2>
           <p className="mt-1">{summary}</p>
-          <div className="mt-2 leading-relaxed text-gray-700">
+          <div className="mt-4 leading-relaxed text-gray-700">
             <b>Role:</b> {projRole}
           </div>
+          {tools && (
+            <div className="mt-2 leading-relaxed text-gray-700">
+              <b>Tools:</b> {tools}
+            </div>
+          )}
+          {awards && (
+            <div className="mt-2 leading-relaxed text-gray-700">
+              <b>Awards:</b> {awards}
+            </div>
+          )}
           {url && (
             <div className="mt-2 text-lg leading-relaxed text-gray-600">
               <a className="underline text-sm" href={url} target="_blank" rel="noopener">
@@ -111,22 +147,6 @@ const Featured = ({ title, projRole, image, width, height, url, summary }) => (
             </div>
           )}
         </div>
-      </div>
-      <div className="w-full md:w-1/2 mr-auto px-4 pt-4 md:pt-0">
-        <ConditionalWrapper
-          condition={url}
-          wrapper={(children) => (
-            <a href={url} target="_blank" rel="noopener">
-              {children}
-            </a>
-          )}
-        >
-          <>
-            <div className="max-w-full image-shadow">
-              <Image alt="..." src={`/${image}`} width={width} height={height} />
-            </div>
-          </>
-        </ConditionalWrapper>
       </div>
     </div>
   </div>
