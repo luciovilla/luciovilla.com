@@ -23,9 +23,9 @@ export default function Projects() {
       <section className="relative w-full last:pb-0 max-w-screen-xl m-auto">
         <Featured
           title="Serial Killer Series"
-          tools="Adobe XD, React, Next.js, PLX animation library"
+          tools="React, Next.js, React PLX (animation library), Adobe XD, Node"
           awards={`2x SND 2020 "Award of Excellence" awards.`}
-          projRole="Responsible for the project concept, design and its implementation. Commissioned and art directed illustrations."
+          projRole="Responsible for the project concept, design, front-end development, commissioned and art directed illustrations."
           image="projects/sk.jpg"
           summary="A three-part investigation series on law enforcement’s failure to catch the most prolific serial killer in U.S. history."
           url="https://www.washingtonpost.com/graphics/2020/national/samuel-little-serial-killer/part-one/"
@@ -34,33 +34,32 @@ export default function Projects() {
         />
         <Featured
           title="Mueller Report Illustrated"
-          projRole="Lead digital designer and developer."
-          tools="Adobe XD, React, PLX animation library, ffmpeg"
+          projRole="Front-end developer."
+          tools="React, React PLX, ffmpeg, Node, Gulp"
           image="projects/mri.jpg"
-          summary="A book and digital interactive six-part series on the obstruction investigation with audio and animations."
+          summary="A six-part interactive series on the obstruction investigation with audio and scrolling animations."
           url="https://www.washingtonpost.com/graphics/2019/politics/mueller-report-illustrated/about/"
-          awards={`New York Times Bestseller, The Indie Bestseller List, Amazon #1 New Release,
-          Malofiej International Awards Gold Medal, 2019 SND Best in Show, 2019 SND Gold Medal, 2019 SND Silver Medal, 2019 SND Bronze Medal, x2 2019 SND Award of Excellence, 
+          awards={`Malofiej International Awards Gold Medal, 2019 SND Best in Show, 2019 SND Gold Medal, 2019 SND Silver Medal, 2019 SND Bronze Medal, x2 2019 SND Award of Excellence, 
           2019 Scripps Howards Award Finalist, 2x ONA Finalist`}
           width={1560}
           height={980}
         />
         <Featured
           title="Mekong River"
-          projRole="Designer and developer."
-          awards="2020 SND Award of Excellence."
-          tools="Adobe XD, ScrollMagic.js "
+          projRole="Designer and front-end developer."
+          awards="2020 SND Award of Excellence"
+          tools="Gulp, ScrollMagic.js, Node, Adobe XD"
           image="projects/mekong.jpg"
-          summary="Story about displaced villages and a ruined ecosystem with audio narration from the reporter."
+          summary="Inteactive story about displaced villages and a ruined ecosystem with audio narration from the reporter."
           url="https://www.washingtonpost.com/graphics/2020/world/the-mekong-river-basin-under-threat/"
           width={1000}
           height={518}
         />
         <Featured
           title="Military Helicopter"
-          projRole="Designer and developer."
+          projRole="Designer and front-end developer."
           image="projects/helicopter.jpg"
-          tools="Adobe XD, React, Next.js, PLX animation library"
+          tools="React, Next.js, Adobe XD, Node, PLX animation library"
           awards="2020 SND Bronze Medal"
           summary="A reconstruction of the
           movements of two D.C. Army National Guard
@@ -72,8 +71,8 @@ export default function Projects() {
         />
         <Featured
           title="Rose Garden Photo"
-          tools="React, Next.js, ScrollMonitor"
-          projRole="After news starting breaking that more and more people were testing positive for coronavirus, I quickly designed and developed this alternative form of storytelling to show who attended this event and updated it as needed."
+          tools="React, Next.js, Node, ScrollMonitor.js"
+          projRole="Designer and front-end developer."
           image="projects/rose.jpg"
           summary="An interactive project that zooms and pans to show who attended a possible superspreader event at the White House."
           url="https://www.washingtonpost.com/graphics/2020/politics/coronavirus-attendees-barrett-nomination-ceremony/"
@@ -83,7 +82,7 @@ export default function Projects() {
 
         <Featured
           title="Washington Post Project Template Generator"
-          projRole="Part of the core developers and continuing to update. Working on designer workflows, onboarding and documentation."
+          projRole="Part of the core developers and still continuing to update. Working on developer workflows, onboarding and documentation."
           image="projects/template.png"
           summary="A Node, React and Next.js based template that powers all of the custom interactive projects at The Washington Post."
           width={1036}

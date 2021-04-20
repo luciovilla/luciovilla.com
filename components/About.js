@@ -18,22 +18,22 @@ export default function About() {
             </svg>
           </span>
         </div>
-        <div className="flex flex-wrap flex-wrap-reverse">
+        <div className="flex flex-wrap-reverse">
           <div className="w-full md:w-3/4 pr-6 md:pr-12">
             <div className="md:pr-12">
               <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                I'm a designer and web developer currently working at The Washington Post as a
+                I'm a designer and front-end developer currently working at The Washington Post as a
                 Design Editor. Providing project and technical feedback to a team of over 30
-                designers, improving designer's coding workflows and pushing for brand consistency.
+                designers, improving developer workflows and pushing for brand consistency.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                Previously I worked at The San Francisco Chronicle, Hoy; Chicago Tribune's Spanish
-                daily and The Chicago Reporter.
+                Previously I worked at The San Francisco Chronicle as an Interactive Producer and Hoy (Chicago Tribune's Spanish
+                daily newspaper) as a News Applications Developer.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-gray-600">
                 During my time in San Francisco I helped instruct a class on editorial web design
                 and development at the Graduate School of Journalism in UC Berkeley and was the
-                board President of the Bay Area chapter of the National Association of Hispanic
+                chapter president for the Bay Area chapter of the National Association of Hispanic
                 Journalists (NAHJ).
               </p>
 
