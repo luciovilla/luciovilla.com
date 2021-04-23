@@ -21,23 +21,23 @@ export default function About() {
         <div className="flex flex-wrap-reverse">
           <div className="w-full md:w-3/4 pr-6 md:pr-12">
             <div className="md:pr-12">
-              <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                I'm a designer and front-end developer currently working at The Washington Post as a
+              <p className="mt-4 leading-relaxed">
+                I'm a front-end developer and designer currently working at The Washington Post as a
                 Design Editor. Providing project and technical feedback to a team of over 30
                 designers, improving developer workflows and pushing for brand consistency.
               </p>
-              <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                Previously I worked at The San Francisco Chronicle as an Interactive Producer and Hoy (Chicago Tribune's Spanish
-                daily newspaper) as a News Applications Developer.
+              <p className="mt-4 leading-relaxed">
+                Previously I worked at The San Francisco Chronicle as an Interactive Producer and
+                Hoy (Chicago Tribune's Spanish daily newspaper) as a News Applications Developer.
               </p>
-              <p className="mt-4 text-lg leading-relaxed text-gray-600">
+              <p className="mt-4 leading-relaxed">
                 During my time in San Francisco I helped instruct a class on editorial web design
                 and development at the Graduate School of Journalism in UC Berkeley and was the
                 chapter president for the Bay Area chapter of the National Association of Hispanic
                 Journalists (NAHJ).
               </p>
 
-              <p className="mt-4 text-lg leading-relaxed text-gray-600">
+              <p className="mt-4 leading-relaxed">
                 Outside of work, I was listed in Editor &amp; Publisher’s 2019 “
                 <a
                   className="underline"
@@ -68,16 +68,11 @@ export default function About() {
                 .
               </p>
 
-              <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                I’m originally from Compton, CA, and graduated from Cal State Fullerton (Go Titans)
-                with a Bachelor’s Degree in Photo Communications. During my time at Fullerton I was
-                a photo editor at The Daily Titan. Prior to being a journalism major I was studying
-                Computer Science at Cal Poly Pomona (Go Broncos) where I was a photo editor at The
-                Poly Post for two years before I transferred to Fullerton.
-              </p>
-              <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                I am currently serving on the board of the NAHJ DC Chapter and am a member of the
-                following orgs: SND, ONA and IRE.
+              <p className="mt-4  leading-relaxed ">
+                I’m originally from Compton, CA, and graduated from Cal State Fullerton (Go Titans!)
+                with a Bachelor’s Degree in Photo Communications. Prior to being a communications
+                major I was studying Computer Science at Cal Poly Pomona (Go Broncos!) before I
+                transferred to Fullerton.
               </p>
             </div>
           </div>
