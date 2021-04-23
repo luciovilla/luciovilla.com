@@ -4,8 +4,7 @@ import Head from 'next/head'
 const canonical_url = 'https://luciovilla.com'
 const pageTitle = 'Lucio Villa, a designer and front-end developer.'
 const siteImg = '/sitev2.gif'
-const pageDescription =
-  'Portfolio site of Lucio Villa, a designer and front-end developer.'
+const pageDescription = 'Portfolio site of Lucio Villa, a designer and front-end developer.'
 const generateStructuredMetadata = () => {
   const schemaMetadata = {
     '@context': 'http://schema.org',
@@ -42,8 +41,6 @@ export default function MetaHead() {
       <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={pageDescription} />
       <link rel="canonical" href={canonical_url} />
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28929069-1" />
       <script
         dangerouslySetInnerHTML={{

@@ -6,12 +6,8 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link
-            rel="preload"
-            href="/fonts/inter-var.woff2"
-            as="font"
-            crossOrigin="anonymous"
-          />
+          <link rel="preload" href="/fonts/inter-var.woff2" as="font" crossOrigin="anonymous" />
+          <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         </Head>
         <body>
           <Main />
