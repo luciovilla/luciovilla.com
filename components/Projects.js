@@ -84,7 +84,7 @@ export default function Projects() {
           title="Washington Post Project Template Generator"
           projRole="Part of the core developers and still continuing to update. Working on developer workflows, onboarding and documentation."
           image="projects/template.png"
-          summary="A Node, React and Next.js based template that powers all of the custom interactive projects at The Washington Post."
+          summary="A Node, React and Next.js based template that powers all of the custom interactive projects at The Washington Post. Four of the projects mentioned above were created using this template I helped develop."
           width={1036}
           height={574}
         />
@@ -112,7 +112,7 @@ const Featured = ({ title, projRole, image, width, height, url, summary, awards,
           </>
         </ConditionalWrapper>
       </div>
-      <div className="w-full md:w-1/2 ml-auto px-4 md:pr-12 md:pl-6 md:pr-4">
+      <div className="w-full md:w-1/2 ml-auto px-4 md:pl-6 md:pr-4">
         <div className="md:pr-12">
           <h2 className="text-3xl font-semibold">{title}</h2>
           <p className="mt-1">{summary}</p>
