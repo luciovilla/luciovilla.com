@@ -3,17 +3,18 @@ import React from 'react'
 export default function Topper() {
   return (
     <div className="relative pt-16 pb-16 md:pb-32 flex items-center w-full min-h-65 md:min-h-80 max-w-screen-xl m-auto">
-      <div className="container mx-auto px-4 w-full md:w-4/5">
+      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
         <div className="w-full px-4">
           <div>
             <span className="font-semibold text-xl text-gray-500">Hola,</span>
             <h1 className="mt-1">
-              <span className="font-semibold text-5xl">I'm Lucio</span>
-              <p className="mt-1 text-xl text-gray-700">
-                – a designer with a passion for coding engaging stories online. Currently a Design
-                Editor at The Washington Post helping the News Design team advance in digital
-                storytelling, mentoring designers, providing both design and technical feedback and
-                while still leading my own projects.
+              <span className="font-semibold text-5xl">I’m Lucio</span>
+              <p className="mt-1 prose text-gray-700 dark:text-gray-400">
+                – a front-end developer and designer with a passion for creating engaging stories
+                online. Currently a Design Editor at The Washington Post helping the News Design
+                team advance in digital storytelling, mentoring designers, providing both design and
+                technical feedback, maintaining a Next.js/React based template and while still
+                leading my own projects.
               </p>
             </h1>
           </div>
