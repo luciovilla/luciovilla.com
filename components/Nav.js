@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
+import NextLink from 'next/link'
 
 export default function Nav() {
   const [animationClass, setAnimationClass] = useState(false)
@@ -6,28 +7,27 @@ export default function Nav() {
   useEffect(() => {
     setAnimationClass(true)
   }, [])
+
   return (
-    <nav id="header" className="w-full top-0 bg-white z-10 lg:pt-6 max-w-screen-xl m-auto">
-      <div className="w-full md:w-4/5 container mx-auto flex flex-wrap items-center justify-between mt-0 px-4 py-2">
-        <div className="flex items-center font-bold text-2xl tracking-tighter px-4 name-lv">
-          L<span className={`${animationClass && 'fade-in'}`}>V</span>
-        </div>
-        <div
-          className="px-0 flex-grow lg:flex lg:items-center lg:w-auto lg:block text-black p-4 lg:p-0 center"
-          id="nav-content"
-        >
-          <ul className="list-reset lg:flex justify-end flex-1 items-center text-center">
-            <li className="mr-3 inline-block py-2 px-4 hover:underline">
-              <a href="#projects">Projects</a>
-            </li>
-            <li className="mr-3 inline-block py-2 px-4 hover:underline">
-              <a href="#about-me">About</a>
-            </li>
-            <li className="hidden md:inline-block inline-block py-2 pl-4 hover:underline">
-              <a href="#awards">Awards/Honors</a>
-            </li>
-          </ul>
-        </div>
+    <nav className="flex justify-between items-center max-w-4xl w-full py-8 px-4 my-0 md:my-8 mx-auto">
+      <a href="#skip" className="sr-only focus:not-sr-only">
+        Skip to content
+      </a>
+      <div className="flex items-center font-bold text-2xl tracking-tighter px-4 name-lv">
+        L<span className={`${animationClass && 'fade-in'}`}>V</span>
+      </div>
+      <div>
+        <NextLink href="/#projects">
+          <a className="p-1 sm:p-4 text-gray-900 dark:text-gray-100 hover:underline">Projects</a>
+        </NextLink>
+        <NextLink href="/#about-me">
+          <a className="p-1 sm:p-4 text-gray-900 dark:text-gray-100 hover:underline">About</a>
+        </NextLink>
+        <NextLink href="/#awards">
+          <a className="p-1 sm:p-4 text-gray-900 dark:text-gray-100 hover:underline">
+            Awards/Honors
+          </a>
+        </NextLink>
       </div>
     </nav>
   )

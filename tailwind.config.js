@@ -1,4 +1,4 @@
-const { spacing, fontFamily } = require('tailwindcss/defaultTheme');
+const { spacing, fontFamily } = require('tailwindcss/defaultTheme')
 
 module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
@@ -15,6 +15,7 @@ module.exports = {
       '1/2': '50vh',
       '3/4': '75vh',
       65: '65vh',
+      75: '75vh',
       80: '80vh',
       85: '85vh',
       full: '100vh',
