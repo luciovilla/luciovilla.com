@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 import Image from 'next/image'
+import NowPlaying from './NowPlaying'
 
 export default function About() {
   return (
@@ -19,7 +20,7 @@ export default function About() {
           </span>
         </div>
         <div className="flex flex-wrap-reverse">
-          <div className="w-full md:w-3/4 pr-6 md:pr-12">
+          <div className="w-full md:w-3/4 md:pr-12">
             <div className="md:pr-12">
               <p className="mt-4 leading-relaxed">
                 I'm a front-end developer and designer currently working at The Washington Post as a
@@ -74,6 +75,9 @@ export default function About() {
                 major I was studying Computer Science at Cal Poly Pomona (Go Broncos!) before I
                 transferred to Fullerton.
               </p>
+              <div className="mt-4 border-t pt-2">
+                <NowPlaying />
+              </div>
             </div>
           </div>
           <div className="w-full md:w-1/5 ml-auto md:pl-4 pt-4 md:pt-0">
