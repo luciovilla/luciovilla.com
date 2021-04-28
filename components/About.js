@@ -66,7 +66,7 @@ export default function About() {
                 >
                   Code Latino Chicago
                 </a>
-                .
+                , a community empowering Latinos into web development, during my time in Chicago.
               </p>
 
               <p className="mt-4  leading-relaxed ">
