@@ -46,7 +46,16 @@ export default function About() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  25 Under 35: The Future Generation of Newspaper Leaders.
+                  25 Under 35: The Future Generation of Newspaper Leaders
+                </a>
+                ” and Fullstack Academy's “
+                <a
+                  className="underline"
+                  href="https://www.fullstackacademy.com/blog/developers-that-work-in-media"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  15 Developers to Follow If You Want to Work in Media.
                 </a>
                 ” I also co-founded{' '}
                 <a
@@ -56,17 +65,8 @@ export default function About() {
                   rel="noreferrer"
                 >
                   Code Latino Chicago
-                </a>{' '}
-                and the{' '}
-                <a
-                  className="underline"
-                  href="https://www.meetup.com/Latino-Techies/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Latino Techies Chicago Meetup
                 </a>
-                .
+                , a community empowering Latinos into web development, during my time in Chicago.
               </p>
 
               <p className="mt-4  leading-relaxed ">
