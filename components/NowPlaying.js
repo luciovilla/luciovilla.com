@@ -25,13 +25,17 @@ export default function NowPlaying() {
               {data.title}
             </a>
           ) : (
-            <p className="text-gray-800 dark:text-gray-200 font-medium">Not Playing</p>
+            <p className="text-gray-800 dark:text-gray-200 font-medium text-sm">
+              Currently not listening to music.
+            </p>
           )}
-          <span className="mx-2 text-gray-500 dark:text-gray-300 hidden sm:block text-sm">
-            {' – '}
-          </span>
           <p className="text-gray-500 dark:text-gray-300 max-w-max truncate text-sm">
-            {data?.artist ?? 'Spotify'}
+            {data?.artist && (
+              <>
+                <span className="mx-2">–</span>
+                {data.artist}
+              </>
+            )}
           </p>
         </div>
       </div>
