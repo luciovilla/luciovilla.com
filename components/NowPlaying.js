@@ -1,13 +1,12 @@
 import useSWR from 'swr'
-
 import fetcher from '../lib/fetcher'
 
 export default function NowPlaying() {
   const { data } = useSWR('/api/now-playing', fetcher)
-  console.log(data, 'data!')
+
   return (
     <div>
-      <div className="text-xs mb-1 text-gray-600">Currently listening to:</div>
+      {data?.artist && <div className="text-xs mb-1 text-gray-600">Currently listening to:</div>}
       <div className="flex flex-row-reverse sm:flex-row mb-8 space-x-0 sm:space-x-2 w-full">
         <svg className="h-4 w-4 ml-auto mt-1" viewBox="0 0 168 168">
           <path
@@ -28,7 +27,9 @@ export default function NowPlaying() {
           ) : (
             <p className="text-gray-800 dark:text-gray-200 font-medium">Not Playing</p>
           )}
-          <span className="mx-2 text-gray-500 dark:text-gray-300 hidden sm:block text-sm">{' – '}</span>
+          <span className="mx-2 text-gray-500 dark:text-gray-300 hidden sm:block text-sm">
+            {' – '}
+          </span>
           <p className="text-gray-500 dark:text-gray-300 max-w-max truncate text-sm">
             {data?.artist ?? 'Spotify'}
           </p>
