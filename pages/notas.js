@@ -5,7 +5,7 @@ import { getAllFilesFrontMatter } from '../lib/mdx'
 export default function Blog({ posts }) {
   return (
     <Container
-      title="Notas – Lucio Villa"
+      title="My Notas – Lucio Villa"
       description="Thoughts on the software industry, programming, tech, videography, music, and my personal life."
     >
       <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
