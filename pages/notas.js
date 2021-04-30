@@ -12,10 +12,8 @@ export default function Blog({ posts }) {
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
           My Notas
         </h1>
-        <p className="text-gray-600 dark:text-gray-400 mb-4">
-          {`I've been writing online since 2014, mostly about web development and tech careers.
-            In total, I've written ${posts.length} articles on this site.
-            Use the search below to filter by title.`}
+        <p className="text-gray-600 dark:text-gray-400 mb-10">
+          {`Blog posts about web development, tech and random chisme. So far, I've written ${posts.length} articles on this site.`}
         </p>
 
         {posts.map((frontMatter) => (
