@@ -14,9 +14,11 @@ export default function Nav() {
         <a href="#skip" className="sr-only focus:not-sr-only">
           Skip to content
         </a>
-        <div className="flex font-bold text-2xl tracking-tighter name-lv">
-          L<span className={`${animationClass && 'fade-in'}`}>V</span>
-        </div>
+        <NextLink href="/">
+          <a className="flex font-bold text-2xl tracking-tighter name-lv">
+            L<span className={`${animationClass && 'fade-in'}`}>V</span>
+          </a>
+        </NextLink>
         <div>
           <NextLink href="/#projects">
             <a className="p-2 sm:p-4 text-gray-900 dark:text-gray-100 hover:underline">Projects</a>
