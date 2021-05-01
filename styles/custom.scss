@@ -1,4 +1,5 @@
-@import 'variables.scss';
+$yellow: #ffa70a;
+$blue: #01417b;
 
 .image-shadow {
   div {
@@ -22,4 +23,12 @@
       transform: translateX(-7.2px);
     }
   }
+}
+.sticky-nav {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  transition: background-color 0.1 ease-in-out;
 }

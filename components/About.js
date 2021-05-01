@@ -5,8 +5,8 @@ import NowPlaying from './NowPlaying'
 
 export default function About() {
   return (
-    <section className="relative py-20 w-full max-w-screen-xl m-auto" id="about-me">
-      <div className="container mx-auto px-4 pb-32 w-full md:w-4/5">
+    <section id="about-me" className="relative w-full max-w-4xl m-auto pb-40" >
+      <div className="container m-auto w-full">
         <div className="text-center w-full mb-10 uppercase text-gray-600">
           About me
           <span className="inline-block w-3">
