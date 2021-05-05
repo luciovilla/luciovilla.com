@@ -8,7 +8,7 @@ const ConditionalWrapper = ({ condition, wrapper, children }) =>
 export default function Projects() {
   return (
     <section id="projects" className="relative w-full space-y-20 max-w-4xl m-auto mb-40">
-      <h3 className="pt-5 text-center uppercase text-gray-600 w-full m-auto">
+      <div className="pt-5 text-center uppercase text-gray-600 w-full m-auto">
         Select Projects{' '}
         <span className="inline-block w-3">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -19,7 +19,7 @@ export default function Projects() {
             />
           </svg>
         </span>
-      </h3>
+      </div>
       <Featured
         title="Serial Killer Series"
         tools="React, Next.js, React PLX (animation library), Adobe XD, Node"
@@ -112,7 +112,7 @@ const Featured = ({ title, projRole, image, width, height, url, summary, awards,
       </div>
       <div className="w-full md:w-1/2 ml-auto">
         <div className="md:pr-12">
-          <h2 className="text-3xl font-semibold">{title}</h2>
+          <h3 className="text-3xl font-semibold">{title}</h3>
           <p className="mt-1">{summary}</p>
           <div className="mt-4 leading-relaxed text-gray-700">
             <b>Role:</b> {projRole}

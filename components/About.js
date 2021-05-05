@@ -5,7 +5,7 @@ import NowPlaying from './NowPlaying'
 export default function About() {
   return (
     <section id="about-me" className="relative w-full space-y-20 max-w-4xl m-auto mb-40">
-      <h3 className="pt-5 text-center uppercase text-gray-600 w-full m-auto">
+      <div className="pt-5 text-center uppercase text-gray-600 w-full m-auto">
         About me{' '}
         <span className="inline-block w-3">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -16,7 +16,7 @@ export default function About() {
             />
           </svg>
         </span>
-      </h3>
+      </div>
       <div className="flex flex-wrap-reverse">
         <div className="w-full md:w-3/4 md:pr-12">
           <div className="md:pr-12">
