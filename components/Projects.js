@@ -98,7 +98,7 @@ const Featured = ({ title, projRole, image, width, height, url, summary, awards,
         <ConditionalWrapper
           condition={url}
           wrapper={(children) => (
-            <a href={url} target="_blank" rel="noopener">
+            <a href={url} target="_blank" rel="noopener" aria-label="project image">
               {children}
             </a>
           )}
@@ -112,7 +112,7 @@ const Featured = ({ title, projRole, image, width, height, url, summary, awards,
       </div>
       <div className="w-full md:w-1/2 ml-auto">
         <div className="md:pr-12">
-          <h3 className="text-3xl font-semibold">{title}</h3>
+          <div className="text-3xl font-semibold">{title}</div>
           <p className="mt-1">{summary}</p>
           <div className="mt-4 leading-relaxed text-gray-700">
             <b>Role:</b> {projRole}
