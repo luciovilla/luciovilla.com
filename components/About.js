@@ -55,7 +55,7 @@ export default function About() {
               >
                 15 Developers to Follow If You Want to Work in Media.
               </a>
-              ” I also co-founded{' '}
+              ” I cofounded{' '}
               <a
                 className="underline"
                 href="http://www.codelatino.com/"
@@ -65,6 +65,16 @@ export default function About() {
                 Code Latino Chicago
               </a>
               , a community empowering Latinos into web development, during my time in Chicago.
+              Contributor to{' '}
+              <a
+                className="underline"
+                href="https://github.com/vercel/next.js/releases/tag/v9.4.3"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Next.js v9.4.3
+              </a>
+              .
             </p>
 
             <p className="mt-4  leading-relaxed ">
