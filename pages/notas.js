@@ -6,7 +6,7 @@ export default function Blog({ posts }) {
   return (
     <Container
       title="My Notas – Lucio Villa"
-      description="Thoughts on the software industry, programming, tech, videography, music, and my personal life."
+      description="Thoughts on web development, tech, music and random chisme."
     >
       <div className="flex flex-col justify-center items-start max-w-2xl mx-auto my-16">
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
