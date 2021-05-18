@@ -21,13 +21,13 @@ export default function Nav() {
         </NextLink>
         <div>
           <NextLink href="/#projects">
-            <a className="p-2 sm:p-4 text-gray-900 dark:text-gray-100 hover:underline">Projects</a>
+            <a className="p-2 sm:p-4 text-gray-900 hover:underline">Projects</a>
           </NextLink>
           <NextLink href="/notas">
-            <a className="p-2 sm:p-4 text-gray-900 dark:text-gray-100 hover:underline">Blog</a>
+            <a className="p-2 sm:p-4 text-gray-900 hover:underline">Blog</a>
           </NextLink>
           <NextLink href="/#about-me">
-            <a className="p-2 sm:p-4 text-gray-900 dark:text-gray-100 hover:underline">About</a>
+            <a className="p-2 sm:p-4 text-gray-900 hover:underline">About</a>
           </NextLink>
         </div>
       </div>

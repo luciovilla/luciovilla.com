@@ -9,7 +9,7 @@ export default function Topper() {
             <span className="font-semibold text-xl text-gray-500">Hola,</span>
             <h1 className="mt-1">
               <span className="font-semibold text-5xl">I’m Lucio</span>
-              <p className="mt-1 prose text-gray-700 dark:text-gray-400">
+              <p className="mt-1 prose text-gray-700">
                 – a front-end developer and designer with a passion for creating engaging stories
                 online. Currently a Design Editor at The Washington Post helping the News Design
                 team advance in digital storytelling, mentoring designers, providing both design and

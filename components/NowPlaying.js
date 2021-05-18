@@ -17,7 +17,7 @@ export default function NowPlaying() {
         <div className="inline-flex flex-col sm:flex-row w-full max-w-full truncate">
           {data?.songUrl ? (
             <a
-              className="text-sm text-gray-800 dark:text-gray-200 font-medium  max-w-max truncate"
+              className="text-sm text-gray-800 font-medium  max-w-max truncate"
               href={data.songUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -25,11 +25,9 @@ export default function NowPlaying() {
               {data.title}
             </a>
           ) : (
-            <p className="text-gray-800 dark:text-gray-200 font-medium text-xs">
-              Currently not listening to music.
-            </p>
+            <p className="text-gray-800 font-medium text-xs">Currently not listening to music.</p>
           )}
-          <p className="text-gray-500 dark:text-gray-300 max-w-max truncate text-sm">
+          <p className="text-gray-500 max-w-max truncate text-sm">
             {data?.artist && (
               <>
                 <span className="mx-2">–</span>
