@@ -1,5 +1,3 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import Image from 'next/image'
 
 const ConditionalWrapper = ({ condition, wrapper, children }) =>
@@ -148,15 +146,3 @@ const Featured = ({ title, projRole, image, width, height, url, summary, awards,
     </div>
   </div>
 )
-
-Featured.propTypes = {
-  projRole: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  hasVideo: PropTypes.string,
-  image: PropTypes.string,
-}
-
-Featured.defaultProps = {
-  image: '',
-  hasVideo: '',
-}
