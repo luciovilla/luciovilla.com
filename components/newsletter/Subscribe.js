@@ -1,6 +1,5 @@
 import { useState, useRef } from 'react'
 import useSWR from 'swr'
-import format from 'comma-number'
 
 import fetcher from '../../lib/fetcher'
 import SuccessMessage from './SuccessMessage'
@@ -11,7 +10,6 @@ export default function Subscribe() {
   const [form, setForm] = useState(false)
   const inputEl = useRef(null)
   const { data } = useSWR('/api/subscribers', fetcher)
-  const subscriberCount = format(data?.count)
 
   const subscribe = async (e) => {
     e.preventDefault()
@@ -66,13 +64,8 @@ export default function Subscribe() {
           {form.state === 'loading' ? <LoadingSpinner /> : 'Subscribe'}
         </button>
       </form>
-      {form.state === 'error' ? (
-        <ErrorMessage>{form.message}</ErrorMessage>
-      ) : form.state === 'success' ? (
-        <SuccessMessage>{form.message}</SuccessMessage>
-      ) : (
-        <p className="text-sm text-gray-800">{`${subscriberCount || '-'} subscribers`}</p>
-      )}
+      {form.state === 'error' && <ErrorMessage>{form.message}</ErrorMessage>}
+      {form.state === 'success' && <SuccessMessage>{form.message}</SuccessMessage>}
     </div>
   )
 }

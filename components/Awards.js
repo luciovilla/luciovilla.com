@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function Awards() {
   return (
     <section className="relative pb-40 w-full max-w-4xl m-auto" id="awards">

@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function Footer() {
   const ExternalLink = ({ href, children }) => (
     <a className="" target="_blank" rel="noopener noreferrer" href={href}>
