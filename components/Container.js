@@ -33,7 +33,7 @@ export default function Container(props) {
   }
 
   return (
-    <div className="">
+    <>
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
@@ -66,10 +66,10 @@ export default function Container(props) {
         {generateStructuredMetadata()}
       </Head>
       <Nav />
-      <main id="skip" className="flex flex-col justify-center px-8">
+      <main id="skip" className="px-8">
         {children}
         <Footer />
       </main>
-    </div>
+    </>
   )
 }
