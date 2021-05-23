@@ -102,7 +102,7 @@ const Featured = ({ title, projRole, image, width, height, url, summary, awards,
           )}
         >
           <>
-            <div className="max-w-full image-shadow">
+            <div className="max-w-full bg-transparent">
               <Image alt="..." src={`/${image}`} width={width} height={height} />
             </div>
           </>

@@ -9,14 +9,21 @@ export default function Nav() {
   }, [])
 
   return (
-    <nav className="sticky-nav w-full bg-white bg-opacity-60 px-4">
-      <div className="max-w-4xl w-full flex justify-between items-center py-4 sm:py-8 my-0 md:my-8 mx-auto">
+    <nav className="backdrop-filter backdrop-blur-md z-10 w-full bg-white bg-opacity-60 px-4 sticky top-0 transition-colors">
+      <div className="max-w-4xl w-full flex justify-between items-center py-4 sm:py-8 mx-auto">
         <a href="#skip" className="sr-only focus:not-sr-only">
           Skip to content
         </a>
         <NextLink href="/">
-          <a className="flex font-bold text-2xl tracking-tighter name-lv">
-            L<span className={`${animationClass && 'fade-in'}`}>V</span>
+          <a className="flex font-bold text-2xl tracking-tighter">
+            <span className="z-10 text-blue">L</span>
+            <span
+              className={`text-yellow  z-0 ${
+                animationClass ? 'transition duration-[2000ms] transform -translate-x-2' : ' opacity-0'
+              }`}
+            >
+              V
+            </span>
           </a>
         </NextLink>
         <div>
