@@ -8,7 +8,7 @@ export default function BlogLayout({ children, data }) {
       date={new Date(data.properties.Date.date.start)}
       type="article"
     >
-      <article className="max-w-2xl mt-8 mx-auto mb-16 w-full">
+      <article className="max-w-2xl mx-auto my-16 w-full">
         {children}
       </article>
     </Container>
