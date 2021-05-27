@@ -1,7 +1,18 @@
 {
-  "name": "new-site",
+  "name": "luciovilla.com",
+  "description": "Portfolio site and blog.",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Lucio Villa",
+    "email": "hi@luciovilla.com",
+    "url": "https://luciovilla.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luciovilla/luciovilla.com.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
