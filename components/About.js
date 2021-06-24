@@ -20,19 +20,16 @@ export default function About() {
         <div className="w-full md:w-3/4 md:pr-12">
           <div className="md:pr-12">
             <p className="mt-4 leading-relaxed">
-              I'm a front-end developer and designer currently working at The Washington Post as a
-              Design Editor. Providing project and technical feedback to a team of over 30
-              designers, improving developer workflows and pushing for brand consistency.
+              I recently made the switch from the newsroom to product and now work as a Senior
+              Front-End Engineer at Vox Media.
             </p>
             <p className="mt-4 leading-relaxed">
-              Previously I worked at The San Francisco Chronicle as an Interactive Producer and Hoy
-              (Chicago Tribune's Spanish daily newspaper) as a News Applications Developer.
+              Previously worked as a designer and web developer at the Washington Post, San
+              Francisco Chronicle and Chicago Tribune's Spanish daily (Hoy Chicago).
             </p>
             <p className="mt-4 leading-relaxed">
               During my time in San Francisco I helped instruct a class on editorial web design and
-              development at the Graduate School of Journalism in UC Berkeley and was the chapter
-              president for the Bay Area chapter of the National Association of Hispanic Journalists
-              (NAHJ).
+              development at the Graduate School of Journalism in UC Berkeley.
             </p>
 
             <p className="mt-4 leading-relaxed">
@@ -75,13 +72,16 @@ export default function About() {
               </a>
               .
             </p>
-
+            <p className="mt-4  leading-relaxed ">
+              I'm also a Lifetime member of the National Association of Hispanic Journalists (NAHJ)
+              and previously served on the local chapter boards in DC, Bay Area and Chicago.
+            </p>
             <p className="mt-4  leading-relaxed ">
               I’m originally from Compton, CA, and graduated from Cal State Fullerton (Go Titans!)
               with a Bachelor’s Degree in Photo Communications. Prior to being a communications
-              major I was studying Computer Science at Cal Poly Pomona (Go Broncos!) before I
-              transferred to Fullerton.
+              major I was studying Computer Science at Cal Poly Pomona (Go Broncos!).
             </p>
+
             <div className="mt-4 border-t pt-2">
               <NowPlaying />
             </div>
