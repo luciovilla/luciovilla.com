@@ -8,9 +8,9 @@ export default function Topper() {
             <h1 className="mt-1">
               <span className="font-semibold text-5xl">I’m Lucio</span>
               <p className="mt-1 text-gray-700">
-                – a Senior Front-End Engineer at Vox Media. Previously worked within newsrooms as a
-                designer and web developer at the Washington Post, San Francisco Chronicle and
-                Chicago Tribune's Spanish daily (Hoy Chicago).
+                – a Senior Engineer at Vox Media. Previously worked in newsrooms as a designer and
+                web developer at the Washington Post, San Francisco Chronicle and Chicago Tribune's
+                Spanish daily (Hoy Chicago).
               </p>
             </h1>
           </div>

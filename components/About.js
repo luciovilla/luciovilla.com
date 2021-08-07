@@ -21,7 +21,7 @@ export default function About() {
           <div className="md:pr-12">
             <p className="mt-4 leading-relaxed">
               I recently made the switch from the newsroom to product and now work as a Senior
-              Front-End Engineer at Vox Media.
+              Engineer at Vox Media.
             </p>
             <p className="mt-4 leading-relaxed">
               Previously worked as a designer and web developer at the Washington Post, San
