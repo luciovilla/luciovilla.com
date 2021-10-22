@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import NowPlaying from './NowPlaying'
+import profilePic from '../public/me.jpg'
 
 export default function About() {
   return (
@@ -89,7 +90,7 @@ export default function About() {
         </div>
         <div className="w-full md:w-1/5 ml-auto md:pl-4 pt-4 md:pt-0">
           <div className="max-w-full image-shadow">
-            <Image alt="..." src="/me.jpg" width={500} height={500} />
+            <Image alt="..." src={profilePic} placeholder="blur" width={500} height={500} />
           </div>
         </div>
       </div>
