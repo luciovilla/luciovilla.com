@@ -9,7 +9,7 @@ export default function Container(props) {
   const meta = {
     title: 'Lucio Villa – Software Engineer',
     description:
-      'A first-generation cyber Latino who codes. Currently a Senior Engineer at Vox Media.',
+      'A first-generation Latino, designer and web developer. Currently a Senior Engineer at Vox Media.',
     image: 'https://luciovilla.com/site.png',
     type: 'website',
     ...customMeta,
@@ -19,8 +19,8 @@ export default function Container(props) {
       '@context': 'http://schema.org',
       '@type': 'Person',
       email: 'mailto:hi@luciovilla.com',
-      jobTitle: 'Design Editor',
-      worksFor: 'The Washington Post',
+      jobTitle: 'Senior Engineer',
+      worksFor: 'Vox Media',
     }
 
     return (
