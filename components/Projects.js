@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import PlaceholderImage from './PlaceholderImage'
 
 const ConditionalWrapper = ({ condition, wrapper, children }) =>
   condition ? wrapper(children) : children
@@ -103,7 +104,14 @@ const Featured = ({ title, projRole, image, width, height, url, summary, awards,
         >
           <>
             <div className="max-w-full bg-transparent">
-              <Image alt="..." src={`/${image}`} width={width} height={height} />
+              <Image
+                alt="..."
+                placeholder="blur"
+                blurDataURL={PlaceholderImage(width, height)}
+                src={`/${image}`}
+                width={width}
+                height={height}
+              />
             </div>
           </>
         </ConditionalWrapper>
