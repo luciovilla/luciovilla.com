@@ -13,8 +13,8 @@ This is my personal site to showcase my latest work and soon some of my writing.
 ```bash
 $ git clone https://github.com/luciovilla/luciovilla.com.git
 $ cd luciovilla.com
-$ npm i
-$ npm run dev
+$ yarn
+$ yarn dev
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
