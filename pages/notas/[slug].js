@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import BlogLayout from '../../layouts/BlogLayout'
 import { getNotionData, getPage, getBlocks } from '../../lib/getNotionData'
 import { Text, ListItem, Heading, ToDo, Toggle } from '../../components/ContentBlocks'

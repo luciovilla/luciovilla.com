@@ -1,11 +1,11 @@
-export default async (_, res) => {
+export default async function subscribers(_, res) {
   const API_KEY = process.env.BUTTONDOWN_API_KEY
   const response = await fetch('https://api.buttondown.email/v1/subscribers', {
     headers: {
       Authorization: `Token ${API_KEY}`,
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json'
     },
-    method: 'GET',
+    method: 'GET'
   })
 
   const { count } = await response.json()

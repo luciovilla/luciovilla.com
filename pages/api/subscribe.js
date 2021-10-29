@@ -1,4 +1,4 @@
-export default async (req, res) => {
+export default async function subscribe(req, res) {
   const { email } = req.body
 
   if (!email) {
@@ -10,13 +10,13 @@ export default async (req, res) => {
     const response = await fetch(`https://api.buttondown.email/v1/subscribers`, {
       body: JSON.stringify({
         email,
-        tags: ['luciovilla.com'],
+        tags: ['luciovilla.com']
       }),
       headers: {
         Authorization: `Token ${API_KEY}`,
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       },
-      method: 'POST',
+      method: 'POST'
     })
 
     if (response.status >= 400) {
@@ -24,12 +24,12 @@ export default async (req, res) => {
 
       if (text.includes('already subscribed')) {
         return res.status(400).json({
-          error: `You're already subscribed to my mailing list.`,
+          error: `You're already subscribed to my mailing list.`
         })
       }
 
       return res.status(400).json({
-        error: text,
+        error: text
       })
     }
 
