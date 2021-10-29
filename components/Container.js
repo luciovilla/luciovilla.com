@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import Script from 'next/script'
 import Nav from './Nav'
 import Footer from './Footer'
 
@@ -12,7 +13,7 @@ export default function Container(props) {
       'A first-generation Latino, designer and web developer. Currently a Senior Engineer at Vox Media.',
     image: 'https://luciovilla.com/site.png',
     type: 'website',
-    ...customMeta,
+    ...customMeta
   }
   const generateStructuredMetadata = () => {
     const schemaMetadata = {
@@ -20,7 +21,7 @@ export default function Container(props) {
       '@type': 'Person',
       email: 'mailto:hi@luciovilla.com',
       jobTitle: 'Senior Engineer',
-      worksFor: 'Vox Media',
+      worksFor: 'Vox Media'
     }
 
     return (
@@ -52,19 +53,20 @@ export default function Container(props) {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
         {meta.date && <meta property="article:published_time" content={meta.date} />}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28929069-1" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+        {generateStructuredMetadata()}
+      </Head>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=UA-28929069-1"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'UA-28929069-1');
-        `,
-          }}
-        />
-        {generateStructuredMetadata()}
-      </Head>
+        `}
+      </Script>
       <Nav />
       <main id="skip" className="px-8">
         {children}

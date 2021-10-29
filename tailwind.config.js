@@ -6,13 +6,13 @@ module.exports = {
   theme: {
     fontFamily: {
       body: ['Inter', ...fontFamily.sans],
-      sans: ['Inter', ...fontFamily.sans],
+      sans: ['Inter', ...fontFamily.sans]
     },
     extend: {
       colors: {
         blue: '#01417b',
-        yellow: '#ffa70a',
-      },
-    },
-  },
+        yellow: '#ffa70a'
+      }
+    }
+  }
 }

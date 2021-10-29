@@ -13,7 +13,7 @@ export default function Footer() {
           href="https://github.com/luciovilla/luciovilla.com"
           className="underline text-gray-500 hover:text-gray-600 transition"
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
         >
           source
         </a>
