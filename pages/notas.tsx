@@ -1,8 +1,9 @@
 import Link from 'next/link'
-import Container from '../components/Container'
+import { PostType } from '../lib/types'
 import { getNotionData } from '../lib/getNotionData'
+import Container from '../components/Container'
 
-export default function Blog({ posts }) {
+export default function Blog({ posts }: { posts: Object[] }) {
   return (
     <Container
       title="My Notas – Lucio Villa"
@@ -14,7 +15,7 @@ export default function Blog({ posts }) {
           {`Blog posts about web development, tech and random chisme.`}
         </p>
 
-        {posts.map((post) => (
+        {posts.map((post: PostType) => (
           <Link key={post.id} href={`/notas/${post.properties.Slug.rich_text[0].plain_text}`}>
             <a className="w-full">
               <div className="mb-8 w-full">
@@ -38,7 +39,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      posts: database,
-    },
+      posts: database
+    }
   }
 }

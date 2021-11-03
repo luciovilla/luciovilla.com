@@ -2,21 +2,27 @@
 import BlogLayout from '../../layouts/BlogLayout'
 import { getNotionData, getPage, getBlocks } from '../../lib/getNotionData'
 import { Text, ListItem, Heading, ToDo, Toggle } from '../../components/ContentBlocks'
+import { PostType, BlockType } from '../../lib/types'
+
+type PostProps = {
+  page: PostType
+  blocks: Object[]
+}
 
 const databaseId = process.env.NOTION_DATABASE_ID
 
-export default function Post({ page, blocks }) {
+const Post = ({ page, blocks }: PostProps) => {
   if (!page || !blocks) {
     return <div />
   }
 
   return (
-    <BlogLayout data={page} content={blocks}>
+    <BlogLayout data={page}>
       <span className="text-sm text-gray-700">
         {new Date(page.created_time).toLocaleString('en-US', {
           month: 'short',
           day: '2-digit',
-          year: 'numeric',
+          year: 'numeric'
         })}
       </span>
 
@@ -24,7 +30,7 @@ export default function Post({ page, blocks }) {
         {page.properties.Post.title[0].plain_text}
       </h1>
 
-      {blocks.map((block) => {
+      {blocks.map((block: BlockType) => {
         const { type, id } = block
         const value = block[type]
         const { text } = value
@@ -34,20 +40,20 @@ export default function Post({ page, blocks }) {
             return <Text text={value.text} id={id} key={id} />
 
           case 'heading_1':
-            return <Heading text={text} id={id} level={type} key={id} />
+            return <Heading text={text} level={type} key={id} />
 
           case 'heading_2':
-            return <Heading text={text} id={id} level={type} key={id} />
+            return <Heading text={text} level={type} key={id} />
 
           case 'heading_3':
-            return <Heading text={text} id={id} level={type} key={id} />
+            return <Heading text={text} level={type} key={id} />
 
           case 'bulleted_list_item':
           case 'numbered_list_item':
             return <ListItem key={id} text={value.text} id={id} />
 
           case 'to_do':
-            return <ToDo key={id} value={value} text={value.text} />
+            return <ToDo key={id} value={value} text={value.text} id={id} />
 
           case 'toggle':
             return <Toggle key={id} text={value.text} />
@@ -77,14 +83,14 @@ export const getStaticPaths = async () => {
   return {
     paths: database.map((page) => ({
       params: {
-        slug: page.properties.Slug.rich_text[0].plain_text,
-      },
+        slug: page.properties.Slug.rich_text[0].plain_text
+      }
     })),
-    fallback: false,
+    fallback: false
   }
 }
 
-export const getStaticProps = async (context) => {
+export const getStaticProps = async (context: { params: { slug: any } }) => {
   const { slug } = context.params
   const database = await getNotionData(databaseId)
   const filter = database.filter((blog) => blog.properties.Slug.rich_text[0].plain_text === slug)
@@ -94,7 +100,9 @@ export const getStaticProps = async (context) => {
   return {
     props: {
       page,
-      blocks,
-    },
+      blocks
+    }
   }
 }
+
+export default Post

@@ -1,43 +1,41 @@
-import { useState, useRef } from 'react'
-import useSWR from 'swr'
+import React, { useState, useRef } from 'react'
 
-import fetcher from '../../lib/fetcher'
+import { Form, FormState } from '../../lib/types'
 import SuccessMessage from './SuccessMessage'
 import ErrorMessage from './ErrorMessage'
 import LoadingSpinner from '../LoadingSpinner'
 
 export default function Subscribe() {
-  const [form, setForm] = useState(false)
+  const [form, setForm] = useState<FormState>({ state: Form.Initial })
   const inputEl = useRef(null)
-  const { data } = useSWR('/api/subscribers', fetcher)
 
-  const subscribe = async (e) => {
+  const subscribe = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setForm({ state: 'loading' })
+    setForm({ state: Form.Loading })
 
     const res = await fetch('/api/subscribe', {
       body: JSON.stringify({
-        email: inputEl.current.value,
+        email: inputEl.current.value
       }),
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       },
-      method: 'POST',
+      method: 'POST'
     })
 
     const { error } = await res.json()
     if (error) {
       setForm({
-        state: 'error',
-        message: error,
+        state: Form.Error,
+        message: error
       })
       return
     }
 
     inputEl.current.value = ''
     setForm({
-      state: 'success',
-      message: `Yay! You're now on the list.`,
+      state: Form.Success,
+      message: `Yay! You're now on the list.`
     })
   }
 
@@ -61,11 +59,11 @@ export default function Subscribe() {
           className="flex items-center justify-center absolute right-1 top-1 px-4 font-bold h-8 bg-gray-100 text-gray-900 rounded w-28"
           type="submit"
         >
-          {form.state === 'loading' ? <LoadingSpinner /> : 'Subscribe'}
+          {form.state === Form.Loading ? <LoadingSpinner /> : 'Subscribe'}
         </button>
       </form>
-      {form.state === 'error' && <ErrorMessage>{form.message}</ErrorMessage>}
-      {form.state === 'success' && <SuccessMessage>{form.message}</SuccessMessage>}
+      {form.state === Form.Error && <ErrorMessage>{form.message}</ErrorMessage>}
+      {form.state === Form.Success && <SuccessMessage>{form.message}</SuccessMessage>}
     </div>
   )
 }

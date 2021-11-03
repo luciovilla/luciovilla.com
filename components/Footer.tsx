@@ -1,9 +1,4 @@
 export default function Footer() {
-  const ExternalLink = ({ href, children }) => (
-    <a className="" target="_blank" rel="noopener noreferrer" href={href}>
-      {children}
-    </a>
-  )
   return (
     <footer className="max-w-4xl mx-auto w-full mb-8 text-center">
       <hr className="w-full border-1 border-gray-200 mb-8" />

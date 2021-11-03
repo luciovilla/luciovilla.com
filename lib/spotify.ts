@@ -1,5 +1,3 @@
-import querystring from 'querystring'
-
 const client_id = process.env.SPOTIFY_CLIENT_ID
 const client_secret = process.env.SPOTIFY_CLIENT_SECRET
 const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN
@@ -13,12 +11,12 @@ const getAccessToken = async () => {
     method: 'POST',
     headers: {
       Authorization: `Basic ${basic}`,
-      'Content-Type': 'application/x-www-form-urlencoded',
+      'Content-Type': 'application/x-www-form-urlencoded'
     },
-    body: querystring.stringify({
+    body: new URLSearchParams({
       grant_type: 'refresh_token',
-      refresh_token,
-    }),
+      refresh_token
+    }).toString()
   })
 
   return response.json()
@@ -28,7 +26,7 @@ export const getNowPlaying = async () => {
   const { access_token } = await getAccessToken()
   return fetch(NOW_PLAYING_ENDPOINT, {
     headers: {
-      Authorization: `Bearer ${access_token}`,
-    },
+      Authorization: `Bearer ${access_token}`
+    }
   })
 }

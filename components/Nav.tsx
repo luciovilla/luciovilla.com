@@ -19,7 +19,9 @@ export default function Nav() {
             <span className="z-10 text-blue">L</span>
             <span
               className={`text-yellow  z-0 ${
-                animationClass ? 'transition duration-[2000ms] transform -translate-x-2' : ' opacity-0'
+                animationClass
+                  ? 'transition duration-[2000ms] transform -translate-x-2'
+                  : ' opacity-0'
               }`}
             >
               V

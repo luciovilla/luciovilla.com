@@ -1,4 +1,6 @@
-export default async function subscribers(_, res) {
+import type { NextApiRequest, NextApiResponse } from 'next'
+
+export default async function subscribers(req: NextApiRequest, res: NextApiResponse) {
   const API_KEY = process.env.BUTTONDOWN_API_KEY
   const response = await fetch('https://api.buttondown.email/v1/subscribers', {
     headers: {

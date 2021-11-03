@@ -1,6 +1,7 @@
 import Container from '../components/Container'
+import { PostType } from '../lib/types'
 
-export default function BlogLayout({ children, data }) {
+export default function BlogLayout({ children, data }: { children: any; data: PostType }) {
   return (
     <Container
       title={`${data.properties.Post.title[0].plain_text} – Lucio Villa`}
@@ -8,9 +9,7 @@ export default function BlogLayout({ children, data }) {
       date={new Date(data.properties.Date.date.start)}
       type="article"
     >
-      <article className="max-w-2xl mx-auto my-16 w-full">
-        {children}
-      </article>
+      <article className="max-w-2xl mx-auto my-16 w-full">{children}</article>
     </Container>
   )
 }
