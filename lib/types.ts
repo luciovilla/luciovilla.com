@@ -71,3 +71,15 @@ export type NowPlayingSong = {
   songUrl: string
   title: string
 }
+
+export type FeaturedProps = {
+  title?: string
+  projRole: string
+  image: string
+  width: number
+  height: number
+  url?: string
+  summary: string
+  awards?: string
+  tools?: string
+}

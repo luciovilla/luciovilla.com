@@ -6,7 +6,7 @@ import { PostType, BlockType } from '../../lib/types'
 
 type PostProps = {
   page: PostType
-  blocks: Object[]
+  blocks: any[]
 }
 
 const databaseId = process.env.NOTION_DATABASE_ID
@@ -37,7 +37,7 @@ const Post = ({ page, blocks }: PostProps) => {
 
         switch (type) {
           case 'paragraph':
-            return <Text text={value.text} id={id} key={id} />
+            return Text({ text: value.text, id })
 
           case 'heading_1':
             return <Heading text={text} level={type} key={id} />
@@ -81,7 +81,7 @@ const Post = ({ page, blocks }: PostProps) => {
 export const getStaticPaths = async () => {
   const database = await getNotionData(databaseId)
   return {
-    paths: database.map((page) => ({
+    paths: database.map((page: any) => ({
       params: {
         slug: page.properties.Slug.rich_text[0].plain_text
       }
@@ -90,10 +90,11 @@ export const getStaticPaths = async () => {
   }
 }
 
-export const getStaticProps = async (context: { params: { slug: any } }) => {
-  const { slug } = context.params
+export const getStaticProps = async ({ params }) => {
   const database = await getNotionData(databaseId)
-  const filter = database.filter((blog) => blog.properties.Slug.rich_text[0].plain_text === slug)
+  const filter = database.filter(
+    (blog: any) => blog.properties.Slug.rich_text[0].plain_text === params.slug
+  )
   const page = await getPage(filter[0].id)
   const blocks = await getBlocks(filter[0].id)
 

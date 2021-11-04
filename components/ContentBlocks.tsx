@@ -1,6 +1,6 @@
 import { ContentBlocks } from '../lib/types'
 
-const SpanText = ({ text, id }: { text: Object[]; id: string }) => {
+const SpanText = (text: Object[], id: string) => {
   if (!text) return null
   return text.map((value: ContentBlocks, i) => {
     const {
@@ -8,40 +8,34 @@ const SpanText = ({ text, id }: { text: Object[]; id: string }) => {
       text
     } = value
     return (
-      <>
-        <span
-          key={id + i}
-          className={[
-            bold ? 'font-bold' : '',
-            code ? 'bg-gray-100 p-1 font-mono text-sm rounded-md' : '',
-            italic ? 'italic' : '',
-            strikethrough ? 'line-through' : '',
-            underline ? 'underline' : ''
-          ].join(' ')}
-          style={color !== 'default' ? { color } : {}}
-        >
-          {text.link ? (
-            <a href={text.link.url} className="underline">
-              {text.content}
-            </a>
-          ) : (
-            text.content
-          )}
-        </span>
-      </>
+      <span
+        key={id + i}
+        className={[
+          bold ? 'font-bold' : '',
+          code ? 'bg-gray-100 p-1 font-mono text-sm rounded-md' : '',
+          italic ? 'italic' : '',
+          strikethrough ? 'line-through' : '',
+          underline ? 'underline' : ''
+        ].join(' ')}
+        style={color !== 'default' ? { color } : {}}
+      >
+        {text.link ? (
+          <a href={text.link.url} className="underline">
+            {text.content}
+          </a>
+        ) : (
+          text.content
+        )}
+      </span>
     )
   })
 }
 
 export const Text = ({ text, id }) => {
-  return <SpanText text={text} id={id} />
+  return SpanText(text, id)
 }
 export const ListItem = ({ text, id }) => {
-  return (
-    <li className="text-gray-700">
-      <SpanText text={text} id={id} />
-    </li>
-  )
+  return <li className="text-gray-700">{SpanText(text, id)}</li>
 }
 
 export const Heading = ({ text, level }) => {
