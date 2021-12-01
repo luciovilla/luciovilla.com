@@ -48,7 +48,7 @@ export const Heading = ({ text, level }) => {
       )
     case 'heading_2':
       return (
-        <h2 className="font-bold text-2xl md:text-3xl tracking-tight my-2 text-black">
+        <h2 className="font-bold text-2xl md:text-3xl tracking-tight my-2 mt-8 text-black">
           {text[0].text.content}
         </h2>
       )

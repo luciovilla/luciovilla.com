@@ -4,15 +4,13 @@ export default function Topper() {
       <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
         <div className="w-full px-4">
           <div>
-            <span className="font-semibold text-xl text-gray-500">Hola,</span>
-            <h1 className="mt-1">
-              <span className="font-semibold text-5xl">I’m Lucio</span>
-              <p className="mt-1 text-gray-700">
-                – a Senior Engineer at Vox Media. Previously worked in newsrooms as a designer and
-                web developer at the Washington Post, San Francisco Chronicle and Chicago Tribune's
-                Spanish daily (Hoy Chicago).
-              </p>
-            </h1>
+            <h1 className="mb-1 font-bold text-3xl md:text-5xl tracking-tight">Lucio Villa</h1>
+            <h2 className="mb-2">Senior Engineer at Vox Media</h2>
+            <p className="mt-1 text-gray-700">
+              First-generation Latino, web developer and designer. Previously worked within
+              newsroom Design teams at the Washington Post, San Francisco Chronicle and Chicago Tribune's
+              Spanish daily (Hoy Chicago) and a former photojournalist.
+            </p>
           </div>
 
           <div className="flex mt-3">

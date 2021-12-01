@@ -23,6 +23,10 @@ export interface PostType {
     Slug: {
       rich_text: [{ plain_text: string }]
     }
+
+    Show_updated_timestamp: {
+      checkbox: boolean
+    }
     url: string
   }
   url: string

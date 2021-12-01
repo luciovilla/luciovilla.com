@@ -16,19 +16,27 @@ const Post = ({ page, blocks }: PostProps) => {
     return <div />
   }
 
+  const timestamp = (date: string) => {
+    return new Date(date).toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric'
+    })
+  }
+
   return (
     <BlogLayout data={page}>
-      <span className="text-sm text-gray-700">
-        {new Date(page.created_time).toLocaleString('en-US', {
-          month: 'short',
-          day: '2-digit',
-          year: 'numeric'
-        })}
-      </span>
-
-      <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-5 text-black">
+      <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black">
         {page.properties.Post.title[0].plain_text}
       </h1>
+      <div className="text-sm text-gray-800 mb-4">
+        <span>{timestamp(page.properties.Date.date.start)}</span>
+        {page.properties.Show_updated_timestamp.checkbox && page.last_edited_time && (
+          <span className="text-sm text-gray-700 pl-1">
+            / Updated: {timestamp(page.last_edited_time)}
+          </span>
+        )}
+      </div>
 
       {blocks.map((block: BlockType) => {
         const { type, id } = block
@@ -37,7 +45,11 @@ const Post = ({ page, blocks }: PostProps) => {
 
         switch (type) {
           case 'paragraph':
-            return Text({ text: value.text, id })
+            return (
+              <p className="mb-4" key={id}>
+                {Text({ text: value.text, id })}
+              </p>
+            )
 
           case 'heading_1':
             return <Heading text={text} level={type} key={id} />

@@ -8,29 +8,12 @@ export default function Container(props) {
   const { children, ...customMeta } = props
   const router = useRouter()
   const meta = {
-    title: 'Lucio Villa – Software Engineer',
+    title: 'Lucio Villa – Latino, Developer, Designer',
     description:
-      'A first-generation Latino, designer and web developer. Currently a Senior Engineer at Vox Media.',
+      'First-generation Latino, web developer and designer. Currently a Senior Engineer at Vox Media.',
     image: 'https://luciovilla.com/site.png',
     type: 'website',
     ...customMeta
-  }
-  const generateStructuredMetadata = () => {
-    const schemaMetadata = {
-      '@context': 'http://schema.org',
-      '@type': 'Person',
-      email: 'mailto:hi@luciovilla.com',
-      jobTitle: 'Senior Engineer',
-      worksFor: 'Vox Media'
-    }
-
-    return (
-      <script
-        type="application/ld+json"
-        data-qa="schema"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMetadata) }}
-      />
-    )
   }
 
   return (
@@ -53,7 +36,6 @@ export default function Container(props) {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
         {meta.date && <meta property="article:published_time" content={meta.date} />}
-        {generateStructuredMetadata()}
       </Head>
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=UA-28929069-1"
