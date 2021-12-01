@@ -7,8 +7,8 @@ export default function Topper() {
             <h1 className="mb-1 font-bold text-3xl md:text-5xl tracking-tight">Lucio Villa</h1>
             <h2 className="mb-2">Senior Engineer at Vox Media</h2>
             <p className="mt-1 text-gray-700">
-              First-generation Latino, web developer and designer. Previously worked within
-              newsroom Design teams at the Washington Post, San Francisco Chronicle and Chicago Tribune's
+              First-generation Latino, web developer and designer. Previously worked within newsroom
+              Design teams at the Washington Post, San Francisco Chronicle, Chicago Tribune's
               Spanish daily (Hoy Chicago) and a former photojournalist.
             </p>
           </div>
