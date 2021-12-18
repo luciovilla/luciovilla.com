@@ -18,6 +18,18 @@ export default function Projects() {
         </span>
       </div>
       <Featured
+        title="Starter Notion blog template"
+        summary="An open-source starter blog template that is statically generated with Next.js, content powered by Notion and styled with Tailwind CSS."
+        projRole="Creator and maintainer."
+        tools="React, Next.js, Tailwind CSS, Notion API"
+        url="https://blog.luciovilla.com"
+      />
+      <Featured
+        title="The Washington Post Custom Project Template Generator"
+        projRole="Part of the core engineers who developed this platform. Worked on developer workflows, onboarding and documentation."
+        summary="A Node, React and Next.js based template that powers all of the custom interactive projects at The Washington Post."
+      />
+      <Featured
         title="Serial Killer Series"
         tools="React, Next.js, React PLX (animation library), Adobe XD, Node"
         awards={`2x SND 2020 "Award of Excellence" awards.`}
@@ -75,14 +87,6 @@ export default function Projects() {
         width={1356}
         height={892}
       />
-
-      <Featured
-        title="The Washington Post Custom Project Template Generator"
-        projRole="Part of the core engineers who developed this platform. Worked on developer workflows, onboarding and documentation."
-        summary="A Node, React and Next.js based template that powers all of the custom interactive projects at The Washington Post. Four of the projects mentioned above were created using this template I helped develop."
-        width={1036}
-        height={574}
-      />
     </section>
   )
 }
@@ -99,47 +103,45 @@ const Featured = ({
   tools
 }: FeaturedProps) => {
   return (
-    <div className="">
-      <div className="flex flex-row-reverse">
-        {image && (
-          <div className="w-full md:w-1/2 pt-4 md:pt-0 mb-5">
-            <div className="max-w-full bg-transparent">
-              <Image
-                alt="..."
-                placeholder="blur"
-                blurDataURL={PlaceholderImage(width, height)}
-                src={`/${image}`}
-                width={width}
-                height={height}
-              />
-            </div>
+    <div className="flex flex-wrap">
+      {image && (
+        <div className="w-full pt-4 md:pt-0 mb-2">
+          <div className="max-w-full bg-transparent">
+            <Image
+              alt="..."
+              placeholder="blur"
+              blurDataURL={PlaceholderImage(width, height)}
+              src={`/${image}`}
+              width={width}
+              height={height}
+            />
           </div>
-        )}
-        <div className="w-full">
-          <div className="md:pr-12">
-            <div className="text-3xl font-semibold">{title}</div>
-            <p className="mt-1 text-gray-800">{summary}</p>
-            <div className="mt-4 leading-relaxed text-gray-800">
-              <b>Role:</b> {projRole}
-            </div>
-            {tools && (
-              <div className="mt-2 leading-relaxed text-gray-800">
-                <b>Tools:</b> {tools}
-              </div>
-            )}
-            {awards && (
-              <div className="mt-2 leading-relaxed text-gray-800">
-                <b>Awards:</b> {awards}
-              </div>
-            )}
-            {url && (
-              <div className="mt-2 text-lg leading-relaxed text-gray-600">
-                <a className="underline text-sm" href={url} target="_blank" rel="noreferrer">
-                  View Project{' '}
-                </a>
-              </div>
-            )}
+        </div>
+      )}
+      <div className="">
+        <div className="md:pr-12">
+          <div className="text-xl md:text-3xl font-semibold">{title}</div>
+          <p className="mt-1 text-gray-800">{summary}</p>
+          <div className="mt-3 leading-relaxed text-gray-800">
+            <b>Role:</b> {projRole}
           </div>
+          {tools && (
+            <div className="mt-1 leading-relaxed text-gray-800">
+              <b>Tools:</b> {tools}
+            </div>
+          )}
+          {awards && (
+            <div className="mt-1 leading-relaxed text-gray-800">
+              <b>Awards:</b> {awards}
+            </div>
+          )}
+          {url && (
+            <div className="mt-1 text-lg leading-relaxed text-gray-600">
+              <a className="underline text-sm" href={url} target="_blank" rel="noreferrer">
+                View Project{' '}
+              </a>
+            </div>
+          )}
         </div>
       </div>
     </div>

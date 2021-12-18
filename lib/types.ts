@@ -80,8 +80,8 @@ export type FeaturedProps = {
   title?: string
   projRole: string
   image?: string
-  width: number
-  height: number
+  width?: number
+  height?: number
   url?: string
   summary: string
   awards?: string
