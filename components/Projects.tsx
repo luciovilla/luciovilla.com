@@ -23,6 +23,9 @@ export default function Projects() {
         projRole="Creator and maintainer."
         tools="React, Next.js, Tailwind CSS, Notion API"
         url="https://blog.luciovilla.com"
+        image="projects/blog.png"
+        width={1372}
+        height={496}
       />
       <Featured
         title="The Washington Post Custom Project Template Generator"
