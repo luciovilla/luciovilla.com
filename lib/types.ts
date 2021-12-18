@@ -79,7 +79,7 @@ export type NowPlayingSong = {
 export type FeaturedProps = {
   title?: string
   projRole: string
-  image: string
+  image?: string
   width: number
   height: number
   url?: string

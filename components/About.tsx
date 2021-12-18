@@ -4,7 +4,7 @@ import profilePic from '../public/me.jpg'
 
 export default function About() {
   return (
-    <section id="about-me" className="relative w-full space-y-20 max-w-4xl m-auto mb-40">
+    <section id="about-me" className="relative w-full space-y-20 max-w-2xl m-auto mb-40">
       <div className="pt-5 text-center uppercase text-gray-600 w-full m-auto">
         About me{' '}
         <span className="inline-block w-3">
@@ -18,12 +18,13 @@ export default function About() {
         </span>
       </div>
       <div className="flex flex-wrap-reverse">
-        <div className="w-full md:w-3/4 md:pr-12">
+        <div className="w-full md:w-4/5 md:pr-12 text-gray-800">
           <div className="md:pr-12">
             <p className="mt-4 leading-relaxed">
-              I recently made the switch from the newsroom to product and now work as a Senior
-              Engineer at Vox Media.
+              Hola! My name is Lucio and I recently made the switch from the newsroom to product and
+              now work as a Senior Engineer at Vox Media.
             </p>
+            <p className="mt-4 leading-relaxed"></p>
             <p className="mt-4 leading-relaxed">
               Previously worked as a designer and web developer at the Washington Post, San
               Francisco Chronicle and Chicago Tribune's Spanish daily (Hoy Chicago).
@@ -88,7 +89,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="w-full md:w-1/5 ml-auto md:pl-4 pt-4 md:pt-0">
+        <div className="w-1/2 md:w-1/5 mx-auto md:ml-auto md:pl-4 pt-4 md:pt-0">
           <div className="max-w-full image-shadow">
             <Image alt="..." src={profilePic} placeholder="blur" width={500} height={500} />
           </div>

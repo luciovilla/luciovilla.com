@@ -1,6 +1,6 @@
 export default function Awards() {
   return (
-    <section className="relative pb-40 w-full max-w-4xl m-auto" id="awards">
+    <section className="relative pb-40 w-full max-w-2xl m-auto" id="awards">
       <div className="text-center w-full mb-10 uppercase text-gray-600">
         Awards & Honors{' '}
         <span className="inline-block w-3">
@@ -16,11 +16,11 @@ export default function Awards() {
 
       <div className="w-full mx-auto">
         <div className="flex flex-wrap justify-center">
-          <div className="w-full md:w-1/2 pr-4">
+          <div className="w-full">
             <div className="relative flex flex-col min-w-0 w-full mb-8">
-              <div className="px-4 flex-auto">
+              <div className="px-4 flex-auto text-gray-700">
                 <div className="text-xl font-semibold -ml-4">2021</div>
-                <ul className="list-outside list-disc mt-4 text-lg text-gray-600">
+                <ul className="list-outside list-disc mt-4 space-y-1">
                   <li>
                     SND:{' '}
                     <a
@@ -93,7 +93,7 @@ export default function Awards() {
                   </li>
                 </ul>
                 <div className="text-xl font-semibold -ml-4 mt-4">2020</div>
-                <ul className="list-outside list-disc mt-4 text-lg text-gray-600">
+                <ul className="list-outside list-disc mt-4 space-y-1">
                   <li>
                     SND:{' '}
                     <a
@@ -201,15 +201,8 @@ export default function Awards() {
                     </a>
                   </li>
                 </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full md:w-1/2 sm:pl-4">
-            <div className="relative flex flex-col min-w-0 w-full mb-8">
-              <div className="px-4 flex-auto">
-                <div className="text-xl font-semibold -ml-4">2019</div>
-                <ul className="list-outside list-disc mt-4 text-lg text-gray-600">
+                <div className="text-xl font-semibold -ml-4 mt-4">2019</div>
+                <ul className="list-outside list-disc mt-4 space-y-1">
                   <li>
                     ONA:{' '}
                     <a
@@ -245,7 +238,7 @@ export default function Awards() {
                   </li>
                 </ul>
                 <div className="text-xl font-semibold -ml-4 mt-4">2018</div>
-                <ul className="list-outside list-disc mt-4 text-lg text-gray-600">
+                <ul className="list-outside list-disc mt-4 space-y-1">
                   <li className="award">
                     POY:{' '}
                     <a

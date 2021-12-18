@@ -2,12 +2,9 @@ import Image from 'next/image'
 import PlaceholderImage from './PlaceholderImage'
 import { FeaturedProps } from '../lib/types'
 
-const ConditionalWrapper = ({ condition, wrapper, children }) =>
-  condition ? wrapper(children) : children
-
 export default function Projects() {
   return (
-    <section id="projects" className="relative w-full space-y-20 max-w-4xl m-auto mb-40">
+    <section id="projects" className="relative w-full space-y-20 max-w-2xl m-auto mb-40">
       <div className="pt-5 text-center uppercase text-gray-600 w-full m-auto">
         Select Projects{' '}
         <span className="inline-block w-3">
@@ -80,9 +77,8 @@ export default function Projects() {
       />
 
       <Featured
-        title="Washington Post Project Template Generator"
-        projRole="Part of the core developers and still continuing to update. Working on developer workflows, onboarding and documentation."
-        image="projects/template.png"
+        title="The Washington Post Custom Project Template Generator"
+        projRole="Part of the core engineers who developed this platform. Worked on developer workflows, onboarding and documentation."
         summary="A Node, React and Next.js based template that powers all of the custom interactive projects at The Washington Post. Four of the projects mentioned above were created using this template I helped develop."
         width={1036}
         height={574}
@@ -104,44 +100,35 @@ const Featured = ({
 }: FeaturedProps) => {
   return (
     <div className="">
-      <div className="items-center flex flex-wrap flex-row-reverse">
-        <div className="w-full md:w-1/2 mr-auto pt-4 md:pt-0 mb-5">
-          <ConditionalWrapper
-            condition={url}
-            wrapper={(children) => (
-              <a href={url} target="_blank" rel="noreferrer" aria-label="project image">
-                {children}
-              </a>
-            )}
-          >
-            <>
-              <div className="max-w-full bg-transparent">
-                <Image
-                  alt="..."
-                  placeholder="blur"
-                  blurDataURL={PlaceholderImage(width, height)}
-                  src={`/${image}`}
-                  width={width}
-                  height={height}
-                />
-              </div>
-            </>
-          </ConditionalWrapper>
-        </div>
-        <div className="w-full md:w-1/2 ml-auto">
+      <div className="flex flex-row-reverse">
+        {image && (
+          <div className="w-full md:w-1/2 pt-4 md:pt-0 mb-5">
+            <div className="max-w-full bg-transparent">
+              <Image
+                alt="..."
+                placeholder="blur"
+                blurDataURL={PlaceholderImage(width, height)}
+                src={`/${image}`}
+                width={width}
+                height={height}
+              />
+            </div>
+          </div>
+        )}
+        <div className="w-full">
           <div className="md:pr-12">
             <div className="text-3xl font-semibold">{title}</div>
-            <p className="mt-1">{summary}</p>
-            <div className="mt-4 leading-relaxed text-gray-700">
+            <p className="mt-1 text-gray-800">{summary}</p>
+            <div className="mt-4 leading-relaxed text-gray-800">
               <b>Role:</b> {projRole}
             </div>
             {tools && (
-              <div className="mt-2 leading-relaxed text-gray-700">
+              <div className="mt-2 leading-relaxed text-gray-800">
                 <b>Tools:</b> {tools}
               </div>
             )}
             {awards && (
-              <div className="mt-2 leading-relaxed text-gray-700">
+              <div className="mt-2 leading-relaxed text-gray-800">
                 <b>Awards:</b> {awards}
               </div>
             )}
@@ -149,15 +136,6 @@ const Featured = ({
               <div className="mt-2 text-lg leading-relaxed text-gray-600">
                 <a className="underline text-sm" href={url} target="_blank" rel="noreferrer">
                   View Project{' '}
-                  <span className="inline-block w-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                      <path
-                        fillRule="evenodd"
-                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </span>
                 </a>
               </div>
             )}

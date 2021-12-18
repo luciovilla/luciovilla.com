@@ -8,9 +8,9 @@ export default function Container(props) {
   const { children, ...customMeta } = props
   const router = useRouter()
   const meta = {
-    title: 'Lucio Villa – Latino, Developer, Designer',
+    title: 'Lucio Villa - Latino, Engineer, Designer',
     description:
-      'First-generation Latino, web developer and designer. Currently a Senior Engineer at Vox Media.',
+      'First-generation Latino, software engineer and web designer. Currently a Senior Engineer at Vox Media.',
     image: 'https://luciovilla.com/site.png',
     type: 'website',
     ...customMeta
