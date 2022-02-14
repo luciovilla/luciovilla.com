@@ -3,10 +3,20 @@ import { Client } from '@notionhq/client'
 const notion = new Client({
   auth: process.env.NOTION_TOKEN
 })
-
 export const getNotionData = async (databaseId: string) => {
   const response = await notion.databases.query({
     database_id: databaseId,
+    // Filter out posts not checked to publish.
+    filter: {
+      and: [
+        {
+          property: 'Published',
+          checkbox: {
+            equals: true
+          }
+        }
+      ]
+    },
     // Sort posts in descending order based on the Date column.
     sorts: [
       {
@@ -16,8 +26,7 @@ export const getNotionData = async (databaseId: string) => {
     ]
   })
 
-  // Filter out posts not checked to publish.
-  return response.results.filter((post) => !!post.properties.Published['checkbox'])
+  return response.results
 }
 
 export const getPage = async (pageId: string) => {
