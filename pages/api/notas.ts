@@ -16,5 +16,5 @@ export default async function notas(req: NextApiRequest, res: NextApiResponse) {
 
   res.setHeader('Cache-Control', 'public, s-maxage=60, stale-while-revalidate=30')
 
-  return res.status(200).json({ allNotas })
+  return res.status(200).json(allNotas)
 }
