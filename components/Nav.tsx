@@ -1,45 +1,41 @@
-import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
+import clsx from 'clsx'
+
 import NextLink from 'next/link'
 
-export default function Nav() {
-  const [animationClass, setAnimationClass] = useState(false)
-
-  useEffect(() => {
-    setAnimationClass(true)
-  }, [])
+function NavItem({ href, text }) {
+  const router = useRouter()
+  const slug = router.asPath.replace(/^\/([^\/]*).*$/, '/$1')
+  const isActive = slug === href
 
   return (
-    <nav className="backdrop-filter backdrop-blur-md z-10 w-full bg-white bg-opacity-60 px-4 sticky top-0 transition-colors">
-      <div className="max-w-4xl w-full flex justify-between items-center py-4 sm:py-8 mx-auto">
+    <NextLink href={href}>
+      <a
+        className={clsx(
+          isActive ? 'font-semibold text-gray-800' : 'font-normal text-gray-600',
+          'md:inline-block p-2 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-100 transition-all'
+        )}
+      >
+        <span>{text}</span>
+      </a>
+    </NextLink>
+  )
+}
+
+export default function Nav() {
+  return (
+    <div className="backdrop-filter backdrop-blur-md z-10 w-full bg-white bg-opacity-60 sticky top-0 flex flex-col justify-center px-4">
+      <nav className="flex items-center justify-between w-full relative max-w-2xl mx-auto py-4 sm:py-8 text-gray-900">
         <a href="#skip" className="sr-only focus:not-sr-only">
           Skip to content
         </a>
-        <NextLink href="/">
-          <a className="flex font-bold text-2xl tracking-tighter">
-            <span className="z-10 text-blue">L</span>
-            <span
-              className={`text-yellow  z-0 ${
-                animationClass
-                  ? 'transition duration-[2000ms] transform -translate-x-2'
-                  : ' opacity-0'
-              }`}
-            >
-              V
-            </span>
-          </a>
-        </NextLink>
-        <div>
-          <NextLink href="/#projects">
-            <a className="p-2 sm:p-4 text-gray-900 hover:underline">Projects</a>
-          </NextLink>
-          <NextLink href="/notas">
-            <a className="p-2 sm:p-4 text-gray-900 hover:underline">Blog</a>
-          </NextLink>
-          <NextLink href="/#about-me">
-            <a className="p-2 sm:p-4 text-gray-900 hover:underline">About</a>
-          </NextLink>
+        <div className="sm:ml-[-0.75rem]">
+          <NavItem href="/" text="Home" />
+          <NavItem href="/#projects" text="Projects" />
+          <NavItem href="/notas" text="Blog" />
+          <NavItem href="/#about-me" text="About Me" />
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   )
 }
