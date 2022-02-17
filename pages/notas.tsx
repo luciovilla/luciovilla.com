@@ -6,13 +6,13 @@ import Container from '../components/Container'
 export default function Blog({ posts }: { posts: Object[] }) {
   return (
     <Container
-      title="My Notas – Lucio Villa"
+      title="Notas - Lucio Villa"
       description="Thoughts on web development, tech, music and random chisme."
     >
       <div className="flex flex-col justify-center items-start max-w-2xl mx-auto my-16">
-        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black">My Notas</h1>
+        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black">Notas</h1>
         <p className="text-gray-600 mb-10">
-          {`Blog posts about web development, tech and random chisme.`}
+          Blog posts about web development, tech and random chisme.
         </p>
 
         {posts.map((post: PostType) => (
