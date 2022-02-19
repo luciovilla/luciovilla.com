@@ -29,12 +29,7 @@ export default function NowPlaying() {
             <p className="text-gray-800 font-medium text-xs">Currently not listening to music.</p>
           )}
           <p className="text-gray-500 max-w-max truncate text-sm">
-            {data?.artist && (
-              <>
-                <span className="mx-2">–</span>
-                {data.artist}
-              </>
-            )}
+            {data?.artist && <span className="mx-2">- {data.artist}</span>}
           </p>
         </div>
       </div>

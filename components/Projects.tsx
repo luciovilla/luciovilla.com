@@ -18,6 +18,16 @@ export default function Projects() {
         </span>
       </div>
       <Featured
+        title="La Palabra"
+        summary="An open-source game inspired by the famous game Wordle. Purpose of the game is to guess the word (based on Bad Bunny lyrics) in 6 tries and includes a link to the Spotify song the word appears in to help in figuring out the word of the day."
+        projRole="Creator and maintainer."
+        tools="React, Next.js, Tailwind CSS, Python"
+        url="https://palabra.luciovilla.com"
+        image="projects/palabra.jpg"
+        width={1200}
+        height={630}
+      />
+      <Featured
         title="Starter Notion blog template"
         summary="An open-source starter blog template that is statically generated with Next.js, content powered by Notion and styled with Tailwind CSS."
         projRole="Creator and maintainer."
