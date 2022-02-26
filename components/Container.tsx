@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import Script from 'next/script'
 import Nav from './Nav'
 import Footer from './Footer'
+import Command from './Command'
 
 export default function Container(props) {
   const { children, ...customMeta } = props
@@ -49,6 +50,7 @@ export default function Container(props) {
             gtag('config', 'UA-28929069-1');
         `}
       </Script>
+      <Command />
       <Nav />
       <main id="skip" className="px-8">
         {children}
