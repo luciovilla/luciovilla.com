@@ -1,8 +1,52 @@
-import { ContentBlocks } from '../lib/types'
+export const RenderBlocks = ({ blocks }) => {
+  return blocks.map((block) => {
+    const { type, id } = block
+    const value = block[type]
 
-const SpanText = (text: Object[], id: string) => {
+    switch (type) {
+      case 'paragraph':
+        return <Text text={value.rich_text} id={id} key={id} />
+
+      case 'heading_1':
+        return <Heading text={value.rich_text} id={id} level={type} key={id} />
+
+      case 'heading_2':
+        return <Heading text={value.rich_text} id={id} level={type} key={id} />
+
+      case 'heading_3':
+        return <Heading text={value.rich_text} id={id} level={type} key={id} />
+
+      case 'bulleted_list_item':
+      case 'numbered_list_item':
+        return <ListItem key={id} value={value} id={id} />
+
+      case 'to_do':
+        return <ToDo key={id} value={value} id={id} />
+
+      case 'toggle':
+        return <Toggle key={id} value={value} />
+
+      case 'image':
+        const imageSrc = value.type === 'external' ? value.external.url : value.file.url
+        const caption = value.caption.length ? value.caption[0].plain_text : ''
+        return (
+          <figure key={id}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img alt={caption} src={imageSrc} />
+            {caption && <figcaption className="mt-2">{caption}</figcaption>}
+          </figure>
+        )
+
+      default:
+        return `Unsupported block (${type === 'unsupported' ? 'unsupported by Notion API' : type})`
+    }
+  })
+}
+
+const SpanText = ({ text, id }) => {
   if (!text) return null
-  return text.map((value: ContentBlocks, i) => {
+
+  return text.map((value, i) => {
     const {
       annotations: { bold, code, color, italic, strikethrough, underline },
       text
@@ -31,31 +75,40 @@ const SpanText = (text: Object[], id: string) => {
   })
 }
 
-export const Text = ({ text, id }) => {
-  return SpanText(text, id)
-}
-export const ListItem = ({ text, id }) => {
-  return <li className="text-gray-700">{SpanText(text, id)}</li>
+const Text = ({ text, id }) => {
+  return (
+    <p className="mb-4 text-gray-700">
+      <SpanText text={text} id={id} />
+    </p>
+  )
 }
 
-export const Heading = ({ text, level }) => {
+const ListItem = ({ value, id }) => {
+  return (
+    <li>
+      <SpanText text={value.rich_text} id={id} />
+    </li>
+  )
+}
+
+const Heading = ({ text, level, id }) => {
   switch (level) {
     case 'heading_1':
       return (
-        <h1 className="font-bold text-3xl md:text-5xl tracking-tight my-2 text-black">
-          {text[0].text.content}
+        <h1 className="my-2 text-3xl font-bold tracking-tight text-black md:text-5xl">
+          <SpanText text={text} id={id} />
         </h1>
       )
     case 'heading_2':
       return (
-        <h2 className="font-bold text-2xl md:text-3xl tracking-tight my-2 mt-8 text-black">
-          {text[0].text.content}
+        <h2 className="my-2 text-2xl font-bold tracking-tight text-black md:text-3xl">
+          <SpanText text={text} id={id} />
         </h2>
       )
     case 'heading_3':
       return (
-        <h3 className="font-bold text-lg md:text-xl tracking-tight my-2 text-black">
-          {text[0].text.content}
+        <h3 className="my-2 text-lg font-bold tracking-tight text-black md:text-xl">
+          <SpanText text={text} id={id} />
         </h3>
       )
     default:
@@ -63,21 +116,26 @@ export const Heading = ({ text, level }) => {
   }
 }
 
-export const ToDo = ({ id, value, text }) => {
+const ToDo = ({ id, value }) => {
   return (
     <div>
       <label htmlFor={id}>
-        <input type="checkbox" id={id} defaultChecked={value.checked} /> {text[0].text.content}
+        <input type="checkbox" id={id} defaultChecked={value.checked} />{' '}
+        <SpanText text={value.rich_text} id={id} />
       </label>
     </div>
   )
 }
 
-export const Toggle = ({ text }) => {
+const Toggle = ({ value }) => {
   return (
     <details>
-      <summary className="cursor-pointer">{text[0].text.content}</summary>
-      Toggle contents dont come through the API yet...
+      <summary className="cursor-pointer">{value.rich_text[0].text.content}</summary>
+      {value.children?.map((block) => {
+        if (block.type === 'paragraph') {
+          return <Text key={block.id} text={block.paragraph.rich_text} id={block.id} />
+        }
+      })}
     </details>
   )
 }
