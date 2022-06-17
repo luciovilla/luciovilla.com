@@ -25,13 +25,13 @@ const Post = ({ page, blocks }: PostProps) => {
 
   return (
     <BlogLayout data={page}>
-      <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black">
+      <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl">
         {page.properties.Post.title[0].plain_text}
       </h1>
-      <div className="text-sm text-gray-800 mb-4">
+      <div className="mb-4 text-sm text-gray-800">
         <span>{timestamp(page.properties.Date.date.start)}</span>
         {page.properties.Show_updated_timestamp.checkbox && page.last_edited_time && (
-          <span className="text-sm text-gray-700 pl-1">
+          <span className="pl-1 text-sm text-gray-700">
             / Updated: {timestamp(page.last_edited_time)}
           </span>
         )}

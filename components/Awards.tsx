@@ -1,7 +1,7 @@
 export default function Awards() {
   return (
-    <section className="relative pb-40 w-full max-w-2xl m-auto" id="awards">
-      <div className="text-center w-full mb-10 uppercase text-gray-600">
+    <section className="relative pb-40 m-auto w-full max-w-2xl" id="awards">
+      <div className="mb-10 w-full text-center text-gray-600 uppercase">
         Awards & Honors{' '}
         <span className="inline-block w-3">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -14,13 +14,13 @@ export default function Awards() {
         </span>
       </div>
 
-      <div className="w-full mx-auto">
+      <div className="mx-auto w-full">
         <div className="flex flex-wrap justify-center">
           <div className="w-full">
-            <div className="relative flex flex-col min-w-0 w-full mb-8">
-              <div className="px-4 flex-auto text-gray-700">
-                <div className="text-xl font-semibold -ml-4">2021</div>
-                <ul className="list-outside list-disc mt-4 space-y-1">
+            <div className="flex relative flex-col mb-8 w-full min-w-0">
+              <div className="flex-auto px-4 text-gray-700">
+                <div className="-ml-4 text-xl font-semibold">2021</div>
+                <ul className="mt-4 space-y-1 list-disc list-outside">
                   <li>
                     SND:{' '}
                     <a
@@ -32,7 +32,7 @@ export default function Awards() {
                       Bronze Medal (Story Page Design)
                     </a>
                   </li>
-                  <li className="award">
+                  <li>
                     SND:{' '}
                     <a
                       className="underline"
@@ -44,7 +44,7 @@ export default function Awards() {
                     </a>
                   </li>
 
-                  <li className="award">
+                  <li>
                     SND:{' '}
                     <a
                       className="underline"
@@ -56,7 +56,7 @@ export default function Awards() {
                     </a>
                   </li>
 
-                  <li className="award">
+                  <li>
                     SND:{' '}
                     <a
                       className="underline"
@@ -68,7 +68,7 @@ export default function Awards() {
                     </a>
                   </li>
 
-                  <li className="award">
+                  <li>
                     SND:{' '}
                     <a
                       className="underline"
@@ -80,7 +80,7 @@ export default function Awards() {
                     </a>
                   </li>
 
-                  <li className="award">
+                  <li>
                     SND:{' '}
                     <a
                       className="underline"
@@ -92,8 +92,8 @@ export default function Awards() {
                     </a>
                   </li>
                 </ul>
-                <div className="text-xl font-semibold -ml-4 mt-4">2020</div>
-                <ul className="list-outside list-disc mt-4 space-y-1">
+                <div className="mt-4 -ml-4 text-xl font-semibold">2020</div>
+                <ul className="mt-4 space-y-1 list-disc list-outside">
                   <li>
                     SND:{' '}
                     <a
@@ -105,7 +105,7 @@ export default function Awards() {
                       Best in Show
                     </a>
                   </li>
-                  <li className="award">
+                  <li>
                     Malofiej:{' '}
                     <a
                       className="underline"
@@ -117,7 +117,7 @@ export default function Awards() {
                     </a>
                   </li>
 
-                  <li className="award">
+                  <li>
                     SND:{' '}
                     <a
                       className="underline"
@@ -129,7 +129,7 @@ export default function Awards() {
                     </a>
                   </li>
 
-                  <li className="award">
+                  <li>
                     SND:{' '}
                     <a
                       className="underline"
@@ -141,7 +141,7 @@ export default function Awards() {
                     </a>
                   </li>
 
-                  <li className="award">
+                  <li>
                     SND:{' '}
                     <a
                       className="underline"
@@ -153,7 +153,7 @@ export default function Awards() {
                     </a>
                   </li>
 
-                  <li className="award">
+                  <li>
                     SND:{' '}
                     <a
                       className="underline"
@@ -165,7 +165,7 @@ export default function Awards() {
                     </a>
                   </li>
 
-                  <li className="award">
+                  <li>
                     Scripps Howard Awards:{' '}
                     <a
                       className="underline"
@@ -177,7 +177,7 @@ export default function Awards() {
                     </a>
                   </li>
 
-                  <li className="award">
+                  <li>
                     ONA:{' '}
                     <a
                       className="underline"
@@ -189,7 +189,7 @@ export default function Awards() {
                     </a>
                   </li>
 
-                  <li className="award">
+                  <li>
                     ONA:{' '}
                     <a
                       className="underline"
@@ -201,8 +201,8 @@ export default function Awards() {
                     </a>
                   </li>
                 </ul>
-                <div className="text-xl font-semibold -ml-4 mt-4">2019</div>
-                <ul className="list-outside list-disc mt-4 space-y-1">
+                <div className="mt-4 -ml-4 text-xl font-semibold">2019</div>
+                <ul className="mt-4 space-y-1 list-disc list-outside">
                   <li>
                     ONA:{' '}
                     <a
@@ -214,7 +214,7 @@ export default function Awards() {
                       Breaking News
                     </a>
                   </li>
-                  <li className="award">
+                  <li>
                     Editor &amp; Pubblisher:{' '}
                     <a
                       className="underline"
@@ -225,7 +225,7 @@ export default function Awards() {
                       25 Under 35
                     </a>
                   </li>
-                  <li className="award">
+                  <li>
                     Fullstack Academy:{' '}
                     <a
                       className="underline"
@@ -237,9 +237,9 @@ export default function Awards() {
                     </a>
                   </li>
                 </ul>
-                <div className="text-xl font-semibold -ml-4 mt-4">2018</div>
-                <ul className="list-outside list-disc mt-4 space-y-1">
-                  <li className="award">
+                <div className="mt-4 -ml-4 text-xl font-semibold">2018</div>
+                <ul className="mt-4 space-y-1 list-disc list-outside">
+                  <li>
                     POY:{' '}
                     <a
                       rel="noreferrer"
@@ -251,7 +251,7 @@ export default function Awards() {
                     </a>
                   </li>
 
-                  <li className="award">
+                  <li>
                     CNPA:{' '}
                     <a
                       className="underline"
@@ -263,7 +263,7 @@ export default function Awards() {
                     </a>
                   </li>
 
-                  <li className="award">
+                  <li>
                     CNPA:{' '}
                     <a
                       className="underline"
@@ -275,7 +275,7 @@ export default function Awards() {
                     </a>
                   </li>
 
-                  <li className="award">
+                  <li>
                     CNPA:{' '}
                     <a
                       className="underline"
@@ -287,7 +287,7 @@ export default function Awards() {
                     </a>
                   </li>
 
-                  <li className="award">
+                  <li>
                     CNPA:{' '}
                     <a
                       className="underline"
@@ -299,7 +299,7 @@ export default function Awards() {
                     </a>
                   </li>
 
-                  <li className="award">
+                  <li>
                     CNPA:{' '}
                     <a
                       className="underline"

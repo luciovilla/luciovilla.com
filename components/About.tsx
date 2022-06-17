@@ -4,8 +4,8 @@ import profilePic from '../public/me.jpg'
 
 export default function About() {
   return (
-    <section id="about-me" className="relative w-full space-y-20 max-w-2xl m-auto mb-40">
-      <div className="pt-5 text-center uppercase text-gray-600 w-full m-auto">
+    <section id="about-me" className="relative m-auto mb-40 space-y-20 w-full max-w-2xl">
+      <div className="pt-5 m-auto w-full text-center text-gray-600 uppercase">
         About me{' '}
         <span className="inline-block w-3">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -18,7 +18,7 @@ export default function About() {
         </span>
       </div>
       <div className="flex flex-wrap-reverse">
-        <div className="w-full md:w-4/5 md:pr-12 text-gray-800">
+        <div className="w-full text-gray-800 md:pr-12 md:w-4/5">
           <div className="md:pr-12">
             <p className="mt-4 leading-relaxed">
               Hola! My name is Lucio and I recently made the switch from the newsroom to product and
@@ -84,13 +84,13 @@ export default function About() {
               major I was studying Computer Science at Cal Poly Pomona (Go Broncos!).
             </p>
 
-            <div className="mt-4 border-t pt-2">
+            <div className="pt-2 mt-4 border-t">
               <NowPlaying />
             </div>
           </div>
         </div>
-        <div className="w-1/2 md:w-1/5 mx-auto md:ml-auto md:pl-4 pt-4 md:pt-0">
-          <div className="max-w-full image-shadow">
+        <div className="pt-4 mx-auto w-1/2 md:pt-0 md:pl-4 md:ml-auto md:w-1/5">
+          <div className="max-w-full">
             <Image alt="..." src={profilePic} placeholder="blur" width={500} height={500} />
           </div>
         </div>

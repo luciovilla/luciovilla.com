@@ -4,8 +4,8 @@ import { FeaturedProps } from '../lib/types'
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative w-full space-y-20 max-w-2xl m-auto mb-40">
-      <div className="pt-5 text-center uppercase text-gray-600 w-full m-auto">
+    <section id="projects" className="relative m-auto mb-40 space-y-20 w-full max-w-2xl">
+      <div className="pt-5 m-auto w-full text-center text-gray-600 uppercase">
         Select Projects{' '}
         <span className="inline-block w-3">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -118,7 +118,7 @@ const Featured = ({
   return (
     <div className="flex flex-wrap">
       {image && (
-        <div className="w-full pt-4 md:pt-0 mb-2">
+        <div className="pt-4 mb-2 w-full md:pt-0">
           <div className="max-w-full bg-transparent">
             <Image
               alt="..."
@@ -133,7 +133,7 @@ const Featured = ({
       )}
       <div className="">
         <div className="md:pr-12">
-          <div className="text-xl md:text-3xl font-semibold">{title}</div>
+          <div className="text-xl font-semibold md:text-3xl">{title}</div>
           <p className="mt-1 text-gray-800">{summary}</p>
           <div className="mt-3 leading-relaxed text-gray-800">
             <b>Role:</b> {projRole}
@@ -150,7 +150,7 @@ const Featured = ({
           )}
           {url && (
             <div className="mt-1 text-lg leading-relaxed text-gray-600">
-              <a className="underline text-sm" href={url} target="_blank" rel="noreferrer">
+              <a className="text-sm underline" href={url} target="_blank" rel="noreferrer">
                 View Project{' '}
               </a>
             </div>
