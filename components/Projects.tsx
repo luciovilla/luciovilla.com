@@ -2,22 +2,13 @@ import Image from 'next/image'
 import PlaceholderImage from './PlaceholderImage'
 import { ProjectProps } from '../lib/types'
 import projects from '../public/projects/list.json'
+import ArrowIcon from './ArrowIcon'
 
 export default function Projects() {
-  console.log(projects, 'projects')
   return (
     <section id="projects" className="relative m-auto mb-40 space-y-20 w-full max-w-2xl">
       <div className="pt-5 m-auto w-full text-center text-gray-600 uppercase">
-        Select Projects{' '}
-        <span className="inline-block w-3">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-            <path
-              fillRule="evenodd"
-              d="M14.707 12.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l2.293-2.293a1 1 0 011.414 0z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </span>
+        Select Projects <ArrowIcon />
       </div>
       {projects.map((project: ProjectProps) => {
         return (
