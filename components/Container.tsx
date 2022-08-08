@@ -52,8 +52,8 @@ export default function Container(props) {
       <Nav />
       <main id="skip" className="px-8">
         {children}
-        <Footer />
       </main>
+      <Footer />
     </>
   )
 }

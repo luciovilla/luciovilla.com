@@ -1,8 +1,10 @@
 import Image from 'next/image'
 import PlaceholderImage from './PlaceholderImage'
-import { FeaturedProps } from '../lib/types'
+import { ProjectProps } from '../lib/types'
+import projects from '../public/projects/list.json'
 
 export default function Projects() {
+  console.log(projects, 'projects')
   return (
     <section id="projects" className="relative m-auto mb-40 space-y-20 w-full max-w-2xl">
       <div className="pt-5 m-auto w-full text-center text-gray-600 uppercase">
@@ -17,146 +19,57 @@ export default function Projects() {
           </svg>
         </span>
       </div>
-      <Featured
-        title="La Palabra"
-        summary="An open-source game inspired by the famous game Wordle. Purpose of the game is to guess the word (based on Bad Bunny lyrics) in 6 tries and includes a link to the Spotify song the word appears in to help in figuring out the word of the day."
-        projRole="Creator and maintainer."
-        tools="React, Next.js, Tailwind CSS, Python"
-        url="https://palabra.luciovilla.com"
-        image="projects/palabra.jpg"
-        width={1200}
-        height={630}
-      />
-      <Featured
-        title="Starter Notion blog template"
-        summary="An open-source starter blog template that is statically generated with Next.js, content powered by Notion and styled with Tailwind CSS."
-        projRole="Creator and maintainer."
-        tools="React, Next.js, Tailwind CSS, Notion API"
-        url="https://blog.luciovilla.com"
-        image="projects/blog.png"
-        width={1372}
-        height={496}
-      />
-      <Featured
-        title="The Washington Post Custom Project Template Generator"
-        projRole="Part of the core engineers who developed this platform. Worked on developer workflows, onboarding and documentation."
-        summary="A Node, React and Next.js based template that powers all of the custom interactive projects at The Washington Post."
-      />
-      <Featured
-        title="Serial Killer Series"
-        tools="React, Next.js, React PLX (animation library), Adobe XD, Node"
-        awards={`2x SND 2020 "Award of Excellence" awards.`}
-        projRole="Responsible for the project concept, design, front-end development, commissioned and art directed illustrations."
-        image="projects/sk.jpg"
-        summary="A three-part investigation series on law enforcement’s failure to catch the most prolific serial killer in U.S. history."
-        url="https://www.washingtonpost.com/graphics/2020/national/samuel-little-serial-killer/part-one/"
-        width={2126}
-        height={1222}
-      />
-      <Featured
-        title="Mueller Report Illustrated"
-        projRole="Front-end developer."
-        tools="React, React PLX, ffmpeg, Node, Gulp"
-        image="projects/mri.jpg"
-        summary="A six-part interactive series on the obstruction investigation with audio and scrolling animations."
-        url="https://www.washingtonpost.com/graphics/2019/politics/mueller-report-illustrated/about/"
-        awards={`Malofiej International Awards Gold Medal, 2019 SND Best in Show, 2019 SND Gold Medal, 2019 SND Silver Medal, 2019 SND Bronze Medal, x2 2019 SND Award of Excellence, 
-          2019 Scripps Howards Award Finalist, 2x ONA Finalist`}
-        width={1560}
-        height={980}
-      />
-      <Featured
-        title="Mekong River"
-        projRole="Designer and front-end developer."
-        awards="2020 SND Award of Excellence"
-        tools="Gulp, ScrollMagic.js, Node, Adobe XD"
-        image="projects/mekong.jpg"
-        summary="Inteactive story about displaced villages and a ruined ecosystem with audio narration from the reporter."
-        url="https://www.washingtonpost.com/graphics/2020/world/the-mekong-river-basin-under-threat/"
-        width={1000}
-        height={518}
-      />
-      <Featured
-        title="Military Helicopter"
-        projRole="Designer and front-end developer."
-        image="projects/helicopter.jpg"
-        tools="React, Next.js, Adobe XD, Node, PLX animation library"
-        awards="2020 SND Bronze Medal"
-        summary="A reconstruction of the
-          movements of two D.C. Army National Guard
-          helicopters that parked nearly still in the air
-          over protesters, using flight-tracking data, images and videos."
-        url="https://www.washingtonpost.com/graphics/2020/investigations/helicopter-protests-washington-dc-national-guard/"
-        width={1200}
-        height={630}
-      />
-      <Featured
-        title="Rose Garden Photo"
-        tools="React, Next.js, Node, ScrollMonitor.js"
-        projRole="Designer and front-end developer."
-        image="projects/rose.jpg"
-        summary="An interactive project that zooms and pans to show who attended a possible superspreader event at the White House."
-        url="https://www.washingtonpost.com/graphics/2020/politics/coronavirus-attendees-barrett-nomination-ceremony/"
-        width={1356}
-        height={892}
-      />
+      {projects.map((project: ProjectProps) => {
+        return (
+          <div className="flex flex-wrap" key={project.title}>
+            {project.image && (
+              <div className="pt-4 mb-2 w-full md:pt-0">
+                <div className="max-w-full bg-transparent">
+                  <Image
+                    alt="..."
+                    placeholder="blur"
+                    blurDataURL={PlaceholderImage(project.width, project.height)}
+                    src={`/${project.image}`}
+                    width={project.width}
+                    height={project.height}
+                  />
+                </div>
+              </div>
+            )}
+            <div>
+              <div className="md:pr-12">
+                <div className="text-xl font-semibold md:text-3xl">{project.title}</div>
+                <p className="mt-1 text-gray-800">{project.summary}</p>
+                <div className="mt-3 leading-relaxed text-gray-800">
+                  <b>Role:</b> {project.projRole}
+                </div>
+                {project.tools && (
+                  <div className="mt-1 leading-relaxed text-gray-800">
+                    <b>Tools:</b> {project.tools}
+                  </div>
+                )}
+                {project.awards && (
+                  <div className="mt-1 leading-relaxed text-gray-800">
+                    <b>Awards:</b> {project.awards}
+                  </div>
+                )}
+                {project.url && (
+                  <div className="mt-1 text-lg leading-relaxed text-gray-600">
+                    <a
+                      className="text-sm underline"
+                      href={project.url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      View Project{' '}
+                    </a>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        )
+      })}
     </section>
-  )
-}
-
-const Featured = ({
-  title,
-  projRole,
-  image,
-  width,
-  height,
-  url,
-  summary,
-  awards,
-  tools
-}: FeaturedProps) => {
-  return (
-    <div className="flex flex-wrap">
-      {image && (
-        <div className="pt-4 mb-2 w-full md:pt-0">
-          <div className="max-w-full bg-transparent">
-            <Image
-              alt="..."
-              placeholder="blur"
-              blurDataURL={PlaceholderImage(width, height)}
-              src={`/${image}`}
-              width={width}
-              height={height}
-            />
-          </div>
-        </div>
-      )}
-      <div className="">
-        <div className="md:pr-12">
-          <div className="text-xl font-semibold md:text-3xl">{title}</div>
-          <p className="mt-1 text-gray-800">{summary}</p>
-          <div className="mt-3 leading-relaxed text-gray-800">
-            <b>Role:</b> {projRole}
-          </div>
-          {tools && (
-            <div className="mt-1 leading-relaxed text-gray-800">
-              <b>Tools:</b> {tools}
-            </div>
-          )}
-          {awards && (
-            <div className="mt-1 leading-relaxed text-gray-800">
-              <b>Awards:</b> {awards}
-            </div>
-          )}
-          {url && (
-            <div className="mt-1 text-lg leading-relaxed text-gray-600">
-              <a className="text-sm underline" href={url} target="_blank" rel="noreferrer">
-                View Project{' '}
-              </a>
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
   )
 }

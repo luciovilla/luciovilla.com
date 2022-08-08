@@ -1,0 +1,82 @@
+[
+  {
+    "title": "La Palabra",
+    "summary": "An open-source game inspired by the famous game Wordle. Purpose of the game is to guess the word (based on Bad Bunny lyrics) in 6 tries and includes a link to the Spotify song the word appears in to help in figuring out the word of the day.",
+    "projRole": "Creator and maintainer.",
+    "tools": "React, Next.js, Tailwind CSS, Python",
+    "url": "https://palabra.luciovilla.com",
+    "image": "projects/palabra.jpg",
+    "width": 1200,
+    "height": 630
+  },
+  {
+    "title": "Starter Notion blog template",
+    "summary": "An open-source starter blog template that is statically generated with Next.js, content powered by Notion and styled with Tailwind CSS.",
+    "projRole": "Creator and maintainer.",
+    "tools": "React, Next.js, Tailwind CSS, Notion API",
+    "url": "https://blog.luciovilla.com",
+    "image": "projects/blog.png",
+    "width": 1372,
+    "height": 496
+  },
+  {
+    "title": "The Washington Post Custom Project Template Generator",
+    "projRole": "Part of the core engineers who developed this platform. Worked on developer workflows, onboarding and documentation.",
+    "summary": "A Node, React and Next.js based template that powers all of the custom interactive projects at The Washington Post."
+  },
+  {
+    "title": "Serial Killer Series",
+    "tools": "React, Next.js, React PLX (animation library), Adobe XD, Node",
+    "awards": "2x SND 2020 \"Award of Excellence\" awards.",
+    "projRole": "Responsible for the project concept, design, front-end development, commissioned and art directed illustrations.",
+    "image": "projects/sk.jpg",
+    "summary": "A three-part investigation series on law enforcement's failure to catch the most prolific serial killer in U.S. history.",
+    "url": "https://www.washingtonpost.com/graphics/2020/national/samuel-little-serial-killer/part-one/",
+    "width": 2126,
+    "height": 1222
+  },
+  {
+    "title": "Mueller Report Illustrated",
+    "projRole": "Front-end developer.",
+    "tools": "React, React PLX, ffmpeg, Node, Gulp",
+    "image": "projects/mri.jpg",
+    "summary": "A six-part interactive series on the obstruction investigation with audio and scrolling animations.",
+    "url": "https://www.washingtonpost.com/graphics/2019/politics/mueller-report-illustrated/about/",
+    "awards": "Malofiej International Awards Gold Medal, 2019 SND Best in Show, 2019 SND Gold Medal, 2019 SND Silver Medal, 2019 SND Bronze Medal, x2 2019 SND Award of Excellence, 2019 Scripps Howards Award Finalist, 2x ONA Finalist",
+    "width": 1560,
+    "height": 980
+  },
+
+  {
+    "title": "Mekong River",
+    "projRole": "Designer and front-end developer.",
+    "awards": "2020 SND Award of Excellence",
+    "tools": "Gulp, ScrollMagic.js, Node, Adobe XD",
+    "image": "projects/mekong.jpg",
+    "summary": "Inteactive story about displaced villages and a ruined ecosystem with audio narration from the reporter.",
+    "url": "https://www.washingtonpost.com/graphics/2020/world/the-mekong-river-basin-under-threat/",
+    "width": 1000,
+    "height": 518
+  },
+  {
+    "title": "Military Helicopter",
+    "projRole": "Designer and front-end developer.",
+    "image": "projects/helicopter.jpg",
+    "tools": "React, Next.js, Adobe XD, Node, PLX animation library",
+    "awards": "2020 SND Bronze Medal",
+    "summary": "A reconstruction of the movements of two D.C. Army National Guard helicopters that parked nearly still in the air over protesters, using flight-tracking data, images and videos.",
+    "url": "https://www.washingtonpost.com/graphics/2020/investigations/helicopter-protests-washington-dc-national-guard/",
+    "width": 1200,
+    "height": 630
+  },
+  {
+    "title": "Rose Garden Photo",
+    "tools": "React, Next.js, Node, ScrollMonitor.js",
+    "projRole": "Designer and front-end developer.",
+    "image": "projects/rose.jpg",
+    "summary": "An interactive project that zooms and pans to show who attended a possible superspreader event at the White House.",
+    "url": "https://www.washingtonpost.com/graphics/2020/politics/coronavirus-attendees-barrett-nomination-ceremony/",
+    "width": 1356,
+    "height": 892
+  }
+]

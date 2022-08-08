@@ -1,4 +1,11 @@
 export default function Topper() {
+  const links = [
+    { href: 'mailto:hi@luciovilla.com?subject=Hola Lucio!', title: 'Email' },
+    { href: 'https://github.com/luciovilla', title: 'Github' },
+    { href: 'https://twitter.com/luciovilla', title: 'Twitter' },
+    { href: 'https://www.linkedin.com/in/luciovilla', title: 'LinkedIn' }
+  ]
+
   return (
     <div className="flex relative items-center py-16 m-auto w-full max-w-2xl min-h-[65vh] md:pb-32 md:min-h-[75vh]">
       <div className="flex flex-col justify-center items-start mb-16">
@@ -12,23 +19,14 @@ export default function Topper() {
           </p>
 
           <div className="flex mt-3">
-            <div className="text-sm">
-              <a className="underline" href="mailto:hi@luciovilla.com?subject=Hola Lucio!">
-                {' '}
-                Email
-              </a>{' '}
-              |{' '}
-              <a className="underline" href="https://github.com/luciovilla">
-                Github
-              </a>{' '}
-              |{' '}
-              <a className="underline" href="https://twitter.com/luciovilla">
-                Twitter
-              </a>{' '}
-              |{' '}
-              <a className="underline" href="https://www.linkedin.com/in/luciovilla">
-                LinkedIn
-              </a>
+            <div className="space-x-2 text-sm">
+              {links.map((link) => {
+                return (
+                  <a key={link.title} className="underline" href={link.href}>
+                    {link.title}
+                  </a>
+                )
+              })}
             </div>
           </div>
         </div>

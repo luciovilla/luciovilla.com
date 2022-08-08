@@ -76,7 +76,7 @@ export type NowPlayingSong = {
   title: string
 }
 
-export type FeaturedProps = {
+export type ProjectProps = {
   title?: string
   projRole: string
   image?: string
