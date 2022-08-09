@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { PostType } from '../lib/types'
 import { getNotionData } from '../lib/getNotionData'
-import Container from '../components/Container'
+import Container from '../layouts/Container'
 
 export default function Blog({ posts }: { posts: Object[] }) {
   return (

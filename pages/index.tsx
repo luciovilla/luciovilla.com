@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from '../components/Container'
+import Container from '../layouts/Container'
 import Topper from '../components/Topper'
 import Projects from '../components/Projects'
 import About from '../components/About'

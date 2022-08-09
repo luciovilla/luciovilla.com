@@ -2,6 +2,7 @@ import BlogLayout from '../../layouts/BlogLayout'
 import { getNotionData, getPage, getBlocks } from '../../lib/getNotionData'
 import { RenderBlocks } from '../../components/ContentBlocks'
 import { PostType } from '../../lib/types'
+import Container from '../../layouts/Container'
 
 type PostProps = {
   page: PostType
@@ -24,20 +25,28 @@ const Post = ({ page, blocks }: PostProps) => {
   }
 
   return (
-    <BlogLayout data={page}>
-      <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl">
-        {page.properties.Post.title[0].plain_text}
-      </h1>
-      <div className="mb-4 text-sm text-gray-800">
-        <span>{timestamp(page.properties.Date.date.start)}</span>
-        {page.properties.Show_updated_timestamp.checkbox && page.last_edited_time && (
-          <span className="pl-1 text-sm text-gray-700">
-            / Updated: {timestamp(page.last_edited_time)}
-          </span>
-        )}
-      </div>
-      <RenderBlocks blocks={blocks} />
-    </BlogLayout>
+    <Container
+      title={`${page.properties.Post.title[0].plain_text} - Lucio Villa`}
+      description={page.properties.Description.rich_text[0].plain_text}
+      date={new Date(page.properties.Date.date.start)}
+      type="article"
+    >
+      <article className="my-16 mx-auto w-full max-w-2xl">
+        {' '}
+        <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl">
+          {page.properties.Post.title[0].plain_text}
+        </h1>
+        <div className="mb-4 text-sm text-gray-800">
+          <span>{timestamp(page.properties.Date.date.start)}</span>
+          {page.properties.Show_updated_timestamp.checkbox && page.last_edited_time && (
+            <span className="pl-1 text-sm text-gray-700">
+              / Updated: {timestamp(page.last_edited_time)}
+            </span>
+          )}
+        </div>
+        <RenderBlocks blocks={blocks} />
+      </article>
+    </Container>
   )
 }
 
