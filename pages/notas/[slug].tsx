@@ -1,4 +1,3 @@
-import BlogLayout from '../../layouts/BlogLayout'
 import { getNotionData, getPage, getBlocks } from '../../lib/getNotionData'
 import { RenderBlocks } from '../../components/ContentBlocks'
 import { PostType } from '../../lib/types'

@@ -9,7 +9,7 @@ export default function Blog({ posts }: { posts: Object[] }) {
       title="Notas - Lucio Villa"
       description="Thoughts on web development, tech, music and random chisme."
     >
-      <div className="flex flex-col justify-center items-start my-16 mx-auto max-w-2xl">
+      <div className="my-16 mx-auto flex max-w-2xl flex-col items-start justify-center">
         <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl">Notas</h1>
         <p className="mb-10 text-gray-600">
           Blog posts about web development, tech and random chisme.

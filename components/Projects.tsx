@@ -6,15 +6,15 @@ import ArrowIcon from './ArrowIcon'
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative m-auto mb-40 space-y-20 w-full max-w-2xl">
-      <div className="pt-5 m-auto w-full text-center text-gray-600 uppercase">
+    <section id="projects" className="relative m-auto mb-40 w-full max-w-2xl space-y-20">
+      <div className="m-auto w-full pt-5 text-center uppercase text-gray-600">
         Select Projects <ArrowIcon />
       </div>
       {projects.map((project: ProjectProps) => {
         return (
           <div className="flex flex-wrap" key={project.title}>
             {project.image && (
-              <div className="pt-4 mb-2 w-full md:pt-0">
+              <div className="mb-2 w-full pt-4 md:pt-0">
                 <div className="max-w-full bg-transparent">
                   <Image
                     alt="..."

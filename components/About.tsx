@@ -5,12 +5,12 @@ import ArrowIcon from './ArrowIcon'
 
 export default function About() {
   return (
-    <section id="about-me" className="relative m-auto mb-40 space-y-20 w-full max-w-2xl">
-      <div className="pt-5 m-auto w-full text-center text-gray-600 uppercase">
+    <section id="about-me" className="relative m-auto mb-40 w-full max-w-2xl space-y-20">
+      <div className="m-auto w-full pt-5 text-center uppercase text-gray-600">
         About me <ArrowIcon />
       </div>
       <div className="flex flex-wrap-reverse">
-        <div className="w-full text-gray-800 md:pr-12 md:w-4/5">
+        <div className="w-full text-gray-800 md:w-4/5 md:pr-12">
           <div className="md:pr-12">
             <p className="mt-4 leading-relaxed">
               Hola! My name is Lucio and I recently made the switch from the newsroom to product and
@@ -76,12 +76,12 @@ export default function About() {
               major I was studying Computer Science at Cal Poly Pomona (Go Broncos!).
             </p>
 
-            <div className="pt-2 mt-4 border-t">
+            <div className="mt-4 border-t pt-2">
               <NowPlaying />
             </div>
           </div>
         </div>
-        <div className="pt-4 mx-auto w-1/2 md:pt-0 md:pl-4 md:ml-auto md:w-1/5">
+        <div className="mx-auto w-1/2 pt-4 md:ml-auto md:w-1/5 md:pt-0 md:pl-4">
           <div className="max-w-full">
             <Image alt="..." src={profilePic} placeholder="blur" width={500} height={500} />
           </div>

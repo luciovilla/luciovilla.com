@@ -13,7 +13,7 @@ function NavItem({ href, text }) {
       <a
         className={clsx(
           isActive ? 'font-semibold text-gray-800' : 'font-normal text-gray-600',
-          'p-2 hover:bg-gray-100 rounded-lg transition-all sm:py-2 sm:px-3 md:inline-block'
+          'rounded-lg p-2 transition-all hover:bg-gray-100 sm:py-2 sm:px-3 md:inline-block'
         )}
       >
         <span>{text}</span>
@@ -24,8 +24,8 @@ function NavItem({ href, text }) {
 
 export default function Nav() {
   return (
-    <div className="flex sticky top-0 z-10 flex-col justify-center px-4 w-full bg-white/60 backdrop-blur-md">
-      <nav className="flex relative justify-between items-center py-4 mx-auto w-full max-w-2xl text-gray-900 sm:py-8">
+    <div className="sticky top-0 z-10 flex w-full flex-col justify-center bg-white/60 px-4 backdrop-blur-md">
+      <nav className="relative mx-auto flex w-full max-w-2xl items-center justify-between py-4 text-gray-900 sm:py-8">
         <a href="#skip" className="sr-only focus:not-sr-only">
           Skip to content
         </a>

@@ -7,8 +7,8 @@ export default function Topper() {
   ]
 
   return (
-    <div className="flex relative items-center py-16 m-auto w-full max-w-2xl min-h-[65vh] md:pb-32 md:min-h-[75vh]">
-      <div className="flex flex-col justify-center items-start mb-16">
+    <div className="relative m-auto flex min-h-[65vh] w-full max-w-2xl items-center py-16 md:min-h-[75vh] md:pb-32">
+      <div className="mb-16 flex flex-col items-start justify-center">
         <div className="w-full">
           <h1 className="mb-1 text-3xl font-bold tracking-tight md:text-5xl">Lucio Villa</h1>
           <h2 className="mb-2 text-gray-700 sm:text-lg">Senior Engineer at Vox Media</h2>
@@ -18,7 +18,7 @@ export default function Topper() {
             daily (Hoy Chicago) and formerly a photojournalist.
           </p>
 
-          <div className="flex mt-3">
+          <div className="mt-3 flex">
             <div className="space-x-2 text-sm">
               {links.map((link) => {
                 return (
