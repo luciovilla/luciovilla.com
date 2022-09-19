@@ -14,7 +14,7 @@ export default function About() {
           <div className="md:pr-12">
             <p className="mt-4 leading-relaxed">
               Hola! My name is Lucio and I recently made the switch from the newsroom to product and
-              now work as a Senior Engineer at Vox Media.
+              now work as a software engineer.
             </p>
             <p className="mt-4 leading-relaxed"></p>
             <p className="mt-4 leading-relaxed">

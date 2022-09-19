@@ -8,8 +8,7 @@ export default function Container({ children, ...customMeta }) {
   const router = useRouter()
   const meta: Record<string, string> = {
     title: 'Lucio Villa - Latino, Engineer, Designer',
-    description:
-      'First-generation Latino, software engineer and web designer. Currently a Senior Engineer at Vox Media.',
+    description: 'First-generation Latino, software engineer and web designer.',
     image: 'https://luciovilla.com/site.png',
     type: 'website',
     ...customMeta
