@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import PlaceholderImage from './PlaceholderImage'
-import { ProjectProps } from '../lib/types'
+import { ProjectProps } from '@lib/types'
 import projects from '../public/projects/list.json'
 import ArrowIcon from './ArrowIcon'
 

@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Script from 'next/script'
-import Nav from '../components/Nav'
-import Footer from '../components/Footer'
+import Nav from '@components/Nav'
+import Footer from '@components/Footer'
 
 export default function Container({ children, ...customMeta }) {
   const router = useRouter()

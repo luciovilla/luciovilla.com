@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getNotas } from '../../lib/getNotas'
-import { PostType } from '../../lib/types'
+import { getNotas } from '@lib/getNotas'
+import { PostType } from '@lib/types'
 
 export default async function notas(req: NextApiRequest, res: NextApiResponse) {
   const response = await getNotas()

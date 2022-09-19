@@ -1,6 +1,6 @@
 import useSWR from 'swr'
-import fetcher from '../lib/fetcher'
-import { NowPlayingSong } from '../lib/types'
+import fetcher from '@lib/fetcher'
+import { NowPlayingSong } from '@lib/types'
 
 export default function NowPlaying() {
   const { data } = useSWR<NowPlayingSong>('/api/now-playing', fetcher)

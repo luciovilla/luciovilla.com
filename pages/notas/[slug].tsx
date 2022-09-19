@@ -1,7 +1,7 @@
-import { getNotionData, getPage, getBlocks } from '../../lib/getNotionData'
-import { RenderBlocks } from '../../components/ContentBlocks'
-import { PostType } from '../../lib/types'
-import Container from '../../layouts/Container'
+import { getNotionData, getPage, getBlocks } from '@lib/getNotionData'
+import { RenderBlocks } from '@components/ContentBlocks'
+import { PostType } from '@lib/types'
+import Container from '@layouts/Container'
 
 type PostProps = {
   page: PostType
