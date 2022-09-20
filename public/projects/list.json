@@ -1,13 +1,33 @@
 [
   {
+    "title": "The Verge Redesign / Duet",
+    "summary": "Helped develop the new redesign of The Verge site and Duet, Vox Media's new publishing platform. A platform with the goal of supporting all of Vox Media's publications.",
+    "projRole": "Part of the core development team.",
+    "tools": "TypeScript, React, Next.js, Tailwind CSS, Relay",
+    "url": "https://theverge.com",
+    "image": "projects/verge.png",
+    "width": 3310,
+    "height": 1842
+  },
+  {
     "title": "La Palabra",
     "summary": "An open-source game inspired by the famous game Wordle. Purpose of the game is to guess the word (based on Bad Bunny lyrics) in 6 tries and includes a link to the Spotify song the word appears in to help in figuring out the word of the day.",
-    "projRole": "Creator and maintainer.",
+    "projRole": "Creator and developer.",
     "tools": "React, Next.js, Tailwind CSS, Python",
     "url": "https://palabra.luciovilla.com",
     "image": "projects/palabra.jpg",
     "width": 1200,
     "height": 630
+  },
+  {
+    "title": "AI Bad Bunny lyrics generator",
+    "summary": "Auto generate lyrics powered by an AI (Artifical Intelligence) trained on Bad Bunny songs. This experiment uses TensorFlow.js with a model exported from the Python version of Tensorflow. Only 134 Bad Bunny songs were used to train the model. I need more Bad Bunny songs. This is a work in progress.",
+    "projRole": "Creator and developer.",
+    "tools": "TensorFlow.js, React, Next.js, Tailwind CSS, Python",
+    "url": "https://lyrics.luciovilla.com",
+    "image": "projects/ai_bb.png",
+    "width": 1200,
+    "height": 675
   },
   {
     "title": "Starter Notion blog template",
