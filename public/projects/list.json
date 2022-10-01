@@ -6,8 +6,8 @@
     "tools": "TypeScript, React, Next.js, Tailwind CSS, Relay",
     "url": "https://theverge.com",
     "image": "projects/verge.jpg",
-    "width": 1986,
-    "height": 1105
+    "width": 1200,
+    "height": 668
   },
   {
     "title": "La Palabra",
