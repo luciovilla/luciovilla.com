@@ -1,3 +1,5 @@
+import NowPlaying from './NowPlaying'
+
 export default function Topper() {
   const links = [
     { href: 'mailto:hi@luciovilla.com?subject=Hola Lucio!', title: 'Email' },
@@ -17,7 +19,7 @@ export default function Topper() {
           <p className="mt-1 text-gray-800 sm:text-lg">
             First-generation Latino, software engineer and web designer. Previously at Vox Media,
             San Francisco Chronicle, Chicago Tribune's Spanish daily (Hoy Chicago) and formerly a
-            photojournalist.
+            photojournalist. <NowPlaying />
           </p>
 
           <div className="mt-3 flex">

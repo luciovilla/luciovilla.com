@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import NowPlaying from './NowPlaying'
 import profilePic from '../public/me.jpg'
 import ArrowIcon from './ArrowIcon'
 
@@ -74,10 +73,6 @@ export default function About() {
               I'm originally from Compton, CA and graduated from Cal State Fullerton (Go Titans!)
               with a Bachelor's Degree in Photo Communications.
             </p>
-
-            <div className="mt-4 border-t pt-2">
-              <NowPlaying />
-            </div>
           </div>
         </div>
         <div className="mx-auto w-1/2 pt-4 md:ml-auto md:w-1/5 md:pt-0 md:pl-4">
