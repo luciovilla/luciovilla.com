@@ -11,10 +11,13 @@ export default function Topper() {
       <div className="mb-16 flex flex-col items-start justify-center">
         <div className="w-full">
           <h1 className="mb-1 text-3xl font-bold tracking-tight md:text-5xl">Lucio Villa</h1>
+          <h2 className="mb-2 text-gray-700 sm:text-lg">
+            Senior Software Engineer at The Washington Post
+          </h2>
           <p className="mt-1 text-gray-800 sm:text-lg">
-            First-generation Latino, software engineer and web designer. Previously worked within
-            newsrooms at the Washington Post, San Francisco Chronicle, Chicago Tribune's Spanish
-            daily (Hoy Chicago) and formerly a photojournalist.
+            First-generation Latino, software engineer and web designer. Previously at Vox Media,
+            San Francisco Chronicle, Chicago Tribune's Spanish daily (Hoy Chicago) and formerly a
+            photojournalist.
           </p>
 
           <div className="mt-3 flex">

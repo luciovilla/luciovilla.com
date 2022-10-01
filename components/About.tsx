@@ -14,20 +14,21 @@ export default function About() {
           <div className="md:pr-12">
             <p className="mt-4 leading-relaxed">
               Hola! My name is Lucio and I recently made the switch from the newsroom to product and
-              now work as a software engineer.
+              now work as a Senior Software Engineer at The Washington Post.
             </p>
             <p className="mt-4 leading-relaxed"></p>
             <p className="mt-4 leading-relaxed">
-              Previously worked as a designer and web developer at the Washington Post, San
-              Francisco Chronicle and Chicago Tribune's Spanish daily (Hoy Chicago).
+              Previously at Vox Media, The Washington Post, San Francisco Chronicle, Chicago
+              Tribune's Spanish daily (Hoy Chicago) respectively and The Chicago Reporter.
             </p>
             <p className="mt-4 leading-relaxed">
               During my time in San Francisco I helped instruct a class on editorial web design and
-              development at the Graduate School of Journalism in UC Berkeley.
+              development in the Graduate School of Journalism at the University of California,
+              Berkeley.
             </p>
 
             <p className="mt-4 leading-relaxed">
-              Outside of work, I was listed in Editor &amp; Publisher’s 2019 “
+              Outside of work, I was listed in Editor &amp; Publisher's 2019 “
               <a
                 className="underline"
                 href="https://www.editorandpublisher.com/feature/eps-25-under-35-2019-the-next-generation-of-newspaper-leaders-wants-to-keep-the-industry-moving/"
@@ -54,26 +55,24 @@ export default function About() {
               >
                 Code Latino Chicago
               </a>
-              , a community empowering Latinos into web development, during my time in Chicago.
-              Contributor to{' '}
+              , a community empowering Latinos into web development. A contributor of Next.js (
               <a
                 className="underline"
                 href="https://github.com/vercel/next.js/releases/tag/v9.4.3"
                 target="_blank"
                 rel="noreferrer"
               >
-                Next.js v9.4.3
+                v9.4.3
               </a>
-              .
+              ), an open-source React Framework .
             </p>
             <p className="mt-4  leading-relaxed ">
-              I'm also a Lifetime member of the National Association of Hispanic Journalists (NAHJ)
-              and previously served on the local chapter boards in DC, Bay Area and Chicago.
+              A Lifetime member of the National Association of Hispanic Journalists (NAHJ) and
+              previously served on the local chapter boards in DC, Bay Area and Chicago.
             </p>
             <p className="mt-4  leading-relaxed ">
-              I’m originally from Compton, CA, and graduated from Cal State Fullerton (Go Titans!)
-              with a Bachelor’s Degree in Photo Communications. Prior to being a communications
-              major I was studying Computer Science at Cal Poly Pomona (Go Broncos!).
+              I'm originally from Compton, CA and graduated from Cal State Fullerton (Go Titans!)
+              with a Bachelor's Degree in Photo Communications.
             </p>
 
             <div className="mt-4 border-t pt-2">
