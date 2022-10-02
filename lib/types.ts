@@ -67,12 +67,28 @@ export interface ContentBlocks {
   }
 }
 
+export type SpotifyAPIResponse = {
+  item: {
+    album: {
+      images: Array<{ width: number; url: string }>
+    }
+    artists: Array<{ name: string }>
+    external_urls: {
+      spotify: string
+    }
+    name: string
+  }
+  is_playing: boolean
+}
+
 export type NowPlayingSong = {
-  albumImageUrl?: string
-  artist?: string
+  albumImageUrl: {
+    url: string
+  }
+  artist: string
   isPlaying: boolean
-  songUrl?: string
-  title?: string
+  songUrl: string
+  title: string
 }
 
 export type Song = {

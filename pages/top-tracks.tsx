@@ -17,7 +17,7 @@ export default function Tracks() {
           Top Tracks
         </h1>
         <p className="mb-10 text-gray-600">
-          A daily update of my top tracks on Spotify (Mostly Bad Bunny...).
+          A daily update of my top tracks on Spotify (Usually mostly Bad Bunny...).
         </p>
 
         {data && (
