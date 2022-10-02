@@ -5,7 +5,7 @@ import { NowPlayingSong } from '@lib/types'
 export default function NowPlaying() {
   const { data } = useSWR<NowPlayingSong>('/api/now-playing', fetcher)
 
-  if (!data && !data?.artist && !data?.songUrl) return null
+  if (!data?.isPlaying) return null
 
   return (
     <>
