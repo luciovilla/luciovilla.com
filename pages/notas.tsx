@@ -16,17 +16,17 @@ export default function Blog({ posts }: { posts: Object[] }) {
         </p>
 
         {posts.map((post: PostType) => (
-          <Link key={post.id} href={`/notas/${post.properties.Slug.rich_text[0].plain_text}`}>
-            <a className="w-full">
-              <div className="mb-8 w-full">
-                <h3 className="w-full text-xl font-medium text-gray-900">
-                  {post.properties.Post.title[0].plain_text}
-                </h3>
-                <p className="text-gray-700">
-                  {post.properties.Description.rich_text[0].plain_text}
-                </p>
-              </div>
-            </a>
+          <Link
+            key={post.id}
+            href={`/notas/${post.properties.Slug.rich_text[0].plain_text}`}
+            className="w-full"
+          >
+            <div className="mb-8 w-full">
+              <h3 className="w-full text-xl font-medium text-gray-900">
+                {post.properties.Post.title[0].plain_text}
+              </h3>
+              <p className="text-gray-700">{post.properties.Description.rich_text[0].plain_text}</p>
+            </div>
           </Link>
         ))}
       </div>

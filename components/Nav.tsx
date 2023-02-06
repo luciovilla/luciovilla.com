@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import clsx from 'clsx'
 
-import NextLink from 'next/link'
+import Link from 'next/link'
 
 function NavItem({ href, text }) {
   const router = useRouter()
@@ -9,16 +9,15 @@ function NavItem({ href, text }) {
   const isActive = slug === href
 
   return (
-    <NextLink href={href}>
-      <a
-        className={clsx(
-          isActive ? 'font-semibold text-gray-800' : 'font-normal text-gray-600',
-          'rounded-lg p-2 transition-all hover:bg-gray-100 sm:py-2 sm:px-3 md:inline-block'
-        )}
-      >
-        <span>{text}</span>
-      </a>
-    </NextLink>
+    <Link
+      href={href}
+      className={clsx(
+        isActive ? 'font-semibold text-gray-800' : 'font-normal text-gray-600',
+        'rounded-lg p-2 transition-all hover:bg-gray-100 sm:py-2 sm:px-3 md:inline-block'
+      )}
+    >
+      <span>{text}</span>
+    </Link>
   )
 }
 
