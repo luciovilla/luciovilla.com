@@ -1,4 +1,4 @@
-import ArrowIcon from './ArrowIcon'
+import ArrowIcon from './icons/ArrowIcon'
 
 export default function Awards() {
   return (

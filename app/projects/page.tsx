@@ -1,12 +1,12 @@
 import Image from 'next/image'
-import PlaceholderImage from './PlaceholderImage'
+import PlaceholderImage from '@components/PlaceholderImage'
+import ArrowIcon from '@components/icons/ArrowIcon'
 import { ProjectProps } from '@lib/types'
-import projects from '../public/projects/list.json'
-import ArrowIcon from './ArrowIcon'
+import projects from '../../public/projects/list.json'
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative m-auto mb-40 w-full max-w-2xl space-y-20">
+    <section className="relative m-auto mb-40 w-full max-w-2xl space-y-20">
       <div className="m-auto w-full pt-5 text-center uppercase text-gray-600">
         Select Projects <ArrowIcon />
       </div>

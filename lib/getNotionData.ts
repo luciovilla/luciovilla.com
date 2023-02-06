@@ -29,8 +29,9 @@ export const getNotionData = async (databaseId: string) => {
   return response.results
 }
 
-export const getPage = async (pageId: string) => {
-  return await notion.pages.retrieve({ page_id: pageId })
+export const getPage = async (pageId: string): Promise<any> => {
+  const pageData = await notion.pages.retrieve({ page_id: pageId })
+  return pageData
 }
 
 export const getBlocks = async (blockId: string) => {

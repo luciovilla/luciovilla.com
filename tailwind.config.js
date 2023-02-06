@@ -1,8 +1,15 @@
+/** @type {import('tailwindcss').Config} */
+
 const { fontFamily } = require('tailwindcss/defaultTheme')
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  content: ['./pages/**/*.tsx', './components/**/*.tsx', './layouts/**/*.tsx'],
+  content: [
+    './app/**/*.{ts,tsx}',
+    './pages/**/*.tsx',
+    './components/**/*.tsx',
+    './layouts/**/*.tsx'
+  ],
   theme: {
     fontFamily: {
       body: ['Inter', ...fontFamily.sans],
