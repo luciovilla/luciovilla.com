@@ -5,6 +5,7 @@ export default function RootHead() {
     <GenerateTags
       title="Notas - Lucio Villa"
       description="My thoughts on web development, tech, music and random chisme."
+      slug="notas"
     />
   )
 }

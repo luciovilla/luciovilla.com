@@ -14,7 +14,7 @@ export default async function RootHead({ params }: { params: { slug: string } })
     <GenerateTags
       title={pageTitle}
       description="My thoughts on web development, tech, music and random chisme."
-      slug={params.slug}
+      slug={`notas/${params.slug}`}
     />
   )
 }
