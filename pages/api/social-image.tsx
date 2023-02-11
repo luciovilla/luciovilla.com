@@ -5,8 +5,8 @@ export const config = {
   runtime: 'edge'
 }
 
-const loadCustomFont = fetch(new URL('../../public/fonts/inter-var.ttf', import.meta.url)).then(
-  (res) => res.arrayBuffer()
+const loadCustomFont = fetch(new URL('../../public/fonts/inter.ttf', import.meta.url)).then((res) =>
+  res.arrayBuffer()
 )
 
 export default async function handler(req: NextRequest) {
@@ -22,19 +22,22 @@ export default async function handler(req: NextRequest) {
             height: '100%',
             width: '100%',
             display: 'flex',
-            textAlign: 'center',
-            alignItems: 'center',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
             justifyContent: 'center',
-            backgroundColor: '#f5f5f5'
+            backgroundColor: 'whitesmoke'
           }}
         >
           <div
             style={{
-              fontSize: 130,
+              marginLeft: 190,
+              marginRight: 190,
+              display: 'flex',
+              fontSize: 100,
               fontFamily: 'Inter',
-              fontStyle: 'normal',
               color: 'black',
-              lineHeight: '1.4'
+              lineHeight: '120px',
+              whiteSpace: 'pre-wrap'
             }}
           >
             {postTitle}
@@ -42,8 +45,8 @@ export default async function handler(req: NextRequest) {
         </div>
       ),
       {
-        width: 1200,
-        height: 630,
+        width: 1920,
+        height: 1080,
         fonts: [
           {
             name: 'Inter',
