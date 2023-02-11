@@ -1,4 +1,11 @@
 import Script from 'next/script'
+import localFont from '@next/font/local'
+
+const inter = localFont({
+  src: '../public/fonts/inter-var.woff2',
+  variable: '--font-inter',
+  display: 'swap'
+})
 
 import './global.css'
 import Nav from '@components/Nav'
@@ -6,7 +13,7 @@ import Footer from '@components/Footer'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.variable}>
       <body>
         <Nav />
         <main id="skip" className="px-8">

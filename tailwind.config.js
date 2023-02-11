@@ -11,9 +11,11 @@ module.exports = {
     './layouts/**/*.tsx'
   ],
   theme: {
-    fontFamily: {
-      body: ['Inter', ...fontFamily.sans],
-      sans: ['Inter', ...fontFamily.sans]
+    extend: {
+      fontFamily: {
+        body: ['var(--font-inter)'],
+        sans: ['var(--font-inter)']
+      }
     },
     animation: {
       wave: 'pulse 1s infinite'

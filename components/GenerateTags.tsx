@@ -29,13 +29,6 @@ export default function GenerateTags({
       <meta name="twitter:site" content="@luciovilla" />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={`${DOMAIN}/${image}`} />
-      <link
-        rel="preload"
-        href="/fonts/inter-var.woff2"
-        as="font"
-        crossOrigin="anonymous"
-        type="font/woff2"
-      />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     </>
   )
