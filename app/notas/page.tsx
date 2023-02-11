@@ -12,6 +12,7 @@ export const metadata = {
   },
   twitter: {
     title: 'Notas',
+    description: 'My thoughts on web development, tech, music and random chisme.',
     card: 'summary_large_image',
     site: '@luciovilla',
     creator: '@luciovilla',

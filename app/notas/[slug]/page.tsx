@@ -18,22 +18,27 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const pageData = await getPage(page[0].id)
   const title = pageData.properties.Post.title[0].plain_text
   const description = pageData.properties.Description.rich_text[0].plain_text
+  const publishedTime = pageData.properties.Date.date.start
+  const modifiedTime = pageData.last_edited_time
+  const postURL = `${DOMAIN}/notas/${params.slug}`
+
   return {
     title,
     description,
     openGraph: {
       title,
       description,
+      publishedTime,
+      modifiedTime,
       type: 'article',
-      url: `${DOMAIN}/notas/${params.slug}`
+      url: postURL
     },
     twitter: {
-      card: 'summary_large_image',
       title,
       description
     },
     alternates: {
-      canonical: `${DOMAIN}/notas/${params.slug}`
+      canonical: postURL
     }
   }
 }

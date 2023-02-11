@@ -14,7 +14,6 @@ export const metadata = {
   },
   twitter: {
     title: 'My Projects',
-    description: 'My selected web portfolio.',
     card: 'summary_large_image',
     site: '@luciovilla',
     creator: '@luciovilla',
