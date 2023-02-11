@@ -33,11 +33,12 @@ export default async function handler(req: NextRequest) {
             style={{
               marginLeft: 190,
               marginRight: 190,
+              marginBottom: 150,
               display: 'flex',
-              fontSize: 100,
+              fontSize: 125,
               fontFamily: 'Inter',
               color: 'black',
-              lineHeight: '120px',
+              lineHeight: 1.1,
               whiteSpace: 'pre-wrap'
             }}
           >
