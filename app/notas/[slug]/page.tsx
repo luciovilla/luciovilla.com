@@ -1,7 +1,42 @@
+import { notFound } from 'next/navigation'
 import { getNotionData, getPage, getBlocks } from '@lib/getNotionData'
 import { RenderBlocks } from '@components/ContentBlocks'
+import { DOMAIN } from '@lib/globals'
 
 const databaseId = process.env.NOTION_DATABASE_ID
+
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const database = await getNotionData(databaseId)
+  const page = database.filter(
+    (blog: any) => blog.properties.Slug.rich_text[0].plain_text === params.slug
+  )
+
+  if (page.length === 0) {
+    return
+  }
+
+  const pageData = await getPage(page[0].id)
+  const title = pageData.properties.Post.title[0].plain_text
+  const description = pageData.properties.Description.rich_text[0].plain_text
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'article',
+      url: `${DOMAIN}/notas/${params.slug}`
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description
+    },
+    alternates: {
+      canonical: `${DOMAIN}/notas/${params.slug}`
+    }
+  }
+}
 
 export async function generateStaticParams() {
   const notas: any = await getNotionData(databaseId)
@@ -13,13 +48,22 @@ export async function generateStaticParams() {
 
 const Post = async ({ params }) => {
   const database = await getNotionData(databaseId)
-  const filter = database.filter(
+  const post = database.filter(
     (blog: any) => blog.properties.Slug.rich_text[0].plain_text === params.slug
   )
-  const page = await getPage(filter[0].id)
-  const blocks = await getBlocks(filter[0].id)
 
-  if (!page || !blocks) return null
+  // Return not found if slug not found in Notion
+  if (post.length === 0) {
+    notFound()
+  }
+
+  const page = await getPage(post[0].id)
+  const blocks = await getBlocks(post[0].id)
+
+  // Return not found if page is empty instead of showing a blank page
+  if (!page || !blocks) {
+    notFound()
+  }
 
   const timestamp = (date: string) => {
     return new Date(date).toLocaleDateString('en-US', {

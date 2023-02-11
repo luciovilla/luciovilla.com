@@ -3,6 +3,27 @@ import PlaceholderImage from '@components/PlaceholderImage'
 import ArrowIcon from '@components/icons/ArrowIcon'
 import { ProjectProps } from '@lib/types'
 import projects from '../../public/projects/list.json'
+import { DOMAIN } from '@lib/globals'
+
+export const metadata = {
+  title: 'Projects',
+  description: 'My selected web portfolio.',
+  openGraph: {
+    title: 'Projects',
+    url: `${DOMAIN}/projects`
+  },
+  twitter: {
+    title: 'My Projects',
+    description: 'My selected web portfolio.',
+    card: 'summary_large_image',
+    site: '@luciovilla',
+    creator: '@luciovilla',
+    images: ['https://luciovilla.com/site.png']
+  },
+  alternates: {
+    canonical: `${DOMAIN}/projects`
+  }
+}
 
 export default function Projects() {
   return (

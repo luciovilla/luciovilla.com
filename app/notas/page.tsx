@@ -1,6 +1,26 @@
 import Link from 'next/link'
 import { PostType } from '@lib/types'
 import { getNotionData } from '@lib/getNotionData'
+import { DOMAIN } from '@lib/globals'
+
+export const metadata = {
+  title: 'Notas',
+  description: 'My thoughts on web development, tech, music and random chisme.',
+  openGraph: {
+    title: 'Notas',
+    url: `${DOMAIN}/notas`
+  },
+  twitter: {
+    title: 'Notas',
+    card: 'summary_large_image',
+    site: '@luciovilla',
+    creator: '@luciovilla',
+    images: ['https://luciovilla.com/site.png']
+  },
+  alternates: {
+    canonical: `${DOMAIN}/notas`
+  }
+}
 
 export default async function Blog() {
   const posts: Object[] = await getNotionData(process.env.NOTION_DATABASE_ID)

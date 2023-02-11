@@ -2,6 +2,25 @@ import Image from 'next/image'
 import profilePic from '../../public/me.jpg'
 import ArrowIcon from '@components/icons/ArrowIcon'
 import Awards from '@components/Awards'
+import { DOMAIN } from '@lib/globals'
+
+export const metadata = {
+  title: 'About Me',
+  openGraph: {
+    title: 'About Me',
+    url: `${DOMAIN}/about-me`
+  },
+  twitter: {
+    title: 'About Me',
+    card: 'summary_large_image',
+    site: '@luciovilla',
+    creator: '@luciovilla',
+    images: ['https://luciovilla.com/site.png']
+  },
+  alternates: {
+    canonical: `${DOMAIN}/about-me`
+  }
+}
 
 export default function AboutMe() {
   return (
