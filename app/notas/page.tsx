@@ -8,7 +8,8 @@ export const metadata = {
   description: 'My thoughts on web development, tech, music and random chisme.',
   openGraph: {
     title: 'Notas',
-    url: `${DOMAIN}/notas`
+    url: `${DOMAIN}/notas`,
+    images: [{ url: 'https://luciovilla.com/og-notas.png' }]
   },
   twitter: {
     title: 'Notas',
@@ -16,7 +17,7 @@ export const metadata = {
     card: 'summary_large_image',
     site: '@luciovilla',
     creator: '@luciovilla',
-    images: ['https://luciovilla.com/site.png']
+    images: ['https://luciovilla.com/og-notas.png']
   },
   alternates: {
     canonical: `${DOMAIN}/notas`
