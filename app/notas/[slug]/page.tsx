@@ -38,6 +38,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     twitter: {
       title,
       description,
+      card: 'summary_large_image',
       images: [socialImage]
     },
     alternates: {
