@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const publishedTime = pageData.properties.Date.date.start
   const modifiedTime = pageData.last_edited_time
   const postURL = `${DOMAIN}/notas/${params.slug}`
+  const socialImage = `https://luciovilla.com/api/social-image?title=${title}`
 
   return {
     title,
@@ -31,11 +32,13 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       publishedTime,
       modifiedTime,
       type: 'article',
-      url: postURL
+      url: postURL,
+      images: [{ url: socialImage }]
     },
     twitter: {
       title,
-      description
+      description,
+      images: [socialImage]
     },
     alternates: {
       canonical: postURL
