@@ -25,8 +25,7 @@ export default async function handler(req: NextRequest) {
             flexDirection: 'column',
             alignItems: 'flex-start',
             justifyContent: 'center',
-            backgroundImage:
-              'url(https://new-newsite-git-test-verel-og-api-luciovilla.vercel.app/ogbg.png)'
+            backgroundImage: 'url(https://luciovilla.com/ogbg.png)'
           }}
         >
           <div
