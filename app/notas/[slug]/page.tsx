@@ -9,7 +9,7 @@ import { defaultMeta } from '@lib/metadata-defaults'
 const databaseId = process.env.NOTION_DATABASE_ID
 
 export async function generateMetadata({ params }): Promise<Metadata | undefined> {
-  const database = await getNotionData(databaseId)
+  const database = await getNotionData()
   const page = database.filter(
     (blog: any) => blog.properties.Slug.rich_text[0].plain_text === params.slug
   )
@@ -50,7 +50,7 @@ export async function generateMetadata({ params }): Promise<Metadata | undefined
 }
 
 export async function generateStaticParams() {
-  const notas: any = await getNotionData(databaseId)
+  const notas: any = await getNotionData()
 
   return notas.map((nota) => ({
     slug: nota.properties.Slug.rich_text[0].plain_text
@@ -58,7 +58,7 @@ export async function generateStaticParams() {
 }
 
 const Post = async ({ params }) => {
-  const database = await getNotionData(databaseId)
+  const database = await getNotionData()
   const post = database.filter(
     (blog: any) => blog.properties.Slug.rich_text[0].plain_text === params.slug
   )
@@ -105,7 +105,10 @@ const Post = async ({ params }) => {
 
   return (
     <article className="my-16 mx-auto w-full max-w-2xl">
-      <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl">{title}</h1>
       <div className="mb-4 text-sm text-gray-800">
         <span>{timestamp(publishedTime)}</span>
