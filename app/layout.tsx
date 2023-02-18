@@ -3,7 +3,6 @@ import localFont from 'next/font/local'
 
 import './global.css'
 import Nav from '@components/Nav'
-import Footer from '@components/Footer'
 import { defaultMeta } from '@lib/metadata-defaults'
 
 const inter = localFont({
@@ -24,7 +23,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="skip" className="px-8">
           {children}
         </main>
-        <Footer />
       </body>
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-JDMZNFHMVW" />
       <Script id="google-analytics">

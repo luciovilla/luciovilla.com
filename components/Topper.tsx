@@ -9,7 +9,7 @@ export default function Topper() {
   ]
 
   return (
-    <div className="relative m-auto flex min-h-[90vh] w-full max-w-2xl items-center py-16 md:pb-32">
+    <div className="relative mx-auto mt-10 flex w-full max-w-2xl items-center py-16 md:pb-32">
       <div className="mb-16 flex flex-col items-start justify-center">
         <div className="w-full">
           <h1 className="mb-1 text-3xl font-bold tracking-tight md:text-5xl">Lucio Villa</h1>

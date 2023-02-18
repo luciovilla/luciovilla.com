@@ -5,6 +5,7 @@ import Awards from '@components/Awards'
 import { DOMAIN } from '@lib/globals'
 import { defaultMeta } from '@lib/metadata-defaults'
 import profilePic from '../../public/me.jpg'
+import Footer from '@components/Footer'
 
 export const metadata = {
   title: 'About Me',
@@ -103,6 +104,7 @@ export default function AboutMe() {
         </div>
       </section>
       <Awards />
+      <Footer />
     </>
   )
 }
