@@ -1,6 +1,6 @@
 import { Client } from '@notionhq/client'
 
-const databaseId = process.env.NOTION_DATABASE_ID
+const databaseId = process.env.NOTION_DATABASE_ID as string
 
 const notion = new Client({
   auth: process.env.NOTION_TOKEN
@@ -38,8 +38,8 @@ export const getPage = async (pageId: string): Promise<any> => {
 }
 
 export const getBlocks = async (blockId: string) => {
-  const blocks = []
-  let cursor: string
+  const blocks: Array<{}> = []
+  let cursor: string | undefined
   while (true) {
     const { results, next_cursor } = await notion.blocks.children.list({
       start_cursor: cursor,
