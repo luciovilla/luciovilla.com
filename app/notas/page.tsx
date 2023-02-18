@@ -23,7 +23,7 @@ export const metadata = {
 }
 
 export default async function Blog() {
-  const posts: Object[] = await getNotionData(process.env.NOTION_DATABASE_ID)
+  const posts: Object[] = await getNotionData()
 
   return (
     <div className="my-16 mx-auto flex max-w-2xl flex-col items-start justify-center">

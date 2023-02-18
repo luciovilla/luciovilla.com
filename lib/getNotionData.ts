@@ -1,9 +1,12 @@
 import { Client } from '@notionhq/client'
 
+const databaseId = process.env.NOTION_DATABASE_ID
+
 const notion = new Client({
   auth: process.env.NOTION_TOKEN
 })
-export const getNotionData = async (databaseId: string) => {
+
+export const getNotionData = async () => {
   const response = await notion.databases.query({
     database_id: databaseId,
     // Filter out posts not checked to publish.
