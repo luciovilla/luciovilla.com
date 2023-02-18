@@ -1,5 +1,5 @@
 import Script from 'next/script'
-import localFont from '@next/font/local'
+import localFont from 'next/font/local'
 
 import './global.css'
 import Nav from '@components/Nav'

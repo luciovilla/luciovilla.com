@@ -75,11 +75,6 @@
   dependencies:
     glob "7.1.7"
 
-"@next/font@^13.1.6":
-  version "13.1.6"
-  resolved "https://registry.npmjs.org/@next/font/-/font-13.1.6.tgz"
-  integrity sha512-AITjmeb1RgX1HKMCiA39ztx2mxeAyxl4ljv2UoSBUGAbFFMg8MO7YAvjHCgFhD39hL7YTbFjol04e/BPBH5RzQ==
-
 "@next/swc-android-arm-eabi@13.1.7-canary.20":
   version "13.1.7-canary.20"
   resolved "https://registry.yarnpkg.com/@next/swc-android-arm-eabi/-/swc-android-arm-eabi-13.1.7-canary.20.tgz#300906c4380f1dd6f6f8e50b6cd3bf2eecbe4142"
