@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { PostType } from '@lib/types'
 import { getNotionData } from '@lib/getNotionData'
 import { DOMAIN } from '@lib/globals'
+import { defaultMeta } from '@lib/metadata-defaults'
 
 export const metadata = {
   title: 'Notas',
@@ -12,11 +13,8 @@ export const metadata = {
     images: [{ url: 'https://luciovilla.com/og-notas.png' }]
   },
   twitter: {
+    ...defaultMeta.twitter,
     title: 'Notas',
-    description: 'My thoughts on web development, tech, music and random chisme.',
-    card: 'summary_large_image',
-    site: '@luciovilla',
-    creator: '@luciovilla',
     images: ['https://luciovilla.com/og-notas.png']
   },
   alternates: {

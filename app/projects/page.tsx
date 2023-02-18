@@ -2,6 +2,7 @@ import Image from 'next/image'
 import PlaceholderImage from '@components/PlaceholderImage'
 import ArrowIcon from '@components/icons/ArrowIcon'
 import { ProjectProps } from '@lib/types'
+import { defaultMeta } from '@lib/metadata-defaults'
 import projects from '../../public/projects/list.json'
 import { DOMAIN } from '@lib/globals'
 
@@ -13,11 +14,8 @@ export const metadata = {
     url: `${DOMAIN}/projects`
   },
   twitter: {
-    title: 'My Projects',
-    card: 'summary_large_image',
-    site: '@luciovilla',
-    creator: '@luciovilla',
-    images: ['https://luciovilla.com/site.png']
+    ...defaultMeta.twitter,
+    title: 'My Projects'
   },
   alternates: {
     canonical: `${DOMAIN}/projects`

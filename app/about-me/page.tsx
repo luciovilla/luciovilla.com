@@ -1,8 +1,10 @@
 import Image from 'next/image'
-import profilePic from '../../public/me.jpg'
+
 import ArrowIcon from '@components/icons/ArrowIcon'
 import Awards from '@components/Awards'
 import { DOMAIN } from '@lib/globals'
+import { defaultMeta } from '@lib/metadata-defaults'
+import profilePic from '../../public/me.jpg'
 
 export const metadata = {
   title: 'About Me',
@@ -11,11 +13,8 @@ export const metadata = {
     url: `${DOMAIN}/about-me`
   },
   twitter: {
-    title: 'About Me',
-    card: 'summary_large_image',
-    site: '@luciovilla',
-    creator: '@luciovilla',
-    images: ['https://luciovilla.com/site.png']
+    ...defaultMeta.twitter,
+    title: 'About Me'
   },
   alternates: {
     canonical: `${DOMAIN}/about-me`

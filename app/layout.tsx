@@ -1,8 +1,10 @@
 import Script from 'next/script'
 import localFont from '@next/font/local'
+
+import './global.css'
 import Nav from '@components/Nav'
 import Footer from '@components/Footer'
-import './global.css'
+import { defaultMeta } from '@lib/metadata-defaults'
 
 const inter = localFont({
   src: '../public/fonts/inter-var.woff2',
@@ -11,42 +13,7 @@ const inter = localFont({
 })
 
 export const metadata = {
-  title: {
-    default: 'Lucio Villa - Latino, Engineer, Designer',
-    template: '%s | Lucio Villa'
-  },
-  description: 'First-generation Latino, software engineer and web designer.',
-  authors: ['Lucio Villa'],
-  icons: {
-    icon: '/favicon.ico'
-  },
-  openGraph: {
-    siteName: 'Luicio Villa',
-    url: 'https://luciovilla.com',
-    type: 'website',
-    description: 'First-generation Latino, software engineer and web designer.',
-    title: 'Lucio Villa - Latino, Engineer, Designer',
-    images: [
-      {
-        url: 'https://luciovilla.com/site.png'
-      }
-    ]
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Lucio Villa',
-    description: 'First-generation Latino, software engineer and web designer.',
-    site: '@luciovilla',
-    creator: '@luciovilla',
-    images: ['https://luciovilla.com/site.png']
-  },
-  alternates: {
-    canonical: 'https://luciovilla.com'
-  },
-  robots: {
-    index: true,
-    follow: true
-  }
+  ...defaultMeta
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

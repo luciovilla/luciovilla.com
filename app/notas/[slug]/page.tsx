@@ -1,11 +1,14 @@
 import { notFound } from 'next/navigation'
+import type { Metadata } from 'next'
+
 import { getNotionData, getPage, getBlocks } from '@lib/getNotionData'
 import { RenderBlocks } from '@components/ContentBlocks'
 import { DOMAIN } from '@lib/globals'
+import { defaultMeta } from '@lib/metadata-defaults'
 
 const databaseId = process.env.NOTION_DATABASE_ID
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params }): Promise<Metadata | undefined> {
   const database = await getNotionData(databaseId)
   const page = database.filter(
     (blog: any) => blog.properties.Slug.rich_text[0].plain_text === params.slug
@@ -36,9 +39,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       images: [{ url: socialImage }]
     },
     twitter: {
+      ...defaultMeta.twitter,
       title,
-      description,
-      card: 'summary_large_image',
       images: [socialImage]
     },
     alternates: {
