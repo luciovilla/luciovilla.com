@@ -30,7 +30,6 @@ export const getNowPlaying = async () => {
       Authorization: `Bearer ${access_token}`
     }
   })
-
   return res.json()
 }
 
