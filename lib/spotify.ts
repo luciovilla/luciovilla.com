@@ -25,19 +25,23 @@ const getAccessToken = async () => {
 
 export const getNowPlaying = async () => {
   const { access_token } = await getAccessToken()
-  return fetch(NOW_PLAYING_ENDPOINT, {
+  const res = await fetch(NOW_PLAYING_ENDPOINT, {
     headers: {
       Authorization: `Bearer ${access_token}`
     }
   })
+
+  return res.json()
 }
 
 export const getTopTracks = async () => {
   const { access_token } = await getAccessToken()
 
-  return fetch(TOP_TRACKS_ENDPOINT, {
+  const res = await fetch(TOP_TRACKS_ENDPOINT, {
     headers: {
       Authorization: `Bearer ${access_token}`
     }
   })
+
+  return await res.json()
 }
