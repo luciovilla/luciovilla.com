@@ -2,8 +2,6 @@ import { getNowPlaying } from '@lib/spotify'
 import { SpotifyAPIResponse } from '@lib/types'
 import { NextResponse } from 'next/server'
 
-export const revalidate = 30
-
 export async function GET() {
   try {
     const response: SpotifyAPIResponse = await getNowPlaying()

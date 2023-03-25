@@ -28,7 +28,8 @@ export const getNowPlaying = async () => {
   const res = await fetch(NOW_PLAYING_ENDPOINT, {
     headers: {
       Authorization: `Bearer ${access_token}`
-    }
+    },
+    next: { revalidate: 30 }
   })
 
   return res.json()
