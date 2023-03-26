@@ -16,26 +16,26 @@ export default function Awards() {
               <div className="flex-auto px-4 text-gray-700">
                 <div className="-ml-4 text-xl font-semibold">2021</div>
                 <ul className="mt-4 list-outside list-disc space-y-1">
-                  {twenty21.map((award) => {
-                    return <Award award={award} />
+                  {twenty21.map((award, idx) => {
+                    return <Award award={award} key={idx} />
                   })}
                 </ul>
                 <div className="mt-4 -ml-4 text-xl font-semibold">2020</div>
                 <ul className="mt-4 list-outside list-disc space-y-1">
-                  {twenty20.map((award) => {
-                    return <Award award={award} />
+                  {twenty20.map((award, idx) => {
+                    return <Award award={award} key={idx} />
                   })}
                 </ul>
                 <div className="mt-4 -ml-4 text-xl font-semibold">2019</div>
                 <ul className="mt-4 list-outside list-disc space-y-1">
-                  {twenty19.map((award) => {
-                    return <Award award={award} />
+                  {twenty19.map((award, idx) => {
+                    return <Award award={award} key={idx} />
                   })}
                 </ul>
                 <div className="mt-4 -ml-4 text-xl font-semibold">2018</div>
                 <ul className="mt-4 list-outside list-disc space-y-1">
-                  {twenty18.map((award) => {
-                    return <Award award={award} />
+                  {twenty18.map((award, idx) => {
+                    return <Award award={award} key={idx} />
                   })}
                 </ul>
               </div>
