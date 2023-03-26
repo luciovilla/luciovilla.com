@@ -38,8 +38,8 @@ export default function AboutMe() {
               </p>
               <p className="mt-4 leading-relaxed"></p>
               <p className="mt-4 leading-relaxed">
-                Previously at Vox Media, The Washington Post, San Francisco Chronicle, Chicago
-                Tribune's Spanish daily (Hoy Chicago) respectively and The Chicago Reporter.
+                Previously at Vox Media, San Francisco Chronicle, Chicago Tribune's Spanish daily
+                (Hoy Chicago), The Chicago Reporter and La Opinión.
               </p>
               <p className="mt-4 leading-relaxed">
                 During my time in San Francisco I helped instruct a class on editorial web design
@@ -84,11 +84,11 @@ export default function AboutMe() {
                 >
                   v9.4.3
                 </a>
-                ), an open-source React Framework .
+                ), an open-source web development React framework.
               </p>
               <p className="mt-4  leading-relaxed ">
-                A Lifetime member of the National Association of Hispanic Journalists (NAHJ) and
-                previously served on the local chapter boards in DC, Bay Area and Chicago.
+                I am a lifetime member of the National Association of Hispanic Journalists (NAHJ)
+                and previously served on the local chapter boards in DC, Bay Area and Chicago.
               </p>
               <p className="mt-4  leading-relaxed ">
                 I'm originally from Compton, CA and graduated from Cal State Fullerton (Go Titans!)
