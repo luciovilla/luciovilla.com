@@ -2,7 +2,7 @@
   {
     "title": "The Verge Redesign / Duet",
     "summary": "Helped develop the new redesign of The Verge site and Duet, Vox Media's new publishing platform. A platform with the goal of supporting all of Vox Media's publications.",
-    "projRole": "Part of the core development team.",
+    "projRole": "Part of the core development team",
     "tools": "TypeScript, React, Next.js, Tailwind CSS, Relay",
     "url": "https://theverge.com",
     "image": "projects/verge.jpg",
@@ -12,7 +12,7 @@
   {
     "title": "La Palabra",
     "summary": "An open-source game inspired by the famous game Wordle. Purpose of the game is to guess the word (based on Bad Bunny lyrics) in 6 tries and includes a link to the Spotify song the word appears in to help in figuring out the word of the day.",
-    "projRole": "Creator and developer.",
+    "projRole": "Creator and developer",
     "tools": "React, Next.js, Tailwind CSS, Python",
     "url": "https://palabra.luciovilla.com",
     "image": "projects/palabra.jpg",
@@ -20,19 +20,19 @@
     "height": 630
   },
   {
-    "title": "AI Bad Bunny lyrics generator",
-    "summary": "Auto generate lyrics powered by an AI (Artifical Intelligence) trained on Bad Bunny songs. This experiment uses TensorFlow.js with a model exported from the Python version of Tensorflow. Only 134 Bad Bunny songs were used to train the model. I need more Bad Bunny songs. This is a work in progress.",
-    "projRole": "Creator and developer.",
-    "tools": "TensorFlow.js, React, Next.js, Tailwind CSS, Python",
-    "url": "https://lyrics.luciovilla.com",
+    "title": "El Bot Bunny",
+    "summary": "An AI Bad Bunny lyrics generator powered by ChatGPT. Users can provide the AI with topics and optionally a song to base the lyrics it will auto generate. Give it a try, share your results.",
+    "projRole": "Creator and developer",
+    "tools": "ChatGPT, React, Next.js, Tailwind CSS, Vercel Edge Functions",
+    "url": "https://elbotbunny.com",
     "image": "projects/ai_bb.png",
-    "width": 1200,
-    "height": 675
+    "width": 1920,
+    "height": 1080
   },
   {
     "title": "Starter Notion blog template",
     "summary": "An open-source starter blog template that is statically generated with Next.js, content powered by Notion and styled with Tailwind CSS.",
-    "projRole": "Creator and maintainer.",
+    "projRole": "Creator and maintainer",
     "tools": "React, Next.js, Tailwind CSS, Notion API",
     "url": "https://blog.luciovilla.com",
     "image": "projects/blog.png",
@@ -57,7 +57,7 @@
   },
   {
     "title": "Mueller Report Illustrated",
-    "projRole": "Front-end developer.",
+    "projRole": "Front-end developer",
     "tools": "React, React PLX, ffmpeg, Node, Gulp",
     "image": "projects/mri.jpg",
     "summary": "A six-part interactive series on the obstruction investigation with audio and scrolling animations.",
@@ -69,7 +69,7 @@
 
   {
     "title": "Mekong River",
-    "projRole": "Designer and front-end developer.",
+    "projRole": "Designer and front-end developer",
     "awards": "2020 SND Award of Excellence",
     "tools": "Gulp, ScrollMagic.js, Node, Adobe XD",
     "image": "projects/mekong.jpg",
@@ -80,7 +80,7 @@
   },
   {
     "title": "Military Helicopter",
-    "projRole": "Designer and front-end developer.",
+    "projRole": "Designer and front-end developer",
     "image": "projects/helicopter.jpg",
     "tools": "React, Next.js, Adobe XD, Node, PLX animation library",
     "awards": "2020 SND Bronze Medal",
@@ -92,7 +92,7 @@
   {
     "title": "Rose Garden Photo",
     "tools": "React, Next.js, Node, ScrollMonitor.js",
-    "projRole": "Designer and front-end developer.",
+    "projRole": "Designer and front-end developer",
     "image": "projects/rose.jpg",
     "summary": "An interactive project that zooms and pans to show who attended a possible superspreader event at the White House.",
     "url": "https://www.washingtonpost.com/graphics/2020/politics/coronavirus-attendees-barrett-nomination-ceremony/",

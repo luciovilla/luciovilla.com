@@ -70,7 +70,7 @@ export default function Projects() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      View Project{' '}
+                      View Project
                     </a>
                   </div>
                 )}

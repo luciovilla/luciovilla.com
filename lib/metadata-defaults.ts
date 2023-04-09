@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const defaultMeta: Metadata = {
   title: {
     default: 'Lucio Villa - Latino, Engineer, Designer',
-    template: '%s | Lucio Villa'
+    template: '%s - Lucio Villa'
   },
   description: 'First-generation Latino, software engineer and web designer.',
   authors: [{ name: 'Lucio Villa' }],
