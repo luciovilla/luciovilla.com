@@ -17,7 +17,8 @@ const getAccessToken = async () => {
     body: new URLSearchParams({
       grant_type: 'refresh_token',
       refresh_token: refresh_token!
-    }).toString()
+    }).toString(),
+    next: { revalidate: 30 } // Revalidate every 30 seconds
   })
 
   return response.json()
