@@ -5,11 +5,11 @@ export const config = {
   runtime: 'edge'
 }
 
-const loadCustomFont = fetch(new URL('../../public/fonts/inter.ttf', import.meta.url)).then((res) =>
-  res.arrayBuffer()
+const loadCustomFont = fetch(new URL('../../../public/fonts/inter.ttf', import.meta.url)).then(
+  (res) => res.arrayBuffer()
 )
 
-export default async function handler(req: NextRequest) {
+export async function GET(req: NextRequest) {
   try {
     const { searchParams } = req.nextUrl
     const postTitle = searchParams.get('title')
