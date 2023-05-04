@@ -10,12 +10,18 @@ export const metadata = {
   openGraph: {
     title: 'Notas',
     url: `${DOMAIN}/notas`,
-    images: [{ url: 'https://luciovilla.com/og-notas.png' }]
+    images: [
+      {
+        url: 'https://luciovilla.com/api/social-image?title=Just%20my%20notes%20on%20web%20dev,%20tech,%20music%20and%20random%20chisme'
+      }
+    ]
   },
   twitter: {
     ...defaultMeta.twitter,
     title: 'Notas',
-    images: ['https://luciovilla.com/og-notas.png']
+    images: [
+      'https://luciovilla.com/api/social-image?title=Just%20my%20notes%20on%20web%20dev,%20tech,%20music%20and%20random%20chisme'
+    ]
   },
   alternates: {
     canonical: `${DOMAIN}/notas`
@@ -28,9 +34,7 @@ export default async function Blog() {
   return (
     <div className="my-16 mx-auto flex max-w-2xl flex-col items-start justify-center">
       <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl">Notas</h1>
-      <p className="mb-10 text-gray-600">
-        Blog posts about web development, tech and random chisme.
-      </p>
+      <p className="mb-10 text-gray-600">My notes on web development, tech and random chisme.</p>
 
       {posts.map((post: PostType) => (
         <Link
