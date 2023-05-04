@@ -20,11 +20,34 @@ export const RenderBlocks = ({ blocks }) => {
       case 'numbered_list_item':
         return <ListItem key={id} value={value} id={id} />
 
+      case 'quote':
+        return (
+          <blockquote
+            key={id}
+            className="relative mb-4 px-1 pb-5 italic text-gray-700 before:absolute before:-left-4 before:-top-2 before:font-serif before:text-4xl before:content-['\201C'] sm:px-5 sm:pb-10"
+          >
+            {value.rich_text[0].plain_text}
+          </blockquote>
+        )
+
       case 'to_do':
         return <ToDo key={id} value={value} id={id} />
 
       case 'toggle':
         return <Toggle key={id} value={value} />
+
+      case 'embed':
+        if (value.caption[0].plain_text === 'Soundcloud') {
+          return (
+            <iframe
+              width="100%"
+              height="166"
+              className="mb-4"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1505909110&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+            />
+          )
+        }
+        return
 
       case 'image':
         const imageSrc = value.type === 'external' ? value.external.url : value.file.url
