@@ -1,6 +1,7 @@
-import ArrowIcon from '@components/icons/ArrowIcon'
-import Award from './Award'
-import { twenty18, twenty19, twenty20, twenty21 } from './data'
+import ArrowIcon from "@components/icons/ArrowIcon";
+
+import Award from "./Award";
+import { twenty18, twenty19, twenty20, twenty21 } from "./data";
 
 export default function Awards() {
   return (
@@ -17,25 +18,25 @@ export default function Awards() {
                 <div className="-ml-4 text-xl font-semibold">2021</div>
                 <ul className="mt-4 list-outside list-disc space-y-1">
                   {twenty21.map((award, idx) => {
-                    return <Award award={award} key={idx} />
+                    return <Award award={award} key={idx} />;
                   })}
                 </ul>
-                <div className="mt-4 -ml-4 text-xl font-semibold">2020</div>
+                <div className="-ml-4 mt-4 text-xl font-semibold">2020</div>
                 <ul className="mt-4 list-outside list-disc space-y-1">
                   {twenty20.map((award, idx) => {
-                    return <Award award={award} key={idx} />
+                    return <Award award={award} key={idx} />;
                   })}
                 </ul>
-                <div className="mt-4 -ml-4 text-xl font-semibold">2019</div>
+                <div className="-ml-4 mt-4 text-xl font-semibold">2019</div>
                 <ul className="mt-4 list-outside list-disc space-y-1">
                   {twenty19.map((award, idx) => {
-                    return <Award award={award} key={idx} />
+                    return <Award award={award} key={idx} />;
                   })}
                 </ul>
-                <div className="mt-4 -ml-4 text-xl font-semibold">2018</div>
+                <div className="-ml-4 mt-4 text-xl font-semibold">2018</div>
                 <ul className="mt-4 list-outside list-disc space-y-1">
                   {twenty18.map((award, idx) => {
-                    return <Award award={award} key={idx} />
+                    return <Award award={award} key={idx} />;
                   })}
                 </ul>
               </div>
@@ -44,5 +45,5 @@ export default function Awards() {
         </div>
       </div>
     </section>
-  )
+  );
 }

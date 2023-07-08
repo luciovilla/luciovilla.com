@@ -2,10 +2,10 @@ export default function robots() {
   return {
     rules: [
       {
-        userAgent: '*'
-      }
+        userAgent: "*",
+      },
     ],
-    sitemap: 'https://luciovilla.com/sitemap.xml',
-    host: 'https://luciovilla.com'
-  }
+    sitemap: "https://luciovilla.com/sitemap.xml",
+    host: "https://luciovilla.com",
+  };
 }

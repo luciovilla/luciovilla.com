@@ -1,18 +1,18 @@
-import { getNotionData } from '@lib/getNotionData'
-import { PostType } from '@lib/types'
+import { getNotionData } from "@lib/getNotionData";
+import { PostType } from "@lib/types";
 
 export default async function sitemap() {
-  const postData: Object[] = await getNotionData()
+  const postData: Object[] = await getNotionData();
 
   const notas = postData.map((nota: PostType) => ({
     url: `https://luciovilla.com/notas/${nota.properties.Slug.rich_text[0].plain_text}`,
-    lastModified: nota.last_edited_time
-  }))
+    lastModified: nota.last_edited_time,
+  }));
 
-  const routes = ['', '/about-me', '/notas', '/projects'].map((route) => ({
+  const routes = ["", "/about-me", "/notas", "/projects"].map((route) => ({
     url: `https://luciovilla.com${route}`,
-    lastModified: new Date().toISOString()
-  }))
+    lastModified: new Date().toISOString(),
+  }));
 
-  return [...routes, ...notas]
+  return [...routes, ...notas];
 }

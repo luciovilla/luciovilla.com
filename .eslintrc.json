@@ -1,0 +1,62 @@
+{
+  "env": {
+    "node": true,
+    "es6": true,
+    "browser": true
+  },
+  "parserOptions": {
+    "tsconfigRootDir": "./",
+    "project": "./tsconfig.json",
+    "ecmaVersion": 13
+  },
+  "plugins": ["prettier", "react", "tailwindcss", "import"],
+  "extends": [
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "eslint:recommended",
+    "next",
+    "plugin:@next/next/recommended",
+    "plugin:tailwindcss/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {
+        "directory": "."
+      }
+    }
+  },
+  "rules": {
+    "one-var": ["error", "never"],
+    "curly": "error",
+    "eqeqeq": "error",
+    "prefer-const": "error",
+    "@next/next/no-html-link-for-pages": "off",
+    "react/no-unescaped-entities": 0,
+    // Warns if boolean attributes have a true value
+    "react/jsx-boolean-value": ["error", "never"],
+    // React with Typescript does not use PropTypes.
+    "react/prop-types": "off",
+    // React components must use self closing when available.
+    "react/self-closing-comp": "error",
+    "react/react-in-jsx-scope": "off",
+    "tailwindcss/no-custom-classname": "off",
+    // Sort dependencies.
+    "import/order": [
+      "error",
+      {
+        "alphabetize": { "order": "asc", "caseInsensitive": true },
+        "groups": [
+          ["builtin", "external"],
+          "internal",
+          ["parent", "sibling", "index"],
+          "object"
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "newlines-between": "always"
+      }
+    ]
+  }
+}

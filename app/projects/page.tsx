@@ -1,26 +1,28 @@
-import Image from 'next/image'
-import PlaceholderImage from '@components/PlaceholderImage'
-import ArrowIcon from '@components/icons/ArrowIcon'
-import { ProjectProps } from '@lib/types'
-import { defaultMeta } from '@lib/metadata-defaults'
-import projects from '../../public/projects/list.json'
-import { DOMAIN } from '@lib/globals'
+import Image from "next/image";
+
+import ArrowIcon from "@components/icons/ArrowIcon";
+import PlaceholderImage from "@components/PlaceholderImage";
+import { DOMAIN } from "@lib/globals";
+import { defaultMeta } from "@lib/metadata-defaults";
+import { ProjectProps } from "@lib/types";
+
+import projects from "../../public/projects/list.json";
 
 export const metadata = {
-  title: 'Projects',
-  description: 'My selected web portfolio.',
+  title: "Projects",
+  description: "My selected web portfolio.",
   openGraph: {
-    title: 'Projects',
-    url: `${DOMAIN}/projects`
+    title: "Projects",
+    url: `${DOMAIN}/projects`,
   },
   twitter: {
     ...defaultMeta.twitter,
-    title: 'My Projects'
+    title: "My Projects",
   },
   alternates: {
-    canonical: `${DOMAIN}/projects`
-  }
-}
+    canonical: `${DOMAIN}/projects`,
+  },
+};
 
 export default function Projects() {
   return (
@@ -37,7 +39,10 @@ export default function Projects() {
                   <Image
                     alt="..."
                     placeholder="blur"
-                    blurDataURL={PlaceholderImage(project.width, project.height)}
+                    blurDataURL={PlaceholderImage(
+                      project.width,
+                      project.height
+                    )}
                     src={`/${project.image}`}
                     width={project.width}
                     height={project.height}
@@ -47,7 +52,9 @@ export default function Projects() {
             )}
             <div>
               <div className="md:pr-12">
-                <div className="text-xl font-semibold md:text-3xl">{project.title}</div>
+                <div className="text-xl font-semibold md:text-3xl">
+                  {project.title}
+                </div>
                 <p className="mt-1 text-gray-800">{project.summary}</p>
                 <div className="mt-3 leading-relaxed text-gray-800">
                   <b>Role:</b> {project.projRole}
@@ -77,8 +84,8 @@ export default function Projects() {
               </div>
             </div>
           </div>
-        )
+        );
       })}
     </section>
-  )
+  );
 }

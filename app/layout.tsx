@@ -1,21 +1,26 @@
-import Script from 'next/script'
-import localFont from 'next/font/local'
+import localFont from "next/font/local";
+import Script from "next/script";
+import React from "react";
 
-import './global.css'
-import Nav from '@components/Nav'
-import { defaultMeta } from '@lib/metadata-defaults'
+import "./global.css";
+import Nav from "@components/Nav";
+import { defaultMeta } from "@lib/metadata-defaults";
 
 const inter = localFont({
-  src: '../public/fonts/inter-var.woff2',
-  variable: '--font-inter',
-  display: 'swap'
-})
+  src: "../public/fonts/inter-var.woff2",
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const metadata = {
-  ...defaultMeta
-}
+  ...defaultMeta,
+};
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className={inter.variable}>
       <body>
@@ -34,5 +39,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         `}
       </Script>
     </html>
-  )
+  );
 }

@@ -1,14 +1,17 @@
-'use client'
+"use client";
 
-import useSWR from 'swr'
-import fetcher from '@lib/fetcher'
-import { NowPlayingSong } from '@lib/types'
-import Image from 'next/image'
+import Image from "next/image";
+import useSWR from "swr";
+
+import fetcher from "@lib/fetcher";
+import { NowPlayingSong } from "@lib/types";
 
 export default function NowPlaying() {
-  const { data } = useSWR<NowPlayingSong>('/api/now-playing', fetcher)
+  const { data } = useSWR<NowPlayingSong>("/api/now-playing", fetcher);
 
-  if (!data?.isPlaying) return null
+  if (!data?.isPlaying) {
+    return null;
+  }
 
   return (
     <>
@@ -16,10 +19,15 @@ export default function NowPlaying() {
       <span className="relative mx-1 inline-block h-4 w-4">
         <Image src={data.albumImageUrl.url} layout="fill" alt="album art" />
       </span>
-      <a className="underline" href={data.songUrl} target="_blank" rel="noopener noreferrer">
+      <a
+        className="underline"
+        href={data.songUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {data.title}
-      </a>{' '}
+      </a>{" "}
       by {data.artist}.
     </>
-  )
+  );
 }
