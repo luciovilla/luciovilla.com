@@ -1,13 +1,14 @@
-import { ImageResponse } from "@vercel/og";
-import { NextRequest } from "next/server";
+import { ImageResponse } from "next/server";
+
+export const runtime = "edge";
 
 const loadCustomFont = fetch(
   new URL("../../../public/fonts/inter.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export async function GET(req: NextRequest) {
+export async function GET(req: Request) {
   try {
-    const { searchParams } = req.nextUrl;
+    const { searchParams } = new URL(req.url);
     const postTitle = searchParams.get("title");
     const fontData = await loadCustomFont;
 

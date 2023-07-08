@@ -1,11 +1,11 @@
 export default function robots() {
   return {
-    rules: [
-      {
-        userAgent: "*",
-      },
-    ],
+    rules: {
+      userAgent: "*",
+      allow: "/api/og/*",
+      disallow: "/api",
+    },
+
     sitemap: "https://luciovilla.com/sitemap.xml",
-    host: "https://luciovilla.com",
   };
 }

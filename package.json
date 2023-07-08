@@ -21,7 +21,6 @@
     "lint-fix": "eslint --fix ."
   },
   "dependencies": {
-    "@vercel/og": "^0.5.8",
     "next": "13.4.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
