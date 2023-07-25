@@ -22,7 +22,7 @@ export async function GET(req: Request) {
             flexDirection: "column",
             alignItems: "flex-start",
             justifyContent: "center",
-            backgroundImage: "url(https://luciovilla.com/ogbg.png)",
+            backgroundImage: "url(https://luciovilla.com/ogbg.png)"
           }}
         >
           <div
@@ -35,7 +35,7 @@ export async function GET(req: Request) {
               fontFamily: "Inter",
               color: "black",
               lineHeight: 1.1,
-              whiteSpace: "pre-wrap",
+              whiteSpace: "pre-wrap"
             }}
           >
             {postTitle}
@@ -49,15 +49,15 @@ export async function GET(req: Request) {
           {
             name: "Inter",
             data: fontData,
-            style: "normal",
-          },
-        ],
+            style: "normal"
+          }
+        ]
       }
     );
   } catch (e: any) {
     console.log(`${e.message}`);
     return new Response(`Failed to generate social image`, {
-      status: 500,
+      status: 500
     });
   }
 }

@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 function NavItem({
   href,
   text,
-  isActive,
+  isActive
 }: {
   href: string;
   text: string;

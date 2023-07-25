@@ -3,7 +3,7 @@ export default function HomeLinks() {
     { href: "mailto:me@luciovilla.com?subject=Hola Lucio!", title: "Email" },
     { href: "https://github.com/luciovilla", title: "Github" },
     { href: "https://twitter.com/luciovilla", title: "Twitter" },
-    { href: "https://www.linkedin.com/in/luciovilla", title: "LinkedIn" },
+    { href: "https://www.linkedin.com/in/luciovilla", title: "LinkedIn" }
   ];
   return (
     <div className="mt-3 flex">

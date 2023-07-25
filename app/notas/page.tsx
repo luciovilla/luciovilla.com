@@ -13,20 +13,20 @@ export const metadata = {
     url: `${DOMAIN}/notas`,
     images: [
       {
-        url: "https://luciovilla.com/api/social-image?title=Just%20my%20notes%20on%20web%20dev,%20tech,%20music%20and%20random%20chisme",
-      },
-    ],
+        url: "https://luciovilla.com/api/social-image?title=Just%20my%20notes%20on%20web%20dev,%20tech,%20music%20and%20random%20chisme"
+      }
+    ]
   },
   twitter: {
     ...defaultMeta.twitter,
     title: "Notas",
     images: [
-      "https://luciovilla.com/api/social-image?title=Just%20my%20notes%20on%20web%20dev,%20tech,%20music%20and%20random%20chisme",
-    ],
+      "https://luciovilla.com/api/social-image?title=Just%20my%20notes%20on%20web%20dev,%20tech,%20music%20and%20random%20chisme"
+    ]
   },
   alternates: {
-    canonical: `${DOMAIN}/notas`,
-  },
+    canonical: `${DOMAIN}/notas`
+  }
 };
 
 export default async function Blog() {

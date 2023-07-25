@@ -7,7 +7,7 @@ import { DOMAIN } from "@lib/globals";
 import { defaultMeta } from "@lib/metadata-defaults";
 
 export async function generateMetadata({
-  params,
+  params
 }): Promise<Metadata | undefined> {
   const database = await getNotionData();
   const page = database.filter(
@@ -36,16 +36,16 @@ export async function generateMetadata({
       modifiedTime,
       type: "article",
       url: postURL,
-      images: [{ url: socialImage }],
+      images: [{ url: socialImage }]
     },
     twitter: {
       ...defaultMeta.twitter,
       title,
-      images: [socialImage],
+      images: [socialImage]
     },
     alternates: {
-      canonical: postURL,
-    },
+      canonical: postURL
+    }
   };
 }
 
@@ -53,7 +53,7 @@ export async function generateStaticParams() {
   const notas: any = await getNotionData();
 
   return notas.map((nota) => ({
-    slug: nota.properties.Slug.rich_text[0].plain_text,
+    slug: nota.properties.Slug.rich_text[0].plain_text
   }));
 }
 
@@ -80,7 +80,7 @@ const Post = async ({ params }) => {
     return new Date(date).toLocaleDateString("en-US", {
       month: "short",
       day: "numeric",
-      year: "numeric",
+      year: "numeric"
     });
   };
   const title = page.properties.Post.title[0].plain_text;
@@ -99,8 +99,8 @@ const Post = async ({ params }) => {
     url: postURL,
     author: {
       "@type": "Person",
-      name: "Lucio Villa",
-    },
+      name: "Lucio Villa"
+    }
   };
 
   return (

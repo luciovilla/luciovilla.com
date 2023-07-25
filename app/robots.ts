@@ -3,9 +3,9 @@ export default function robots() {
     rules: {
       userAgent: "*",
       allow: "/api/og/*",
-      disallow: "/api",
+      disallow: "/api"
     },
 
-    sitemap: "https://luciovilla.com/sitemap.xml",
+    sitemap: "https://luciovilla.com/sitemap.xml"
   };
 }

@@ -3,7 +3,7 @@ import { Client } from "@notionhq/client";
 const databaseId = process.env.NOTION_DATABASE_ID as string;
 
 const notion = new Client({
-  auth: process.env.NOTION_TOKEN,
+  auth: process.env.NOTION_TOKEN
 });
 
 export const getNotionData = async () => {
@@ -15,18 +15,18 @@ export const getNotionData = async () => {
         {
           property: "Published",
           checkbox: {
-            equals: true,
-          },
-        },
-      ],
+            equals: true
+          }
+        }
+      ]
     },
     // Sort posts in descending order based on the Date column.
     sorts: [
       {
         property: "Date",
-        direction: "descending",
-      },
-    ],
+        direction: "descending"
+      }
+    ]
   });
 
   return response.results;
@@ -44,7 +44,7 @@ export const getBlocks = async (blockId: string) => {
   while (true) {
     const { results, next_cursor } = await notion.blocks.children.list({
       start_cursor: cursor,
-      block_id: blockId,
+      block_id: blockId
     });
     blocks.push(...results);
     if (!next_cursor) {

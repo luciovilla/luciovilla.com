@@ -9,15 +9,15 @@ import { defaultMeta } from "@lib/metadata-defaults";
 const inter = localFont({
   src: "../public/fonts/inter-var.woff2",
   variable: "--font-inter",
-  display: "swap",
+  display: "swap"
 });
 
 export const metadata = {
-  ...defaultMeta,
+  ...defaultMeta
 };
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {

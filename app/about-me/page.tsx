@@ -12,15 +12,15 @@ export const metadata = {
   title: "About Me",
   openGraph: {
     title: "About Me",
-    url: `${DOMAIN}/about-me`,
+    url: `${DOMAIN}/about-me`
   },
   twitter: {
     ...defaultMeta.twitter,
-    title: "About Me",
+    title: "About Me"
   },
   alternates: {
-    canonical: `${DOMAIN}/about-me`,
-  },
+    canonical: `${DOMAIN}/about-me`
+  }
 };
 
 export default function AboutMe() {

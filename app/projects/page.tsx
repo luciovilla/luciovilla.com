@@ -13,15 +13,15 @@ export const metadata = {
   description: "My selected web portfolio.",
   openGraph: {
     title: "Projects",
-    url: `${DOMAIN}/projects`,
+    url: `${DOMAIN}/projects`
   },
   twitter: {
     ...defaultMeta.twitter,
-    title: "My Projects",
+    title: "My Projects"
   },
   alternates: {
-    canonical: `${DOMAIN}/projects`,
-  },
+    canonical: `${DOMAIN}/projects`
+  }
 };
 
 export default function Projects() {

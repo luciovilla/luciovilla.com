@@ -14,7 +14,7 @@ export async function GET() {
       artist: track.artists.map((artist) => artist.name).join(", "),
       songUrl: track.external_urls.spotify,
       title: track.name,
-      albumArt: track.album.images.find((image) => image.width === 64),
+      albumArt: track.album.images.find((image) => image.width === 64)
     }));
 
     return NextResponse.json({ tracks });

@@ -77,7 +77,7 @@ const SpanText = ({ text, id }) => {
   return text.map((value, i) => {
     const {
       annotations: { bold, code, color, italic, strikethrough, underline },
-      text,
+      text
     } = value;
     return (
       <span
@@ -87,7 +87,7 @@ const SpanText = ({ text, id }) => {
           code ? "rounded-md bg-gray-100 p-1 font-mono text-sm" : "",
           italic ? "italic" : "",
           strikethrough ? "line-through" : "",
-          underline ? "underline" : "",
+          underline ? "underline" : ""
         ].join(" ")}
         style={color !== "default" ? { color } : {}}
       >

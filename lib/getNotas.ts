@@ -8,17 +8,17 @@ const filter = {
       {
         property: "Published",
         checkbox: {
-          equals: true,
-        },
-      },
-    ],
+          equals: true
+        }
+      }
+    ]
   },
   sorts: [
     {
       property: "Date",
-      direction: "descending",
-    },
-  ],
+      direction: "descending"
+    }
+  ]
 };
 
 export const getNotas = async () => {
@@ -26,9 +26,9 @@ export const getNotas = async () => {
     method: "POST",
     headers: {
       Authorization: `Bearer ${NOTION_TOKEN}`,
-      "Content-Type": "application/json",
+      "Content-Type": "application/json"
     },
-    body: JSON.stringify(filter),
+    body: JSON.stringify(filter)
   });
 
   return response.json();

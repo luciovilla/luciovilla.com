@@ -30,6 +30,7 @@
   },
   "rules": {
     "one-var": ["error", "never"],
+    "comma-dangle": ["error", "never"],
     "curly": "error",
     "eqeqeq": "error",
     "prefer-const": "error",
