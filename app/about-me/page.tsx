@@ -30,11 +30,11 @@ export default function AboutMe() {
         id="about-me"
         className="relative m-auto mb-40 w-full max-w-2xl space-y-20"
       >
-        <div className="m-auto w-full pt-5 text-center uppercase text-gray-600">
+        <div className="m-auto w-full pt-5 text-center uppercase">
           About me <ArrowIcon />
         </div>
         <div className="flex flex-wrap-reverse">
-          <div className="w-full text-gray-800 md:w-4/5 md:pr-12">
+          <div className="w-full md:w-4/5 md:pr-12">
             <div className="md:pr-12">
               <p className="mt-4 leading-relaxed">
                 Hola! My name is Lucio and I recently made the switch from the

@@ -27,7 +27,7 @@ export const metadata = {
 export default function Projects() {
   return (
     <section className="relative m-auto mb-40 w-full max-w-2xl space-y-20">
-      <div className="m-auto w-full pt-5 text-center uppercase text-gray-600">
+      <div className="m-auto w-full pt-5 text-center uppercase">
         Select Projects <ArrowIcon />
       </div>
       {projects.map((project: ProjectProps) => {
@@ -55,22 +55,22 @@ export default function Projects() {
                 <div className="text-xl font-semibold md:text-3xl">
                   {project.title}
                 </div>
-                <p className="mt-1 text-gray-800">{project.summary}</p>
-                <div className="mt-3 leading-relaxed text-gray-800">
+                <p className="mt-1">{project.summary}</p>
+                <div className="mt-3 leading-relaxed">
                   <b>Role:</b> {project.projRole}
                 </div>
                 {project.tools && (
-                  <div className="mt-1 leading-relaxed text-gray-800">
+                  <div className="mt-1 leading-relaxed">
                     <b>Tools:</b> {project.tools}
                   </div>
                 )}
                 {project.awards && (
-                  <div className="mt-1 leading-relaxed text-gray-800">
+                  <div className="mt-1 leading-relaxed">
                     <b>Awards:</b> {project.awards}
                   </div>
                 )}
                 {project.url && (
-                  <div className="mt-1 text-lg leading-relaxed text-gray-600">
+                  <div className="mt-1 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
                     <a
                       className="text-sm underline"
                       href={project.url}

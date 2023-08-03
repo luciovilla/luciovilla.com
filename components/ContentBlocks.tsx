@@ -24,7 +24,7 @@ export const RenderBlocks = ({ blocks }) => {
         return (
           <blockquote
             key={id}
-            className="relative mb-4 px-1 pb-5 italic text-gray-700 before:absolute before:-left-4 before:-top-2 before:font-serif before:text-4xl before:content-['\201C'] sm:px-5 sm:pb-10"
+            className="relative mb-4 px-1 pb-5 italic before:absolute before:-left-4 before:-top-2 before:font-serif before:text-4xl before:content-['\201C'] sm:px-5 sm:pb-10"
           >
             {value.rich_text[0].plain_text}
           </blockquote>
@@ -105,7 +105,7 @@ const SpanText = ({ text, id }) => {
 
 const Text = ({ text, id }) => {
   return (
-    <p className="mb-4 text-gray-700">
+    <p className="mb-4">
       <SpanText text={text} id={id} />
     </p>
   );
@@ -123,19 +123,19 @@ const Heading = ({ text, level, id }) => {
   switch (level) {
     case "heading_1":
       return (
-        <h1 className="my-2 text-3xl font-bold tracking-tight text-black md:text-5xl">
+        <h1 className="my-2 text-3xl font-bold tracking-tight md:text-5xl">
           <SpanText text={text} id={id} />
         </h1>
       );
     case "heading_2":
       return (
-        <h2 className="my-2 text-2xl font-bold tracking-tight text-black md:text-3xl">
+        <h2 className="tracking-tigh my-2 text-2xl font-bold md:text-3xl">
           <SpanText text={text} id={id} />
         </h2>
       );
     case "heading_3":
       return (
-        <h3 className="my-2 text-lg font-bold tracking-tight text-black md:text-xl">
+        <h3 className="my-2 text-lg font-bold tracking-tight md:text-xl">
           <SpanText text={text} id={id} />
         </h3>
       );

@@ -34,10 +34,10 @@ export default async function Blog() {
 
   return (
     <div className="mx-auto my-16 flex max-w-2xl flex-col items-start justify-center">
-      <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl">
+      <h1 className="mb-4 text-3xl font-bold tracking-tight md:text-5xl">
         Notas
       </h1>
-      <p className="mb-10 text-gray-600">
+      <p className="mb-10">
         My notes on web development, tech and random chisme.
       </p>
 
@@ -48,12 +48,10 @@ export default async function Blog() {
           className="w-full"
         >
           <div className="mb-8 w-full">
-            <h3 className="w-full text-xl font-medium text-gray-900">
+            <h3 className="w-full text-xl font-medium">
               {post.properties.Post.title[0].plain_text}
             </h3>
-            <p className="text-gray-700">
-              {post.properties.Description.rich_text[0].plain_text}
-            </p>
+            <p>{post.properties.Description.rich_text[0].plain_text}</p>
           </div>
         </Link>
       ))}

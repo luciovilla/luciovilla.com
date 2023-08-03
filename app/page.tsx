@@ -9,10 +9,10 @@ export default function Home() {
           <h1 className="mb-1 text-3xl font-bold tracking-tight md:text-5xl">
             Lucio Villa
           </h1>
-          <h2 className="mb-2 text-gray-700 sm:text-lg">
+          <h2 className="mb-2 sm:text-lg">
             Senior Software Engineer at The Washington Post
           </h2>
-          <p className="mt-1 text-gray-800 sm:text-lg">
+          <p className="mt-1 sm:text-lg">
             First-generation Latino, software engineer and web designer.
             Previously at Vox Media, San Francisco Chronicle, Chicago Tribune's
             Spanish daily (Hoy Chicago) and formerly a photojournalist.{" "}

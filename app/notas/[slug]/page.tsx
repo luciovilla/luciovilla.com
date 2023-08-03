@@ -109,14 +109,14 @@ const Post = async ({ params }) => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl">
+      <h1 className="mb-4 text-3xl font-bold tracking-tight md:text-5xl">
         {title}
       </h1>
-      <div className="mb-4 text-sm text-gray-800">
+      <div className="mb-4 text-sm">
         <span>{timestamp(publishedTime)}</span>
         {page.properties.Show_updated_timestamp.checkbox &&
           page.last_edited_time && (
-            <span className="pl-1 text-sm text-gray-700">
+            <span className="pl-1 text-sm">
               / Updated: {timestamp(modifiedTime)}
             </span>
           )}

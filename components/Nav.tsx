@@ -15,7 +15,7 @@ function NavItem({
   return (
     <Link
       href={href}
-      className={`rounded-lg p-2 transition-all hover:bg-gray-100 sm:px-3 sm:py-2 md:inline-block ${
+      className={`rounded-lg p-2 transition-all hover:bg-gray-100 dark:hover:bg-gray-700 sm:px-3 sm:py-2 md:inline-block ${
         isActive && "underline"
       }`}
     >
@@ -28,8 +28,8 @@ export default function Nav() {
   const pathName = usePathname();
 
   return (
-    <div className="sticky top-0 z-10 flex w-full flex-col justify-center bg-white/60 px-4 backdrop-blur-md">
-      <nav className="relative mx-auto flex w-full max-w-2xl items-center justify-between py-4 text-gray-900 sm:py-8">
+    <div className="sticky top-0 z-10 flex w-full flex-col justify-center px-4 backdrop-blur-md">
+      <nav className="relative mx-auto flex w-full max-w-2xl items-center justify-between py-4 sm:py-8">
         <a href="#skip" className="sr-only focus:not-sr-only">
           Skip to content
         </a>
