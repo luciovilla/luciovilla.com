@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import Awards from "@components/Awards";
 import Footer from "@components/Footer";
-import ArrowIcon from "@components/icons/ArrowIcon";
+import TopSongs from "@components/TopSongs";
 import { DOMAIN } from "@lib/globals";
 import { defaultMeta } from "@lib/metadata-defaults";
 
@@ -30,9 +30,6 @@ export default function AboutMe() {
         id="about-me"
         className="relative m-auto mb-40 w-full max-w-2xl space-y-20"
       >
-        <div className="m-auto w-full pt-5 text-center uppercase">
-          About me <ArrowIcon />
-        </div>
         <div className="flex flex-wrap-reverse">
           <div className="w-full md:w-4/5 md:pr-12">
             <div className="md:pr-12">
@@ -119,6 +116,7 @@ export default function AboutMe() {
         </div>
       </section>
       <Awards />
+      <TopSongs />
       <Footer />
     </>
   );

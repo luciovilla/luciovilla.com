@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-import ArrowIcon from "@components/icons/ArrowIcon";
 import PlaceholderImage from "@components/PlaceholderImage";
 import { DOMAIN } from "@lib/globals";
 import { defaultMeta } from "@lib/metadata-defaults";
@@ -26,10 +25,7 @@ export const metadata = {
 
 export default function Projects() {
   return (
-    <section className="relative m-auto mb-40 w-full max-w-2xl space-y-20">
-      <div className="m-auto w-full pt-5 text-center uppercase">
-        Select Projects <ArrowIcon />
-      </div>
+    <section className="relative m-auto mb-20 w-full max-w-2xl space-y-20">
       {projects.map((project: ProjectProps) => {
         return (
           <div className="flex flex-wrap" key={project.title}>

@@ -5,8 +5,8 @@ import { twenty18, twenty19, twenty20, twenty21 } from "./data";
 
 export default function Awards() {
   return (
-    <section className="relative m-auto w-full max-w-2xl pb-40" id="awards">
-      <div className="mb-10 w-full text-center uppercase">
+    <section className="relative m-auto mb-20 w-full max-w-2xl">
+      <div className="mb-10 w-full uppercase">
         Awards & Honors <ArrowIcon />
       </div>
 

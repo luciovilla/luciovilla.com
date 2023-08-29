@@ -82,10 +82,13 @@ export type Song = {
   songUrl: string;
   artist: string;
   title: string;
+  albumArt: {
+    url: string;
+  };
 };
 
 export type TopTracks = {
-  tracks: Song[];
+  tracks?: Song[];
 };
 
 export type ProjectProps = {
