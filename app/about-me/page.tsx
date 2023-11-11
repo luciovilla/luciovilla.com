@@ -34,9 +34,16 @@ export default function AboutMe() {
           <div className="w-full md:w-4/5 md:pr-12">
             <div className="md:pr-12">
               <p className="mt-4 leading-relaxed">
-                Hola! My name is Lucio and I recently made the switch from the
-                newsroom to product and now work as a Senior Software Engineer
-                at The Washington Post.
+                Hola! My name is Lucio and I've been working in the news
+                industry for over a decade. A software engineer born out the
+                newsroom with a background in photography. I'm passionate about
+                building tools for journalists and developing the best products
+                for readers.
+              </p>
+              <p className="mt-4 leading-relaxed">
+                Currently working as a Senior Software Engineer at The
+                Washington Post where I help build and maintain the audio and
+                video players for the entire site.
               </p>
               <p className="mt-4 leading-relaxed" />
               <p className="mt-4 leading-relaxed">
@@ -54,7 +61,7 @@ export default function AboutMe() {
                 Outside of work, I was listed in Editor &amp; Publisher's 2019 “
                 <a
                   className="underline"
-                  href="https://www.editorandpublisher.com/feature/eps-25-under-35-2019-the-next-generation-of-newspaper-leaders-wants-to-keep-the-industry-moving/"
+                  href="https://editorandpublisher.pressreader.com/editor-publisher/20190401"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -72,7 +79,7 @@ export default function AboutMe() {
                 ” I cofounded{" "}
                 <a
                   className="underline"
-                  href="http://www.codelatino.com/"
+                  href="https://gozamos.com/latino-tech-pioneer-lucio-villa-leaves-his-mark-in-chicago/"
                   target="_blank"
                   rel="noreferrer"
                 >
