@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import localFont from "next/font/local";
 import Script from "next/script";
 import React from "react";
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Nav />
         <main id="skip" className="px-8">
           {children}
+          <SpeedInsights />
         </main>
       </body>
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-JDMZNFHMVW" />
