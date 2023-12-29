@@ -1,9 +1,11 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import localFont from "next/font/local";
 import Script from "next/script";
-import React from "react";
+import { ReactNode } from "react";
 
 import "./global.css";
+
+import ItsTime from "@components/ItsTime";
 import Nav from "@components/Nav";
 import { defaultMeta } from "@lib/metadata-defaults";
 
@@ -17,16 +19,13 @@ export const metadata = {
   ...defaultMeta
 };
 
-export default function RootLayout({
-  children
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
       <body className="bg-white text-gray-900 dark:bg-gray-800 dark:text-gray-200">
         <Nav />
         <main id="skip" className="px-8">
+          <ItsTime />
           {children}
           <SpeedInsights />
         </main>
