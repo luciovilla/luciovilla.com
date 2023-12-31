@@ -92,7 +92,12 @@ const SpanText = ({ text, id }) => {
         style={color !== "default" ? { color } : {}}
       >
         {text.link ? (
-          <a href={text.link.url} className="underline">
+          <a
+            href={text.link.url}
+            className="underline"
+            target="_blank"
+            rel="noopener"
+          >
             {text.content}
           </a>
         ) : (
@@ -113,7 +118,7 @@ const Text = ({ text, id }) => {
 
 const ListItem = ({ value, id }) => {
   return (
-    <li>
+    <li className="mb-2">
       <SpanText text={value.rich_text} id={id} />
     </li>
   );
