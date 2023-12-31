@@ -25,8 +25,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="bg-white text-gray-900 dark:bg-gray-800 dark:text-gray-200">
         <Nav />
         <main id="skip" className="px-8">
-          <ItsTime />
           {children}
+          <ItsTime />
           <SpeedInsights />
         </main>
       </body>
