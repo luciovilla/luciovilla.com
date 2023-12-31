@@ -18,7 +18,7 @@ export default function TopSongs() {
   return (
     <section className="relative m-auto mb-20 w-full max-w-2xl px-4">
       <div className="mb-2 w-full text-lg uppercase">
-        Spotify Top Tracks <ArrowIcon />
+        My Spotify Top Tracks <ArrowIcon />
       </div>
 
       <div className="mx-auto w-full">
