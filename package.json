@@ -23,14 +23,18 @@
   "dependencies": {
     "@vercel/og": "^0.6.1",
     "@vercel/speed-insights": "^1.0.2",
+    "contentlayer": "0.3.2",
+    "contentlayer-source-notion": "^0.0.1-alpha.26",
     "next": "^14.0.4",
+    "next-contentlayer": "0.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sharp": "^0.33.1",
     "swr": "^2.2.4"
   },
   "devDependencies": {
-    "@notionhq/client": "^2.2.14",
+    "@notionhq/client": "^2.2.3",
+    "@tailwindcss/typography": "^0.5.10",
     "@types/react": "^18.2.46",
     "autoprefixer": "^10.4.16",
     "encoding": "^0.1.13",

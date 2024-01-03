@@ -1,30 +1,39 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { RenderBlocks } from "@components/ContentBlocks";
-import { getNotionData, getPage, getBlocks } from "@lib/getNotionData";
 import { DOMAIN } from "@lib/globals";
 import { defaultMeta } from "@lib/metadata-defaults";
+import { allPosts } from "contentlayer/generated";
+
+export async function generateStaticParams() {
+  return allPosts.map((post) => ({
+    slug: post.slug
+  }));
+}
+
+const timestamp = (date: string) => {
+  return new Date(date).toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric"
+  });
+};
 
 export async function generateMetadata({
   params
 }): Promise<Metadata | undefined> {
-  const database = await getNotionData();
-  const page = database.filter(
-    (blog: any) => blog.properties.Slug.rich_text[0].plain_text === params.slug
-  );
+  const post = allPosts.find((post) => post.slug === params.slug);
 
-  if (page.length === 0) {
+  if (!post?._id) {
     return;
   }
 
-  const pageData = await getPage(page[0].id);
-  const title = pageData.properties.Post.title[0].plain_text;
-  const description = pageData.properties.Description.rich_text[0].plain_text;
-  const publishedTime = pageData.properties.Date.date.start;
-  const modifiedTime = pageData.last_edited_time;
-  const postURL = `${DOMAIN}/notas/${params.slug}`;
-  const socialImage = `https://luciovilla.com/api/social-image?title=${title}`;
+  const title = post.title;
+  const description = post.description;
+  const publishedTime = post.date?.start;
+  // const modifiedTime = pageData.last_edited_time;
+  const postURL = `${DOMAIN}/notas/${post.slug}`;
+  const socialImage = `${DOMAIN}/api/social-image?title=${title}`;
 
   return {
     title,
@@ -33,7 +42,7 @@ export async function generateMetadata({
       title,
       description,
       publishedTime,
-      modifiedTime,
+      // modifiedTime,
       type: "article",
       url: postURL,
       images: [{ url: socialImage }]
@@ -49,52 +58,25 @@ export async function generateMetadata({
   };
 }
 
-export async function generateStaticParams() {
-  const notas: any = await getNotionData();
+const PostLayout = ({ params }) => {
+  const post = allPosts.find((post) => post.slug === params.slug);
 
-  return notas.map((nota) => ({
-    slug: nota.properties.Slug.rich_text[0].plain_text
-  }));
-}
-
-const Post = async ({ params }) => {
-  const database = await getNotionData();
-  const post = database.filter(
-    (blog: any) => blog.properties.Slug.rich_text[0].plain_text === params.slug
-  );
-
-  // Return not found if slug not found in Notion
-  if (post.length === 0) {
+  // Return 404 page if slug not found
+  if (!post?.slug) {
     notFound();
   }
 
-  const page = await getPage(post[0].id);
-  const blocks = await getBlocks(post[0].id);
-
-  // Return not found if page is empty instead of showing a blank page
-  if (!page || !blocks) {
-    notFound();
-  }
-
-  const timestamp = (date: string) => {
-    return new Date(date).toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric"
-    });
-  };
-  const title = page.properties.Post.title[0].plain_text;
-  const publishedTime = page.properties.Date.date.start;
-  const modifiedTime = page.last_edited_time;
   const postURL = `${DOMAIN}/notas/${params.slug}`;
-  const socialImage = `https://luciovilla.com/api/social-image?title=${title}`;
+  const postTitle = post?.title || "Post Needs Title";
+  const socialImage = `https://luciovilla.com/api/social-image?title=${postTitle}`;
 
+  // TO DO: look into how latest Next.js does this now
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    headline: title,
-    datePublished: publishedTime,
-    dateModified: modifiedTime,
+    headline: postTitle,
+    datePublished: post.date?.start,
+    // dateModified: modifiedTime,
     image: socialImage,
     url: postURL,
     author: {
@@ -104,26 +86,25 @@ const Post = async ({ params }) => {
   };
 
   return (
-    <article className="mx-auto my-16 w-full max-w-2xl">
+    <article className="prose mx-auto my-16 w-full max-w-2xl">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <h1 className="mb-4 text-3xl font-bold tracking-tight md:text-5xl">
-        {title}
-      </h1>
+      <h1 className="mb-4 tracking-tight">{post.title}</h1>
       <div className="mb-4 text-sm">
-        <span>{timestamp(publishedTime)}</span>
-        {page.properties.Show_updated_timestamp.checkbox &&
-          page.last_edited_time && (
-            <span className="pl-1 text-sm">
-              / Updated: {timestamp(modifiedTime)}
-            </span>
-          )}
+        {post.date?.start && (
+          <time dateTime={post.date.start}>{timestamp(post.date.start)}</time>
+        )}
+        {/* {post.showUpdatedTimestamp && post (
+          <span className="pl-1 text-sm">
+            / Updated: {timestamp(modifiedTime)}
+          </span>
+        )} */}
       </div>
-      <RenderBlocks blocks={blocks} />
+      <div dangerouslySetInnerHTML={{ __html: post.body.html }} />
     </article>
   );
 };
 
-export default Post;
+export default PostLayout;

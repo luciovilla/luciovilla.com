@@ -1,9 +1,8 @@
 import Link from "next/link";
 
-import { getNotionData } from "@lib/getNotionData";
 import { DOMAIN } from "@lib/globals";
 import { defaultMeta } from "@lib/metadata-defaults";
-import { PostType } from "@lib/types";
+import { allPosts } from "contentlayer/generated";
 
 export const metadata = {
   title: "Notas",
@@ -30,8 +29,6 @@ export const metadata = {
 };
 
 export default async function Blog() {
-  const posts: Object[] = await getNotionData();
-
   return (
     <div className="mx-auto my-16 flex max-w-2xl flex-col items-start justify-center">
       <h1 className="mb-4 text-3xl font-bold tracking-tight md:text-5xl">
@@ -41,17 +38,11 @@ export default async function Blog() {
         My notes on web development, tech and random chisme.
       </p>
 
-      {posts.map((post: PostType) => (
-        <Link
-          key={post.id}
-          href={`/notas/${post.properties.Slug.rich_text[0].plain_text}`}
-          className="w-full"
-        >
+      {allPosts.map((post) => (
+        <Link key={post._id} href={post.url} className="w-full">
           <div className="mb-8 w-full">
-            <h3 className="w-full text-xl font-medium">
-              {post.properties.Post.title[0].plain_text}
-            </h3>
-            <p>{post.properties.Description.rich_text[0].plain_text}</p>
+            <h3 className="w-full text-xl font-medium">{post.title}</h3>
+            <p>{post.description}</p>
           </div>
         </Link>
       ))}
