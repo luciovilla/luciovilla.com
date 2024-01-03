@@ -15,7 +15,7 @@ function NavItem({
   return (
     <Link
       href={href}
-      className={`rounded-lg p-2 transition-all hover:bg-gray-100 dark:hover:bg-gray-700 sm:px-3 sm:py-2 md:inline-block ${
+      className={`rounded-lg p-2 transition-all hover:bg-gray-100 sm:px-3 sm:py-2 md:inline-block dark:hover:bg-gray-700 ${
         isActive && "underline"
       }`}
     >

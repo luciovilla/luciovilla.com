@@ -16,11 +16,16 @@ export default function NowPlaying() {
   return (
     <>
       Currently listening to
-      <span className="relative mx-1 inline-block h-4 w-4">
-        <Image src={data.albumImageUrl.url} layout="fill" alt="album art" />
+      <span className="mx-1 inline-block h-4 w-4">
+        <Image
+          src={data.albumImageUrl.url}
+          width={16}
+          height={16}
+          alt="album art"
+        />
       </span>
       <a
-        className="underline"
+        className="underline underline-offset-2"
         href={data.songUrl}
         target="_blank"
         rel="noopener noreferrer"

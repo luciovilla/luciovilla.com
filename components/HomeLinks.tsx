@@ -10,7 +10,13 @@ export default function HomeLinks() {
       <div className="space-x-2 text-sm">
         {links.map((link) => {
           return (
-            <a key={link.title} className="underline" href={link.href}>
+            <a
+              key={link.title}
+              className="underline underline-offset-2"
+              href={link.href}
+              target="_blank"
+              rel="noopener"
+            >
               {link.title}
             </a>
           );

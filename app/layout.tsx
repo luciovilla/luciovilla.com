@@ -5,7 +5,6 @@ import { ReactNode } from "react";
 
 import "./global.css";
 
-import ItsTime from "@components/ItsTime";
 import Nav from "@components/Nav";
 import { defaultMeta } from "@lib/metadata-defaults";
 
@@ -26,7 +25,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Nav />
         <main id="skip" className="px-8">
           {children}
-          <ItsTime />
           <SpeedInsights />
         </main>
       </body>
