@@ -69,6 +69,7 @@ export type SpotifyAPIResponse = {
 };
 
 export type NowPlayingSong = {
+  status: number;
   albumImageUrl: {
     url: string;
   };

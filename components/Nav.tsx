@@ -16,7 +16,7 @@ function NavItem({
     <Link
       href={href}
       className={`rounded-lg p-2 transition-all hover:bg-gray-100 sm:px-3 sm:py-2 md:inline-block dark:hover:bg-gray-700 ${
-        isActive && "underline"
+        isActive && "underline underline-offset-4"
       }`}
     >
       <span>{text}</span>

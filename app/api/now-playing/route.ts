@@ -18,16 +18,17 @@ export async function GET() {
     const artist = response.item.artists
       .map((artist) => artist.name)
       .join(", ");
-    const albumImageUrl = response.item.album.images.find(
-      (image) => image.width === 64
-    );
+
     const songUrl = response.item.external_urls.spotify;
 
-    return NextResponse.json(
-      { albumImageUrl, artist, isPlaying, songUrl, title },
-      { status: 200 }
-    );
+    return NextResponse.json({
+      artist,
+      isPlaying,
+      songUrl,
+      title,
+      status: 200
+    });
   } catch (error) {
-    return NextResponse.json({ isPlaying: false }, { status: 200 });
+    return NextResponse.json({ status: 400 });
   }
 }

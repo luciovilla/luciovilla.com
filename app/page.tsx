@@ -9,14 +9,13 @@ export default function Home() {
           <h1 className="mb-1 text-3xl font-bold tracking-tight md:text-5xl">
             Lucio Villa
           </h1>
-          <h2 className="mb-2 sm:text-lg">
+          <h2 className="mb-2">
             Senior Software Engineer at The Washington Post
           </h2>
           <p className="mt-1 sm:text-lg">
-            First-generation Latino, software engineer and web designer.
-            Previously at Vox Media, San Francisco Chronicle, Chicago Tribune's
-            Spanish daily (Hoy Chicago) and formerly a photojournalist.{" "}
-            <NowPlaying />
+            Hola! I'm a first-generation Latino, software engineer and web
+            designer. Passionate about building web products, improving
+            developer experience and making music playlists. <NowPlaying />
           </p>
           <HomeLinks />
         </div>
