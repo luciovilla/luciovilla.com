@@ -25,7 +25,10 @@ export const metadata = {
 
 export default function Projects() {
   return (
-    <section className="relative m-auto mb-20 w-full max-w-2xl space-y-20">
+    <section className="relative mx-auto my-16 mb-20 w-full max-w-2xl space-y-20">
+      <h1 className="mb-4 text-3xl font-bold tracking-tight md:text-5xl">
+        Projects
+      </h1>
       {projects.map((project: ProjectProps) => {
         return (
           <div className="flex flex-wrap" key={project.title}>

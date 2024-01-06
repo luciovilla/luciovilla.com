@@ -28,88 +28,112 @@ export default function AboutMe() {
     <>
       <section
         id="about-me"
-        className="relative m-auto mb-40 w-full max-w-2xl space-y-20"
+        className="relative m-auto my-16 mb-40 w-full max-w-2xl"
       >
+        <h1 className="text-3xl font-bold tracking-tight md:text-5xl">
+          About Me
+        </h1>
         <div className="flex flex-wrap-reverse">
           <div className="w-full md:w-4/5 md:pr-12">
-            <div className="md:pr-12">
-              <p className="mt-4 leading-relaxed">
-                Hola! My name is Lucio and I've been working in the news
-                industry for over a decade. A software engineer born out the
-                newsroom with a background in photography. I'm passionate about
-                building tools for journalists and developing the best products
-                for readers.
+            <div className="mt-4 space-y-2 leading-relaxed md:pr-12">
+              <p>
+                Hola! My name is Lucio Villa and I am not your typical software
+                engineer. With a background in photojournalism and experience
+                building websites (ask me about my high school web design
+                competition days!) I learned that I can combine my skills in web
+                development in the world of journalism when The New York Times
+                published their multimedia interactive project called{" "}
+                <a
+                  href="https://www.nytimes.com/2022/12/23/insider/snow-fall-at-10-how-it-changed-journalism.html"
+                  className="underline underline-offset-2"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Snow Fall
+                </a>{" "}
+                back in 2012.
               </p>
-              <p className="mt-4 leading-relaxed">
-                Currently working as a Senior Software Engineer at The
-                Washington Post where I help build and maintain the audio and
-                video players for the entire site.
+              <p>
+                Now currently working as a Senior Software Engineer at The
+                Washington Post where I help build and maintain the media
+                players.
               </p>
-              <p className="mt-4 leading-relaxed" />
-              <p className="mt-4 leading-relaxed">
-                Previously at Vox Media, San Francisco Chronicle, Chicago
-                Tribune's Spanish daily (Hoy Chicago), The Chicago Reporter and
-                La Opinión.
+              <p>
+                Previously worked at Vox Media, The Washington Post (I left and
+                cameback), San Francisco Chronicle and Chicago Tribune where I
+                had built, designed and maintained frontend platforms at each
+                organization. Throughout my career using technologies like
+                PHP/Wordpress, Python/Django, Grunt.js, Node.js, Gatsby,
+                Next.js, React and TypeScript to name a few.
               </p>
-              <p className="mt-4 leading-relaxed">
-                During my time in San Francisco I helped instruct a class on
-                editorial web design and development in the Graduate School of
-                Journalism at the University of California, Berkeley.
-              </p>
+              <p>Outside of work:</p>
+              <ul className="list-outside list-disc space-y-2 pl-4">
+                <li>
+                  A contributor of{" "}
+                  <a
+                    className="underline underline-offset-2"
+                    href="https://nextjs.org"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Next.js
+                  </a>
+                  , an open-source web development React framework.
+                </li>
+                <li>
+                  Helped instruct a class on editorial web design and
+                  development in the Graduate School of Journalism at the
+                  University of California, Berkeley.
+                </li>
+                <li>
+                  Listed in Editor &amp; Publisher's 2019 “
+                  <a
+                    className="underline underline-offset-2"
+                    href="https://editorandpublisher.pressreader.com/editor-publisher/20190401"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    25 Under 35: The Future Generation of Newspaper Leaders
+                  </a>
+                </li>
+                <li>
+                  Fullstack Academy's “
+                  <a
+                    href="https://www.fullstackacademy.com/blog/developers-that-work-in-media"
+                    className="underline underline-offset-2"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    15 Developers to Follow If You Want to Work in Media.
+                  </a>
+                </li>
+                <li>
+                  Co-founded{" "}
+                  <a
+                    className="underline underline-offset-2"
+                    href="https://gozamos.com/latino-tech-pioneer-lucio-villa-leaves-his-mark-in-chicago/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Code Latino Chicago
+                  </a>{" "}
+                  a community empowering Latinos into web development.
+                </li>
+                <li>
+                  Lifetime member of the National Association of Hispanic
+                  Journalists (NAHJ) and previously served on the local chapter
+                  boards in DC, Bay Area and Chicago.
+                </li>
+              </ul>
 
-              <p className="mt-4 leading-relaxed">
-                Outside of work, I was listed in Editor &amp; Publisher's 2019 “
-                <a
-                  className="underline"
-                  href="https://editorandpublisher.pressreader.com/editor-publisher/20190401"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  25 Under 35: The Future Generation of Newspaper Leaders
-                </a>
-                ” and Fullstack Academy's “
-                <a
-                  className="underline"
-                  href="https://www.fullstackacademy.com/blog/developers-that-work-in-media"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  15 Developers to Follow If You Want to Work in Media.
-                </a>
-                ” I cofounded{" "}
-                <a
-                  className="underline"
-                  href="https://gozamos.com/latino-tech-pioneer-lucio-villa-leaves-his-mark-in-chicago/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Code Latino Chicago
-                </a>
-                , a community empowering Latinos into web development. A
-                contributor of Next.js (
-                <a
-                  className="underline"
-                  href="https://github.com/vercel/next.js/releases/tag/v9.4.3"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  v9.4.3
-                </a>
-                ), an open-source web development React framework.
-              </p>
-              <p className="mt-4  leading-relaxed ">
-                I am a lifetime member of the National Association of Hispanic
-                Journalists (NAHJ) and previously served on the local chapter
-                boards in DC, Bay Area and Chicago.
-              </p>
-              <p className="mt-4  leading-relaxed ">
+              <p>
                 I'm originally from Compton, CA and graduated from Cal State
                 Fullerton (Go Titans!) with a Bachelor's Degree in Photo
                 Communications.
               </p>
             </div>
           </div>
-          <div className="mx-auto w-1/2 pt-4 md:ml-auto md:w-1/5 md:pl-4 md:pt-0">
+          <div className="w-1/2 pt-4 sm:mx-auto sm:w-1/5 md:ml-auto md:pl-4 md:pt-0">
             <div className="max-w-full">
               <Image
                 alt="..."

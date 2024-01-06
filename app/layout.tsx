@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en" className={inter.variable}>
       <body className="bg-white text-gray-900 dark:bg-gray-800 dark:text-gray-200">
         <Nav />
-        <main id="skip" className="px-8">
+        <main id="skip" className="px-4">
           {children}
           <SpeedInsights />
         </main>

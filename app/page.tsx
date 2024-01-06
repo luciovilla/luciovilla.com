@@ -9,13 +9,13 @@ export default function Home() {
           <h1 className="mb-1 text-3xl font-bold tracking-tight md:text-5xl">
             Lucio Villa
           </h1>
-          <h2 className="mb-2">
+          <h2 className="mb-2 text-sm sm:text-base">
             Senior Software Engineer at The Washington Post
           </h2>
-          <p className="mt-1 sm:text-lg">
-            Hola! I'm a first-generation Latino, software engineer and web
-            designer. Passionate about building web products, improving
-            developer experience and making music playlists. <NowPlaying />
+          <p className="mt-1 text-balance sm:text-pretty sm:text-lg">
+            Hola! I am a first-generation Latino, software engineer and web
+            designer. Passionate about building high quality software and well
+            designed web products. <NowPlaying />
           </p>
           <HomeLinks />
         </div>
