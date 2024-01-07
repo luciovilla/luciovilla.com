@@ -28,7 +28,7 @@ export default function Nav() {
   const pathName = usePathname();
 
   return (
-    <div className="sticky top-0 z-10 flex w-full flex-col justify-center bg-white/70 px-5 backdrop-blur-md">
+    <div className="sticky top-0 z-10 flex w-full flex-col justify-center bg-white/70 px-5 backdrop-blur-md dark:bg-gray-800/70">
       <nav className="relative mx-auto flex w-full max-w-2xl items-center justify-between py-4 sm:py-8">
         <a href="#skip" className="sr-only focus:not-sr-only">
           Skip to content
