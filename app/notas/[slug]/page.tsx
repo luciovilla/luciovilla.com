@@ -76,16 +76,32 @@ const Post = async ({ params }) => {
     notFound();
   }
 
-  const timestamp = (date: string) => {
-    return new Date(date).toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric"
+  const timestamp = (timestamp: Date) => {
+    const dateString = timestamp.toLocaleDateString("en-US", {
+      dateStyle: "medium"
     });
+    const timeString = timestamp
+      .toLocaleTimeString("en-US", {
+        timeStyle: "short"
+      })
+      .toLowerCase();
+    const timezoneName = timestamp
+      .toLocaleString("en-US", {
+        timeZoneName: "short"
+      })
+      .split(" ")
+      .pop();
+    return dateString + " " + timeString + " " + timezoneName;
   };
   const title = page.properties.Post.title[0].plain_text;
-  const publishedTime = page.properties.Date.date.start;
-  const modifiedTime = page.last_edited_time;
+  const publishedTime = new Date(page.properties.Date.date.start);
+  const showUpdatedTimestamp = page.properties.Show_updated_timestamp.checkbox;
+  const publishedTimestamp = publishedTime.toLocaleDateString("en-US", {
+    dateStyle: "medium"
+  });
+  const modifiedTime = page.last_edited_time
+    ? new Date(page.last_edited_time)
+    : null;
   const postURL = `${DOMAIN}/notas/${params.slug}`;
   const socialImage = `https://luciovilla.com/api/social-image?title=${title}`;
 
@@ -113,13 +129,20 @@ const Post = async ({ params }) => {
         {title}
       </h1>
       <div className="mb-4 text-sm">
-        <span>{timestamp(publishedTime)}</span>
-        {page.properties.Show_updated_timestamp.checkbox &&
+        {showUpdatedTimestamp && modifiedTime ? (
           page.last_edited_time && (
-            <span className="pl-1 text-sm">
-              / Updated: {timestamp(modifiedTime)}
-            </span>
-          )}
+            <time
+              dateTime={modifiedTime.toISOString()}
+              className="pl-1 text-sm"
+            >
+              Updated {timestamp(modifiedTime)}
+            </time>
+          )
+        ) : (
+          <time dateTime={publishedTime.toISOString()}>
+            {publishedTimestamp}
+          </time>
+        )}
       </div>
       <RenderBlocks blocks={blocks} />
     </article>
