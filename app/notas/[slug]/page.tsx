@@ -82,6 +82,7 @@ const Post = async ({ params }) => {
     });
     const timeString = timestamp
       .toLocaleTimeString("en-US", {
+        timeZone: "America/New_York",
         timeStyle: "short"
       })
       .toLowerCase();
