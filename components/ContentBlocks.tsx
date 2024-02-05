@@ -54,7 +54,7 @@ export const RenderBlocks = ({ blocks }) => {
           value.type === "external" ? value.external.url : value.file.url;
         const caption = value.caption.length ? value.caption[0].plain_text : "";
         return (
-          <figure key={id}>
+          <figure key={id} className="mb-4">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img alt={caption} src={imageSrc} />
             {caption && <figcaption className="mt-2">{caption}</figcaption>}
