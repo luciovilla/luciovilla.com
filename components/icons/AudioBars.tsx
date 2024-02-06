@@ -1,6 +1,6 @@
 export default function AudioBars() {
   return (
-    <span className="mx-1 inline-block h-3 w-3">
+    <span className="mx-1 inline-block size-3">
       <svg
         viewBox="0 0 135 140"
         xmlns="http://www.w3.org/2000/svg"
