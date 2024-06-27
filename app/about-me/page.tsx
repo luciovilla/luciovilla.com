@@ -37,26 +37,9 @@ export default function AboutMe() {
           <div className="w-full md:w-4/5 md:pr-12">
             <div className="mt-4 space-y-2 leading-relaxed md:pr-12">
               <p>
-                Hola! My name is Lucio Villa and I am not your typical software
-                engineer. With a background in photojournalism and experience
-                building websites (ask me about my high school web design
-                competition days!) I learned that I can combine my skills in web
-                development in the world of journalism when The New York Times
-                published their multimedia interactive project called{" "}
-                <a
-                  href="https://www.nytimes.com/2022/12/23/insider/snow-fall-at-10-how-it-changed-journalism.html"
-                  className="underline underline-offset-2"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Snow Fall
-                </a>{" "}
-                back in 2012.
-              </p>
-              <p>
-                Now currently working as a Senior Software Engineer at The
-                Washington Post where I help build and maintain the media
-                players.
+                Hola! My name is Lucio Villa a first-generation Latino, software
+                engineer and web designer. Currently working as a Senior
+                Software Engineer at The Washington Post.
               </p>
               <p>
                 Previously worked at Vox Media, The Washington Post (I left and

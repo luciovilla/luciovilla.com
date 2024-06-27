@@ -9,7 +9,7 @@ export default async function sitemap() {
     lastModified: nota.last_edited_time
   }));
 
-  const routes = ["", "/about-me", "/notas", "/projects"].map((route) => ({
+  const routes = ["", "/about-me", "/notas", "/work"].map((route) => ({
     url: `https://luciovilla.com${route}`,
     lastModified: new Date().toISOString()
   }));

@@ -8,15 +8,15 @@ import { ProjectProps } from "@lib/types";
 import projects from "../../public/projects/list.json";
 
 export const metadata = {
-  title: "Projects",
+  title: "Selected Work",
   description: "My selected web portfolio.",
   openGraph: {
-    title: "Projects",
+    title: "Selected Work",
     url: `${DOMAIN}/projects`
   },
   twitter: {
     ...defaultMeta.twitter,
-    title: "My Projects"
+    title: "Selected Work"
   },
   alternates: {
     canonical: `${DOMAIN}/projects`
@@ -27,16 +27,16 @@ export default function Projects() {
   return (
     <section className="relative mx-auto my-16 mb-20 w-full max-w-2xl space-y-20">
       <h1 className="mb-4 text-3xl font-bold tracking-tight md:text-5xl">
-        Projects
+        Selected Work
       </h1>
       {projects.map((project: ProjectProps) => {
         return (
           <div className="flex flex-wrap" key={project.title}>
             {project.image && (
-              <div className="mb-2 w-full pt-4 md:pt-0">
+              <div className="mb-2 w-full pt-4 shadow-sm md:pt-0">
                 <div className="max-w-full bg-transparent">
                   <Image
-                    alt="..."
+                    alt=""
                     placeholder="blur"
                     blurDataURL={PlaceholderImage(
                       project.width,

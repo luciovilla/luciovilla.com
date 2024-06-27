@@ -35,15 +35,11 @@ export default function Nav() {
         </a>
         <div className="ml-[-0.75rem]">
           <NavItem href="/" text="Home" isActive={pathName === "/"} />
-          <NavItem
-            href="/projects"
-            text="Projects"
-            isActive={pathName === "/projects"}
-          />
+          <NavItem href="/work" text="Work" isActive={pathName === "/work"} />
           <NavItem href="/notas" text="Blog" isActive={pathName === "/notas"} />
           <NavItem
             href="/about-me"
-            text="About Me"
+            text="About"
             isActive={pathName === "/about-me"}
           />
         </div>

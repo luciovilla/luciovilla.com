@@ -1,5 +1,15 @@
 [
   {
+    "title": "Multiplayer Loteria Game",
+    "summary": "While looking for a Loteria game online, I could not find many good options so I decided to build one. To give the game a modern look, I also used AI to generate “realistic” versions of the original card images.",
+    "projRole": "Creator and developer",
+    "tools": "LiveBlocks, TypeScript, React, Next.js, Tailwind CSS, LiveBlocks, shadcn UI",
+    "url": "https://loteria.luciovilla.com/",
+    "image": "projects/loteria.jpg",
+    "width": 1200,
+    "height": 668
+  },
+  {
     "title": "The Verge Redesign / Duet",
     "summary": "Helped develop the new redesign of The Verge site and Duet, Vox Media's new publishing platform. A platform with the goal of supporting all of Vox Media's publications.",
     "projRole": "Part of the core development team",
@@ -43,17 +53,6 @@
     "title": "The Washington Post Custom Project Template Generator",
     "projRole": "Part of the core engineers who developed this platform. Worked on developer workflows, onboarding and documentation.",
     "summary": "A Node, React and Next.js based template that powers all of the custom interactive projects at The Washington Post."
-  },
-  {
-    "title": "Serial Killer Series",
-    "tools": "React, Next.js, React PLX (animation library), Adobe XD, Node",
-    "awards": "2x SND 2020 \"Award of Excellence\" awards.",
-    "projRole": "Responsible for the project concept, design, front-end development, commissioned and art directed illustrations.",
-    "image": "projects/sk.jpg",
-    "summary": "A three-part investigation series on law enforcement's failure to catch the most prolific serial killer in U.S. history.",
-    "url": "https://www.washingtonpost.com/graphics/2020/national/samuel-little-serial-killer/part-one/",
-    "width": 2126,
-    "height": 1222
   },
   {
     "title": "Mueller Report Illustrated",
