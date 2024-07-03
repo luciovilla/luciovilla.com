@@ -33,7 +33,7 @@ export default function Nav() {
         <a href="#skip" className="sr-only focus:not-sr-only">
           Skip to content
         </a>
-        <div className="ml-[-0.75rem]">
+        <div className="-ml-3">
           <NavItem href="/" text="Home" isActive={pathName === "/"} />
           <NavItem href="/work" text="Work" isActive={pathName === "/work"} />
           <NavItem href="/notas" text="Blog" isActive={pathName === "/notas"} />

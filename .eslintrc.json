@@ -13,9 +13,7 @@
   "extends": [
     "plugin:prettier/recommended",
     "plugin:react/recommended",
-    "eslint:recommended",
     "next",
-    "plugin:@next/next/recommended",
     "plugin:tailwindcss/recommended"
   ],
   "settings": {
